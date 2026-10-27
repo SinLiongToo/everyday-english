@@ -134,6 +134,14 @@ section.blk > h2 .num { color: var(--accent); }
 .vcard.done { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--card)); }
 .vword { font-size: 1.2rem; font-weight: 700; }
 .vzh { color: var(--muted); }
+.vcard.haspic { grid-template-columns: 64px 1fr auto; column-gap: 12px; }
+.vpic {
+  grid-row: 1 / span 2; width: 64px; height: 64px; border-radius: 14px; background: var(--card-2);
+  display: grid; place-items: center; font-size: 2.4rem; line-height: 1;
+}
+.haspic .vword, .haspic .vzh { grid-column: 2; }
+.haspic .vact { grid-column: 3; }
+.qpic { font-size: 3.4rem; line-height: 1; margin: 4px 0 10px; }
 .vex { grid-column: 1 / -1; font-size: .95rem; border-left: 3px solid var(--border); padding-left: 10px; margin-top: 6px; }
 .vact { display: flex; gap: 6px; align-items: start; grid-row: 1 / span 2; grid-column: 2; }
 .ibtn {
@@ -222,6 +230,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 <script src="vocab-1.js"></script>
 <script src="vocab-2.js"></script>
 <script src="vocab-3.js"></script>
+<script src="pictures.js"></script>
 <script>
 (function () {
   "use strict";
@@ -299,6 +308,12 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const key = (tid, lv, w) => `${tid}|${lv}|${w}`;
   const TOPICS = window.TOPICS || [];
+  const PICS = {};
+  Object.entries(window.PICS || {}).forEach(([tid, s]) => {
+    PICS[tid] = {};
+    s.split("|").forEach((pair) => { const i = pair.lastIndexOf(":"); PICS[tid][pair.slice(0, i).toLowerCase()] = pair.slice(i + 1); });
+  });
+  const picFor = (tid, w) => (PICS[tid] || {})[w.toLowerCase()] || "";
   const totalWords = TOPICS.reduce((n, tp) => n + LEVELS.reduce((m, lv) => m + tp[lv].v.length, 0), 0);
 
   // ---------- speech ----------
@@ -412,8 +427,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       `<button class="tab ${l}" role="tab" aria-selected="${l === lv}" data-lv="${l}">${t(l)} <small>${t(l + "Cefr")}</small></button>`).join("");
 
     const vocab = L.v.map(([w, m, ex]) => {
-      const k = key(tp.id, lv, w), done = state.learned.has(k);
-      return `<div class="vcard${done ? " done" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
+      const k = key(tp.id, lv, w), done = state.learned.has(k), pic = picFor(tp.id, w);
+      return `<div class="vcard${done ? " done" : ""}${pic ? " haspic" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
+        ${pic ? `<div class="vpic" aria-hidden="true">${pic}</div>` : ""}
         <div class="vword">${esc(w)}</div>
         <div class="vact">
           <button class="ibtn" data-say="${esc(w)}" title="${t("speak")}" aria-label="${t("speak")}: ${esc(w)}">🔊</button>
@@ -518,7 +534,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       const re = new RegExp("\\b" + reEsc(w) + "\\w*", "i");
       if (!re.test(ex)) return null;
       const others = shuffle(words.filter((x) => x[0] !== w)).slice(0, 3).map((x) => x[0]);
-      return { w, m, ex, re, opts: shuffle([w, ...others]) };
+      return { w, m, ex, re, pic: picFor(tp.id, w), opts: shuffle([w, ...others]) };
     }).filter(Boolean).slice(0, QUIZ_LEN);
     let i = 0, score = 0;
     const box = document.getElementById("quiz");
@@ -529,6 +545,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       const parts = q.ex.split(q.re);
       box.innerHTML = `
         <div class="qmeta">${t("qOf")(i + 1, qs.length)}</div>
+        ${q.pic ? `<div class="qpic" aria-hidden="true">${q.pic}</div>` : ""}
         <p class="qtext">${esc(parts[0])}<span class="blank">____</span>${esc(parts.slice(1).join(""))}</p>
         <div class="opts">${q.opts.map((o) => `<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>
         <div class="qfoot"><span class="fb" id="fb" aria-live="polite"></span></div>`;
