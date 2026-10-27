@@ -126,6 +126,10 @@ section.blk > h2 .num { color: var(--accent); }
 .vtools label { display: inline-flex; align-items: center; gap: 6px; font-size: .92rem; cursor: pointer; }
 .vtools input[type="checkbox"] { accent-color: var(--accent); width: 18px; height: 18px; }
 .vcard[hidden] { display: none; }
+.vcard.playing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.aptools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
+.tbtn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); font-weight: 700; }
+select.tbtn { font: inherit; font-size: .9rem; color: var(--fg); cursor: pointer; }
 .vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
 .vcard {
   background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px;
@@ -263,6 +267,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hoverTip: "譯文已隱藏，滑過或點一下可查看。",
       speed: "語速", slow: "慢", normal: "正常",
       search: "搜尋單字或中文", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
+      autoPlay: "▶ 自動播放", apMode: "播放內容", apRep: "每項重複次數",
+      modeW: "單字", modeWE: "單字＋例句", modeE: "例句",
       foot: "練習進度只儲存在你的瀏覽器中。"
     },
     en: {
@@ -288,6 +294,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hoverTip: "",
       speed: "Speed", slow: "Slow", normal: "Normal",
       search: "Search words", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
+      autoPlay: "▶ Auto-play", apMode: "What to play", apRep: "Repeat each item",
+      modeW: "Words", modeWE: "Words + examples", modeE: "Examples",
       foot: "Your progress is saved only in this browser."
     }
   };
@@ -305,7 +313,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     hideTr: store.get("hideTr", false),
     slow: store.get("slow", false),
     learned: new Set(store.get("learned", [])),
-    level: store.get("level", "basic")
+    level: store.get("level", "basic"),
+    apMode: store.get("apMode", "we"),
+    apRep: store.get("apRep", 1)
   };
   const t = (k) => UI[state.lang][k];
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -343,11 +353,39 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       u.rate = state.slow ? 0.7 : 0.95;
       u.pitch = alt ? 0.85 : 1.05;
       u.onend = u.onerror = () => resolve();
+      // Some browsers occasionally never fire onend; don't let auto-play hang on it.
+      setTimeout(resolve, 3000 + text.length * 150 / u.rate);
       synth.speak(u);
     });
   }
   let playToken = 0;
   function stopSpeech() { playToken++; if (synth) synth.cancel(); }
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  // Reads items one after another, highlighting each. An item is {el, parts: [{text, alt}]}.
+  // Pressing the same button again (or any 🔊, or leaving the page) stops it.
+  async function playSeq(btn, label, getItems, repeat = 1) {
+    if (btn.dataset.on) { stopSpeech(); return; }
+    if (!synth) { alert(t("noSpeech")); return; }
+    stopSpeech();
+    const my = playToken;
+    btn.dataset.on = "1"; btn.textContent = t("stop");
+    for (const it of getItems()) {
+      if (my !== playToken) break;
+      it.el.classList.add("playing");
+      it.el.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      for (let r = 0; r < repeat && my === playToken; r++) {
+        for (const p of it.parts) {
+          if (my !== playToken) break;
+          await speak(p.text, p.alt);
+          await wait(state.slow ? 600 : 350);
+        }
+      }
+      it.el.classList.remove("playing");
+      if (my === playToken) await wait(state.slow ? 800 : 450);
+    }
+    delete btn.dataset.on; btn.textContent = label;
+  }
 
   // ---------- header ----------
   function applyChrome() {
@@ -471,11 +509,23 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
           <label><input type="checkbox" id="vun"> ${t("unlearned")}</label>
           <span class="note" id="vcount"></span>
         </div>
+        <div class="aptools">
+          <button class="tbtn primary" id="apBtn" type="button">${t("autoPlay")}</button>
+          <select class="tbtn" id="apMode" aria-label="${t("apMode")}">
+            ${[["w", "modeW"], ["we", "modeWE"], ["e", "modeE"]].map(([v, k]) =>
+              `<option value="${v}"${state.apMode === v ? " selected" : ""}>${t(k)}</option>`).join("")}
+          </select>
+          <select class="tbtn" id="apRep" aria-label="${t("apRep")}">
+            ${[1, 2, 3].map((n) => `<option value="${n}"${state.apRep === n ? " selected" : ""}>×${n}</option>`).join("")}
+          </select>
+        </div>
         <div class="vgrid">${vocab}</div>
       </section>
       <section class="blk">
-        <h2><span class="num">2</span>${t("phrases")}</h2>
-        <ul class="list">${phrases}</ul>
+        <h2><span class="num">2</span>${t("phrases")}
+          <span class="h2-act"><button class="tbtn" id="playPhr" type="button">${t("playAll")}</button></span>
+        </h2>
+        <ul class="list" id="phr">${phrases}</ul>
       </section>
       <section class="blk">
         <h2><span class="num">3</span>${t("dialog")}
@@ -496,21 +546,32 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     document.getElementById("vq").oninput = filterVocab;
     document.getElementById("vun").onchange = filterVocab;
     filterVocab();
-    document.getElementById("speedBtn").onclick = () => { state.slow = !state.slow; store.set("slow", state.slow); render(); };
-    const playBtn = document.getElementById("playAll");
-    playBtn.onclick = async () => {
-      if (playBtn.dataset.on) { stopSpeech(); return; }
-      const my = ++playToken;
-      playBtn.dataset.on = "1"; playBtn.textContent = t("stop");
-      const rows = [...document.querySelectorAll("#dlg .row")];
-      for (let i = 0; i < L.d.length && my === playToken; i++) {
-        rows.forEach((r) => r.classList.remove("playing"));
-        rows[i].classList.add("playing");
-        await speak(L.d[i][1], L.d[i][0] === "B");
-      }
-      rows.forEach((r) => r.classList.remove("playing"));
-      delete playBtn.dataset.on; playBtn.textContent = t("playAll");
+    // Speed changes apply to the next sentence, so an auto-play in progress keeps going.
+    const speedBtn = document.getElementById("speedBtn");
+    speedBtn.onclick = () => {
+      state.slow = !state.slow; store.set("slow", state.slow);
+      speedBtn.textContent = `${t("speed")}: ${state.slow ? t("slow") : t("normal")}`;
+      speedBtn.setAttribute("aria-pressed", String(state.slow));
     };
+
+    const apBtn = document.getElementById("apBtn");
+    document.getElementById("apMode").onchange = (e) => { state.apMode = e.target.value; store.set("apMode", state.apMode); };
+    document.getElementById("apRep").onchange = (e) => { state.apRep = +e.target.value; store.set("apRep", state.apRep); };
+    apBtn.onclick = () => playSeq(apBtn, t("autoPlay"), () =>
+      [...app.querySelectorAll(".vcard:not([hidden])")].map((el) => {
+        const w = el.querySelector(".vact [data-say]").dataset.say;
+        const ex = el.querySelector(".vex [data-say]").dataset.say;
+        const parts = state.apMode === "w" ? [w] : state.apMode === "e" ? [ex] : [w, ex];
+        return { el, parts: parts.map((text) => ({ text })) };
+      }), state.apRep);
+
+    const phrBtn = document.getElementById("playPhr");
+    phrBtn.onclick = () => playSeq(phrBtn, t("playAll"), () =>
+      [...document.querySelectorAll("#phr .row")].map((el, i) => ({ el, parts: [{ text: L.p[i][0] }] })));
+
+    const playBtn = document.getElementById("playAll");
+    playBtn.onclick = () => playSeq(playBtn, t("playAll"), () =>
+      [...document.querySelectorAll("#dlg .row")].map((el, i) => ({ el, parts: [{ text: L.d[i][1], alt: L.d[i][0] === "B" }] })));
     startQuiz(tp, lv);
   }
 
