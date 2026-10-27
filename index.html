@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Everyday English</title>
+<meta name="description" content="從基礎到高階的生活英語：食衣住行育樂、家庭、朋友、工作、運動、政治、新聞。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗣️</text></svg>">
+<style>
+:root {
+  --bg: #f7f5f0;
+  --card: #ffffff;
+  --card-2: #f1eee6;
+  --fg: #1c1b19;
+  --muted: #5b5850;
+  --border: #ddd8cc;
+  --accent: #1f6f5c;
+  --accent-fg: #ffffff;
+  --accent-soft: #dcefe8;
+  --basic: #1f7a4d;
+  --inter: #a55a00;
+  --adv: #a3243b;
+  --ok: #1f7a4d;
+  --bad: #b4232f;
+  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 14px rgba(0,0,0,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141513; --card: #1d1f1c; --card-2: #262924; --fg: #ecebe6; --muted: #a9a79e;
+    --border: #353831; --accent: #5cc4a6; --accent-fg: #0d1f1a; --accent-soft: #1d3a32;
+    --basic: #6fd39d; --inter: #f0b35a; --adv: #f58a9c; --ok: #6fd39d; --bad: #ff8a8a;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141513; --card: #1d1f1c; --card-2: #262924; --fg: #ecebe6; --muted: #a9a79e;
+  --border: #353831; --accent: #5cc4a6; --accent-fg: #0d1f1a; --accent-soft: #1d3a32;
+  --basic: #6fd39d; --inter: #f0b35a; --adv: #f58a9c; --ok: #6fd39d; --bad: #ff8a8a;
+  --shadow: none; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* header */
+.top {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
+}
+.top-in { max-width: 1040px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+.brand {
+  font-weight: 800; font-size: 1.1rem; text-decoration: none; color: var(--fg); margin-right: auto;
+  white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+}
+.brand span { color: var(--accent); }
+.tbtn {
+  border: 1px solid var(--border); background: var(--card); border-radius: 999px;
+  padding: 5px 12px; font-size: .9rem; white-space: nowrap;
+}
+.tbtn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+
+main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
+
+/* home */
+.hero h1 { font-size: clamp(1.7rem, 4.5vw, 2.6rem); line-height: 1.2; margin: 8px 0 8px; letter-spacing: -.01em; }
+.hero p { color: var(--muted); margin: 0 0 20px; max-width: 60ch; }
+.levels { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.lv-chip { display: inline-flex; align-items: center; gap: 6px; font-size: .88rem; color: var(--muted); }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot.basic { background: var(--basic); } .dot.inter { background: var(--inter); } .dot.adv { background: var(--adv); }
+.stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+.stat { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px; min-width: 120px; }
+.stat b { display: block; font-size: 1.4rem; }
+.stat small { color: var(--muted); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.tcard {
+  display: block; text-decoration: none; color: var(--fg);
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 16px; box-shadow: var(--shadow); transition: transform .15s, border-color .15s;
+}
+.tcard:hover { transform: translateY(-2px); border-color: var(--accent); }
+.tcard .ic { font-size: 2rem; line-height: 1; }
+.tcard h3 { margin: 10px 0 2px; font-size: 1.05rem; }
+.tcard .sub { color: var(--muted); font-size: .88rem; }
+.bar { height: 6px; background: var(--card-2); border-radius: 99px; overflow: hidden; margin-top: 12px; }
+.bar i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.tcard .pct { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+
+/* topic */
+.back { display: inline-block; margin-bottom: 10px; text-decoration: none; font-size: .95rem; }
+.thead { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.thead .ic { font-size: 2.6rem; }
+.thead h1 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.2; }
+.thead .sub { color: var(--muted); }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.tab {
+  border: 0; background: none; padding: 10px 14px; border-bottom: 3px solid transparent;
+  color: var(--muted); font-weight: 600; margin-bottom: -1px;
+}
+.tab[aria-selected="true"] { color: var(--fg); }
+.tab.basic[aria-selected="true"] { border-color: var(--basic); }
+.tab.inter[aria-selected="true"] { border-color: var(--inter); }
+.tab.adv[aria-selected="true"] { border-color: var(--adv); }
+.tab small { font-weight: 400; }
+
+section.blk { margin-bottom: 32px; }
+section.blk > h2 { font-size: 1.15rem; margin: 0 0 12px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+section.blk > h2 .num { color: var(--accent); }
+.h2-act { margin-left: auto; }
+
+.vtools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 12px; }
+.vtools input[type="search"] {
+  flex: 1 1 220px; min-width: 0; font: inherit; color: var(--fg); background: var(--card);
+  border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px;
+}
+.vtools label { display: inline-flex; align-items: center; gap: 6px; font-size: .92rem; cursor: pointer; }
+.vtools input[type="checkbox"] { accent-color: var(--accent); width: 18px; height: 18px; }
+.vcard[hidden] { display: none; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.vcard {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px;
+}
+.vcard.done { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--card)); }
+.vword { font-size: 1.2rem; font-weight: 700; }
+.vzh { color: var(--muted); }
+.vex { grid-column: 1 / -1; font-size: .95rem; border-left: 3px solid var(--border); padding-left: 10px; margin-top: 6px; }
+.vact { display: flex; gap: 6px; align-items: start; grid-row: 1 / span 2; grid-column: 2; }
+.ibtn {
+  border: 1px solid var(--border); background: var(--card); border-radius: 8px;
+  min-width: 36px; height: 36px; padding: 0 8px; font-size: .95rem;
+}
+.ibtn:hover { border-color: var(--accent); }
+.ibtn.on { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.row {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.row .txt { flex: 1; min-width: 0; }
+.row .en { font-weight: 600; }
+.tr { color: var(--muted); font-size: .93rem; }
+:root.hide-tr .tr { visibility: hidden; }
+:root.hide-tr .row:hover .tr, :root.hide-tr .vcard:hover .tr { visibility: visible; }
+
+.spk {
+  flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  font-weight: 700; font-size: .85rem; background: var(--accent-soft); color: var(--accent);
+}
+.spk.B { background: var(--card-2); color: var(--fg); }
+.row.playing { border-color: var(--accent); }
+
+/* quiz */
+.quiz { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+.qmeta { color: var(--muted); font-size: .88rem; margin-bottom: 8px; }
+.qtext { font-size: 1.2rem; margin: 0 0 14px; }
+.blank { display: inline-block; min-width: 4em; border-bottom: 2px solid var(--accent); text-align: center; }
+.opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
+.opt {
+  border: 1px solid var(--border); background: var(--card-2); border-radius: 10px; padding: 10px 12px;
+  text-align: left; font-weight: 600;
+}
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt.right { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 18%, var(--card)); }
+.opt.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 15%, var(--card)); }
+.opt:disabled { cursor: default; }
+.qfoot { display: flex; align-items: center; gap: 10px; margin-top: 14px; flex-wrap: wrap; min-height: 40px; }
+.fb { font-weight: 600; }
+.fb.ok { color: var(--ok); } .fb.no { color: var(--bad); }
+.pbtn {
+  border: 0; background: var(--accent); color: var(--accent-fg); border-radius: 10px;
+  padding: 9px 16px; font-weight: 700; margin-left: auto;
+}
+.score { font-size: 2rem; font-weight: 800; margin: 4px 0; }
+
+.pager { display: flex; justify-content: space-between; gap: 10px; margin-top: 40px; flex-wrap: wrap; }
+.pager a {
+  text-decoration: none; background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 10px 14px; color: var(--fg);
+}
+.pager a:hover { border-color: var(--accent); }
+.pager small { display: block; color: var(--muted); }
+
+.note { color: var(--muted); font-size: .9rem; }
+footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 16px 32px; }
+
+@media (max-width: 560px) {
+  .wide-only { display: none; }
+  .top-in { gap: 6px; }
+  .tbtn { padding: 5px 10px; }
+  .vgrid { grid-template-columns: 1fr; }
+  .tab { padding: 8px 10px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tcard { padding: 12px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#/" id="brand"></a>
+    <button class="tbtn" id="trBtn" type="button"></button>
+    <button class="tbtn" id="langBtn" type="button" aria-label="Language">🌐 <span id="langLbl"></span></button>
+    <button class="tbtn" id="themeBtn" type="button" aria-label="Theme"></button>
+  </div>
+</header>
+<main id="app"></main>
+<footer id="foot"></footer>
+
+<script src="data.js"></script>
+<script src="vocab-1.js"></script>
+<script src="vocab-2.js"></script>
+<script src="vocab-3.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  const LEVELS = ["basic", "inter", "adv"];
+  const UI = {
+    zh: {
+      brand: "生活英語 <span class=\"wide-only\">Everyday English</span>",
+      heroTitle: "從日常到深度對話，一步一步說好英語",
+      heroDesc: "涵蓋食衣住行育樂、家庭、朋友、工作、海外工作、運動、政治與新聞。每個主題 100 個單字，分為基礎、中級、高級，並有實用句、情境對話與小測驗，可點 🔊 聽發音。",
+      basic: "基礎", inter: "中級", adv: "高級",
+      basicCefr: "A1–A2", interCefr: "B1–B2", advCefr: "C1",
+      statLearned: "已學會單字", statTopics: "主題", statWords: "單字總數",
+      learnedOf: (a, b) => `已學會 ${a} / ${b}`,
+      back: "← 所有主題",
+      vocab: "單字", phrases: "實用句", dialog: "情境對話", quiz: "小測驗",
+      speak: "朗讀", markDone: "標記為已學會", playAll: "▶ 播放全部", stop: "■ 停止",
+      trShow: "譯文：顯示", trHide: "譯文：隱藏",
+      langLbl: "EN", themeDark: "🌙", themeLight: "☀️",
+      qOf: (i, n) => `第 ${i} / ${n} 題・選出適合填入空格的字`,
+      right: "答對了！", wrong: (a) => `答錯了，正確答案是「${a}」`,
+      next: "下一題 →", finish: "看結果", retry: "再測一次",
+      scoreMsg: (s, n) => `${n} 題中答對 ${s} 題`,
+      great: "太棒了！可以挑戰下一個等級。", good: "不錯！再複習一下單字。", tryAgain: "多看幾次單字和例句，再試一次。",
+      prev: "上一個主題", nextT: "下一個主題",
+      noSpeech: "此瀏覽器不支援語音朗讀。",
+      hoverTip: "譯文已隱藏，滑過或點一下可查看。",
+      speed: "語速", slow: "慢", normal: "正常",
+      search: "搜尋單字或中文", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
+      foot: "練習進度只儲存在你的瀏覽器中。"
+    },
+    en: {
+      brand: "Everyday <span>English</span>",
+      heroTitle: "From daily chats to deep discussions, one step at a time",
+      heroDesc: "Food, clothing, housing, transport, education, leisure, family, friends, work, working abroad, sports, politics and news. Every topic has 100 words across Basic, Intermediate and Advanced levels, plus useful phrases, dialogues and a quiz. Tap 🔊 to hear any line.",
+      basic: "Basic", inter: "Intermediate", adv: "Advanced",
+      basicCefr: "A1–A2", interCefr: "B1–B2", advCefr: "C1",
+      statLearned: "Words learned", statTopics: "Topics", statWords: "Total words",
+      learnedOf: (a, b) => `${a} / ${b} learned`,
+      back: "← All topics",
+      vocab: "Vocabulary", phrases: "Useful phrases", dialog: "Dialogue", quiz: "Quiz",
+      speak: "Listen", markDone: "Mark as learned", playAll: "▶ Play all", stop: "■ Stop",
+      trShow: "", trHide: "",
+      langLbl: "中文", themeDark: "🌙", themeLight: "☀️",
+      qOf: (i, n) => `Question ${i} of ${n} · Choose the word that fits the blank`,
+      right: "Correct!", wrong: (a) => `Not quite. The answer is "${a}".`,
+      next: "Next →", finish: "See results", retry: "Try again",
+      scoreMsg: (s, n) => `${s} out of ${n} correct`,
+      great: "Excellent! You're ready for the next level.", good: "Good job! Review the words once more.", tryAgain: "Review the words and examples, then try again.",
+      prev: "Previous topic", nextT: "Next topic",
+      noSpeech: "Speech is not supported in this browser.",
+      hoverTip: "",
+      speed: "Speed", slow: "Slow", normal: "Normal",
+      search: "Search words", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
+      foot: "Your progress is saved only in this browser."
+    }
+  };
+
+  // ---------- storage (always guarded) ----------
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("ee:" + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem("ee:" + k, JSON.stringify(v)); } catch (e) {} }
+  };
+
+  const root = document.documentElement;
+  const state = {
+    lang: store.get("lang", "zh"),
+    theme: store.get("theme", null),
+    hideTr: store.get("hideTr", false),
+    slow: store.get("slow", false),
+    learned: new Set(store.get("learned", [])),
+    level: store.get("level", "basic")
+  };
+  const t = (k) => UI[state.lang][k];
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const key = (tid, lv, w) => `${tid}|${lv}|${w}`;
+  const TOPICS = window.TOPICS || [];
+  const totalWords = TOPICS.reduce((n, tp) => n + LEVELS.reduce((m, lv) => m + tp[lv].v.length, 0), 0);
+
+  // ---------- speech ----------
+  const synth = window.speechSynthesis;
+  let voices = [];
+  function loadVoices() {
+    if (!synth) return;
+    voices = synth.getVoices().filter((v) => /^en[-_]/i.test(v.lang));
+  }
+  if (synth) { loadVoices(); synth.onvoiceschanged = loadVoices; }
+  function pickVoice(alt) {
+    if (!voices.length) return null;
+    const us = voices.filter((v) => /en[-_]US/i.test(v.lang));
+    const pool = us.length > 1 ? us : voices;
+    return pool[alt ? Math.min(1, pool.length - 1) : 0];
+  }
+  function speak(text, alt) {
+    return new Promise((resolve) => {
+      if (!synth) { alert(t("noSpeech")); return resolve(); }
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-US";
+      const v = pickVoice(alt);
+      if (v) u.voice = v;
+      u.rate = state.slow ? 0.7 : 0.95;
+      u.pitch = alt ? 0.85 : 1.05;
+      u.onend = u.onerror = () => resolve();
+      synth.speak(u);
+    });
+  }
+  let playToken = 0;
+  function stopSpeech() { playToken++; if (synth) synth.cancel(); }
+
+  // ---------- header ----------
+  function applyChrome() {
+    root.dataset.lang = state.lang;
+    root.lang = state.lang === "zh" ? "zh-Hant" : "en";
+    if (state.theme) root.dataset.theme = state.theme; else delete root.dataset.theme;
+    root.classList.toggle("hide-tr", state.hideTr && state.lang === "zh");
+    const dark = state.theme ? state.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    document.getElementById("brand").innerHTML = t("brand");
+    const langLbl = document.getElementById("langLbl");
+    langLbl.textContent = t("langLbl");
+    langLbl.lang = state.lang === "zh" ? "en" : "zh-Hant";
+    const themeBtn = document.getElementById("themeBtn");
+    themeBtn.textContent = dark ? t("themeLight") : t("themeDark");
+    themeBtn.title = dark ? "Light" : "Dark";
+    const trBtn = document.getElementById("trBtn");
+    trBtn.hidden = state.lang !== "zh";
+    trBtn.textContent = state.hideTr ? t("trHide") : t("trShow");
+    trBtn.setAttribute("aria-pressed", String(state.hideTr));
+    document.getElementById("foot").textContent = t("foot");
+  }
+  document.getElementById("langBtn").onclick = () => {
+    state.lang = state.lang === "zh" ? "en" : "zh"; store.set("lang", state.lang); applyChrome(); render();
+  };
+  document.getElementById("themeBtn").onclick = () => {
+    const dark = state.theme ? state.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    state.theme = dark ? "light" : "dark"; store.set("theme", state.theme); applyChrome();
+  };
+  document.getElementById("trBtn").onclick = () => {
+    state.hideTr = !state.hideTr; store.set("hideTr", state.hideTr); applyChrome();
+  };
+
+  // ---------- views ----------
+  const app = document.getElementById("app");
+  const zh = () => state.lang === "zh";
+  const trLine = (s, tag = "div") => zh() ? `<${tag} class="tr">${esc(s)}</${tag}>` : "";
+
+  function topicProgress(tp) {
+    let n = 0, d = 0;
+    LEVELS.forEach((lv) => tp[lv].v.forEach((w) => { n++; if (state.learned.has(key(tp.id, lv, w[0]))) d++; }));
+    return [d, n];
+  }
+
+  function renderHome() {
+    document.title = zh() ? "生活英語 Everyday English" : "Everyday English";
+    const levels = LEVELS.map((lv) =>
+      `<span class="lv-chip"><span class="dot ${lv}"></span>${t(lv)} · ${t(lv + "Cefr")}</span>`).join("");
+    const cards = TOPICS.map((tp) => {
+      const [d, n] = topicProgress(tp);
+      return `<a class="tcard" href="#/${tp.id}">
+        <div class="ic" aria-hidden="true">${tp.icon}</div>
+        <h3>${esc(zh() ? tp.zh : tp.en)}</h3>
+        ${zh() ? `<div class="sub">${esc(tp.en)}</div>` : ""}
+        <div class="bar"><i style="width:${(d / n * 100).toFixed(0)}%"></i></div>
+        <div class="pct">${t("learnedOf")(d, n)}</div>
+      </a>`;
+    }).join("");
+    app.innerHTML = `
+      <section class="hero">
+        <h1>${esc(t("heroTitle"))}</h1>
+        <p>${esc(t("heroDesc"))}</p>
+        <div class="levels">${levels}</div>
+      </section>
+      <div class="stats">
+        <div class="stat"><b>${state.learned.size}</b><small>${t("statLearned")}</small></div>
+        <div class="stat"><b>${totalWords}</b><small>${t("statWords")}</small></div>
+        <div class="stat"><b>${TOPICS.length}</b><small>${t("statTopics")}</small></div>
+      </div>
+      <div class="grid">${cards}</div>`;
+  }
+
+  function renderTopic(tp, lv) {
+    const L = tp[lv];
+    const idx = TOPICS.indexOf(tp);
+    const prev = TOPICS[(idx - 1 + TOPICS.length) % TOPICS.length];
+    const next = TOPICS[(idx + 1) % TOPICS.length];
+    document.title = `${zh() ? tp.zh : tp.en} · Everyday English`;
+
+    const tabs = LEVELS.map((l) =>
+      `<button class="tab ${l}" role="tab" aria-selected="${l === lv}" data-lv="${l}">${t(l)} <small>${t(l + "Cefr")}</small></button>`).join("");
+
+    const vocab = L.v.map(([w, m, ex]) => {
+      const k = key(tp.id, lv, w), done = state.learned.has(k);
+      return `<div class="vcard${done ? " done" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
+        <div class="vword">${esc(w)}</div>
+        <div class="vact">
+          <button class="ibtn" data-say="${esc(w)}" title="${t("speak")}" aria-label="${t("speak")}: ${esc(w)}">🔊</button>
+          <button class="ibtn${done ? " on" : ""}" data-learn="${esc(k)}" title="${t("markDone")}" aria-label="${t("markDone")}" aria-pressed="${done}">✓</button>
+        </div>
+        ${zh() ? `<div class="vzh tr">${esc(m)}</div>` : "<div></div>"}
+        <div class="vex">${esc(ex)} <button class="ibtn" style="height:28px;min-width:28px;font-size:.8rem" data-say="${esc(ex)}" aria-label="${t("speak")}">🔊</button></div>
+      </div>`;
+    }).join("");
+
+    const phrases = L.p.map(([en, z]) => `<li class="row">
+        <div class="txt"><div class="en">${esc(en)}</div>${trLine(z)}</div>
+        <button class="ibtn" data-say="${esc(en)}" aria-label="${t("speak")}">🔊</button>
+      </li>`).join("");
+
+    const dialog = L.d.map(([s, en, z], i) => `<li class="row" data-line="${i}">
+        <span class="spk ${s}">${s}</span>
+        <div class="txt"><div class="en">${esc(en)}</div>${trLine(z)}</div>
+        <button class="ibtn" data-say="${esc(en)}" data-alt="${s === "B" ? 1 : ""}" aria-label="${t("speak")}">🔊</button>
+      </li>`).join("");
+
+    app.innerHTML = `
+      <a class="back" href="#/">${t("back")}</a>
+      <div class="thead">
+        <div class="ic" aria-hidden="true">${tp.icon}</div>
+        <div><h1>${esc(zh() ? tp.zh : tp.en)}</h1>${zh() ? `<div class="sub">${esc(tp.en)}</div>` : ""}</div>
+      </div>
+      <div class="tabs" role="tablist">${tabs}</div>
+      ${state.hideTr && zh() ? `<p class="note">${t("hoverTip")}</p>` : ""}
+      <section class="blk">
+        <h2><span class="num">1</span>${t("vocab")}
+          <span class="h2-act"><button class="tbtn" id="speedBtn" type="button" aria-pressed="${state.slow}">${t("speed")}: ${state.slow ? t("slow") : t("normal")}</button></span>
+        </h2>
+        <div class="vtools">
+          <input type="search" id="vq" placeholder="${t("search")}" aria-label="${t("search")}">
+          <label><input type="checkbox" id="vun"> ${t("unlearned")}</label>
+          <span class="note" id="vcount"></span>
+        </div>
+        <div class="vgrid">${vocab}</div>
+      </section>
+      <section class="blk">
+        <h2><span class="num">2</span>${t("phrases")}</h2>
+        <ul class="list">${phrases}</ul>
+      </section>
+      <section class="blk">
+        <h2><span class="num">3</span>${t("dialog")}
+          <span class="h2-act"><button class="tbtn" id="playAll" type="button">${t("playAll")}</button></span>
+        </h2>
+        <ul class="list" id="dlg">${dialog}</ul>
+      </section>
+      <section class="blk">
+        <h2><span class="num">4</span>${t("quiz")}</h2>
+        <div class="quiz" id="quiz"></div>
+      </section>
+      <nav class="pager">
+        <a href="#/${prev.id}/${lv}"><small>${t("prev")}</small>${prev.icon} ${esc(zh() ? prev.zh : prev.en)}</a>
+        <a href="#/${next.id}/${lv}" style="text-align:right"><small>${t("nextT")}</small>${esc(zh() ? next.zh : next.en)} ${next.icon}</a>
+      </nav>`;
+
+    app.querySelectorAll(".tab").forEach((b) => b.onclick = () => { location.hash = `#/${tp.id}/${b.dataset.lv}`; });
+    document.getElementById("vq").oninput = filterVocab;
+    document.getElementById("vun").onchange = filterVocab;
+    filterVocab();
+    document.getElementById("speedBtn").onclick = () => { state.slow = !state.slow; store.set("slow", state.slow); render(); };
+    const playBtn = document.getElementById("playAll");
+    playBtn.onclick = async () => {
+      if (playBtn.dataset.on) { stopSpeech(); return; }
+      const my = ++playToken;
+      playBtn.dataset.on = "1"; playBtn.textContent = t("stop");
+      const rows = [...document.querySelectorAll("#dlg .row")];
+      for (let i = 0; i < L.d.length && my === playToken; i++) {
+        rows.forEach((r) => r.classList.remove("playing"));
+        rows[i].classList.add("playing");
+        await speak(L.d[i][1], L.d[i][0] === "B");
+      }
+      rows.forEach((r) => r.classList.remove("playing"));
+      delete playBtn.dataset.on; playBtn.textContent = t("playAll");
+    };
+    startQuiz(tp, lv);
+  }
+
+  function filterVocab() {
+    const q = document.getElementById("vq").value.trim().toLowerCase();
+    const un = document.getElementById("vun").checked;
+    let n = 0;
+    app.querySelectorAll(".vcard").forEach((c) => {
+      const show = (!q || c.dataset.q.includes(q)) && !(un && c.classList.contains("done"));
+      c.hidden = !show;
+      if (show) n++;
+    });
+    document.getElementById("vcount").textContent = t("nWords")(n);
+  }
+
+  // ---------- quiz (cloze from example sentences) ----------
+  const QUIZ_LEN = 10;
+  const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  function startQuiz(tp, lv) {
+    const words = tp[lv].v;
+    const qs = shuffle(words).map(([w, m, ex]) => {
+      const re = new RegExp("\\b" + reEsc(w) + "\\w*", "i");
+      if (!re.test(ex)) return null;
+      const others = shuffle(words.filter((x) => x[0] !== w)).slice(0, 3).map((x) => x[0]);
+      return { w, m, ex, re, opts: shuffle([w, ...others]) };
+    }).filter(Boolean).slice(0, QUIZ_LEN);
+    let i = 0, score = 0;
+    const box = document.getElementById("quiz");
+
+    function show() {
+      if (i >= qs.length) return result();
+      const q = qs[i];
+      const parts = q.ex.split(q.re);
+      box.innerHTML = `
+        <div class="qmeta">${t("qOf")(i + 1, qs.length)}</div>
+        <p class="qtext">${esc(parts[0])}<span class="blank">____</span>${esc(parts.slice(1).join(""))}</p>
+        <div class="opts">${q.opts.map((o) => `<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+        <div class="qfoot"><span class="fb" id="fb" aria-live="polite"></span></div>`;
+      box.querySelectorAll(".opt").forEach((b) => b.onclick = () => answer(b, q));
+    }
+    function answer(btn, q) {
+      const ok = btn.dataset.o === q.w;
+      if (ok) score++;
+      box.querySelectorAll(".opt").forEach((b) => {
+        b.disabled = true;
+        if (b.dataset.o === q.w) b.classList.add("right");
+      });
+      if (!ok) btn.classList.add("wrong");
+      box.querySelector(".blank").textContent = q.ex.match(q.re)[0];
+      const fb = document.getElementById("fb");
+      fb.className = "fb " + (ok ? "ok" : "no");
+      fb.textContent = (ok ? t("right") : t("wrong")(q.w)) + (zh() ? `（${q.m}）` : "");
+      const nb = document.createElement("button");
+      nb.className = "pbtn"; nb.textContent = i + 1 < qs.length ? t("next") : t("finish");
+      nb.onclick = () => { i++; show(); };
+      box.querySelector(".qfoot").appendChild(nb);
+      nb.focus();
+      speak(q.ex);
+    }
+    function result() {
+      const r = score / qs.length;
+      box.innerHTML = `
+        <div class="score">${Math.round(r * 100)}%</div>
+        <div>${t("scoreMsg")(score, qs.length)}</div>
+        <p class="note">${r >= 0.85 ? t("great") : r >= 0.5 ? t("good") : t("tryAgain")}</p>
+        <div class="qfoot"><button class="pbtn" style="margin-left:0" id="retry">${t("retry")}</button></div>`;
+      document.getElementById("retry").onclick = () => startQuiz(tp, lv);
+    }
+    show();
+  }
+
+  // ---------- delegated clicks ----------
+  app.addEventListener("click", (e) => {
+    const say = e.target.closest("[data-say]");
+    if (say) { stopSpeech(); speak(say.dataset.say, !!say.dataset.alt); return; }
+    const lb = e.target.closest("[data-learn]");
+    if (lb) {
+      const k = lb.dataset.learn;
+      state.learned.has(k) ? state.learned.delete(k) : state.learned.add(k);
+      store.set("learned", [...state.learned]);
+      const on = state.learned.has(k);
+      lb.classList.toggle("on", on); lb.setAttribute("aria-pressed", String(on));
+      lb.closest(".vcard").classList.toggle("done", on);
+      filterVocab();
+    }
+    // tap to reveal a hidden translation on touch screens
+    const row = e.target.closest(".row, .vcard");
+    if (row && root.classList.contains("hide-tr")) row.querySelectorAll(".tr").forEach((x) => x.style.visibility = "visible");
+  });
+
+  // ---------- router ----------
+  function render() {
+    stopSpeech();
+    const [, id, lv] = location.hash.replace(/^#\/?/, "#/").split("/");
+    const tp = TOPICS.find((x) => x.id === id);
+    if (tp) {
+      const level = LEVELS.includes(lv) ? lv : state.level;
+      state.level = level; store.set("level", level);
+      renderTopic(tp, level);
+    } else {
+      renderHome();
+    }
+  }
+  window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyChrome);
+  applyChrome();
+  render();
+})();
+</script>
+</body>
+</html>
