@@ -865,15 +865,20 @@ window.TOPICS = [
   }
 ];
 
-// Extra vocabulary lives in vocab-*.js, one word per line: "word | 中文 | example sentence".
+// Extra vocabulary lives in vocab-*.js, one word per line: "word | 中文 | example sentence",
+// optionally followed by "| emoji" to give the word a picture.
 window.addVocab = function (id, more) {
   const tp = window.TOPICS.find((t) => t.id === id);
   if (!tp) return;
+  const pics = (window.PICS = window.PICS || {});
   Object.keys(more).forEach((lv) => {
     const have = new Set(tp[lv].v.map((w) => w[0].toLowerCase()));
     more[lv].split("\n").map((l) => l.trim()).filter(Boolean).forEach((line) => {
       const w = line.split("|").map((s) => s.trim());
-      if (w.length === 3 && !have.has(w[0].toLowerCase())) { tp[lv].v.push(w); have.add(w[0].toLowerCase()); }
+      if (w.length < 3 || have.has(w[0].toLowerCase())) return;
+      tp[lv].v.push(w.slice(0, 3));
+      have.add(w[0].toLowerCase());
+      if (w[3]) pics[id] = (pics[id] ? pics[id] + "|" : "") + w[0] + ":" + w[3];
     });
   });
 };
