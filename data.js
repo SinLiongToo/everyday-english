@@ -204,6 +204,72 @@ window.TOPICS = [
     }
   },
   {
+    id: "household", icon: "🧺", zh: "居家用品", en: "Household Items",
+    basic: {
+      v: [
+        ["toothbrush", "牙刷", "I need a new toothbrush."],
+        ["toothpaste", "牙膏", "We're out of toothpaste."],
+        ["shampoo", "洗髮精", "This shampoo smells nice."],
+        ["toilet paper", "衛生紙（捲筒）", "Buy some toilet paper, please."],
+        ["hair dryer", "吹風機", "Can I borrow your hair dryer?"],
+        ["comb", "梳子", "Where is my comb?"]
+      ],
+      p: [
+        ["Where do you keep the scissors?", "剪刀放在哪裡？"],
+        ["We're out of toilet paper.", "衛生紙用完了。"],
+        ["Can you hand me a towel?", "可以拿條毛巾給我嗎？"]
+      ],
+      d: [
+        ["A", "Mom, where's the toothpaste?", "媽，牙膏在哪裡？"],
+        ["B", "It's in the bathroom cabinet.", "在浴室的櫃子裡。"],
+        ["A", "I can't find it. Oh, we're out!", "找不到。喔，用完了！"],
+        ["B", "OK, I'll buy some today.", "好，我今天去買。"]
+      ]
+    },
+    inter: {
+      v: [
+        ["detergent", "洗衣精", "Use less detergent for small loads."],
+        ["extension cord", "延長線", "Plug the lamp into the extension cord."],
+        ["ironing board", "燙衣板", "Set up the ironing board in the bedroom."],
+        ["drying rack", "曬衣架", "Hang the shirts on the drying rack."],
+        ["first aid kit", "急救箱", "Keep a first aid kit in the kitchen."],
+        ["batteries", "電池", "The remote needs new batteries."]
+      ],
+      p: [
+        ["The light bulb in the hallway burned out.", "走廊的燈泡燒壞了。"],
+        ["Could you unplug the iron when you're done?", "用完可以把熨斗插頭拔掉嗎？"],
+        ["The vacuum cleaner isn't picking anything up.", "吸塵器吸不起東西了。"]
+      ],
+      d: [
+        ["A", "The washing machine is making a weird noise.", "洗衣機發出奇怪的聲音。"],
+        ["B", "Did you leave something in your pockets?", "你口袋裡有留東西嗎？"],
+        ["A", "Oh, a coin! That's probably it.", "喔，一枚硬幣！大概就是這個。"],
+        ["B", "Take it out before it damages the drum.", "趁它還沒弄壞滾筒前拿出來。"]
+      ]
+    },
+    adv: {
+      v: [
+        ["air purifier", "空氣清淨機", "An air purifier helps with allergies."],
+        ["water filter", "濾水器", "Change the water filter every three months."],
+        ["circuit breaker", "斷路器", "The circuit breaker tripped when we ran two heaters."],
+        ["surge protector", "突波保護器", "Plug your computer into a surge protector."],
+        ["warranty", "保固", "The fridge is still under warranty."],
+        ["ergonomic", "符合人體工學的", "I bought an ergonomic office chair."]
+      ],
+      p: [
+        ["It's more cost-effective to repair it than to replace it.", "修理比換新更划算。"],
+        ["Look for appliances with a high energy-efficiency rating.", "挑選能源效率等級高的家電。"],
+        ["Decluttering made our small apartment feel twice as big.", "斷捨離讓我們的小公寓感覺大了一倍。"]
+      ],
+      d: [
+        ["A", "Our dryer keeps tripping the circuit breaker.", "我們的烘衣機一直讓斷路器跳掉。"],
+        ["B", "It might be drawing too much current on a shared circuit.", "可能是共用迴路的電流太大。"],
+        ["A", "Should we call an electrician or just replace it?", "要叫電工還是直接換掉？"],
+        ["B", "Get it inspected first. It's still under warranty, so the repair might be free.", "先請人檢查。還在保固期內，維修可能免費。"]
+      ]
+    }
+  },
+  {
     id: "transport", icon: "🚇", zh: "行・交通", en: "Transportation",
     basic: {
       v: [
