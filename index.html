@@ -125,7 +125,9 @@ section.blk > h2 .num { color: var(--accent); }
 }
 .vtools label { display: inline-flex; align-items: center; gap: 6px; font-size: .92rem; cursor: pointer; }
 .vtools input[type="checkbox"] { accent-color: var(--accent); width: 18px; height: 18px; }
-.vcard[hidden] { display: none; }
+.vcard[hidden], .row[hidden] { display: none; }
+#phr { max-height: 70vh; overflow-y: auto; overscroll-behavior: contain; padding: 2px 4px 2px 2px; }
+.row .pn { color: var(--muted); font-size: .8rem; min-width: 2.2em; padding-top: 3px; font-variant-numeric: tabular-nums; }
 .vcard.playing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
 .aptools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
 .tbtn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); font-weight: 700; }
@@ -245,6 +247,14 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 <script src="vocab-6.js"></script>
 <script src="vocab-7.js"></script>
 <script src="vocab-8.js"></script>
+<script src="sent-1.js"></script>
+<script src="sent-2.js"></script>
+<script src="sent-3.js"></script>
+<script src="sent-4.js"></script>
+<script src="sent-5.js"></script>
+<script src="sent-6.js"></script>
+<script src="sent-7.js"></script>
+<script src="sent-8.js"></script>
 <script>
 (function () {
   "use strict";
@@ -254,7 +264,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     zh: {
       brand: "生活英語 <span class=\"wide-only\">Everyday English</span>",
       heroTitle: "從日常到深度對話，一步一步說好英語",
-      heroDesc: "涵蓋食衣住行育樂、居家用品、機場、家庭、朋友、工作、海外工作、科技、運動、政治與新聞。每個主題 200 個單字，分為基礎、中級、高級，並有實用句、情境對話與小測驗，可點 🔊 聽發音。",
+      heroDesc: "涵蓋食衣住行育樂、居家用品、機場、家庭、朋友、工作、海外工作、科技、運動、政治與新聞。每個主題 200 個單字、500 個句子（每字一句例句＋300 句實用句），分為基礎、中級、高級，並有情境對話與小測驗，可點 🔊 聽發音。",
       basic: "基礎", inter: "中級", adv: "高級",
       basicCefr: "A1–A2", interCefr: "B1–B2", advCefr: "C1",
       statLearned: "已學會單字", statTopics: "主題", statWords: "單字總數",
@@ -274,6 +284,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hoverTip: "譯文已隱藏，滑過或點一下可查看。",
       speed: "語速", slow: "慢", normal: "正常",
       search: "搜尋單字或中文", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
+      searchP: "搜尋句子或中文", nSent: (n) => `${n} 句`, statSent: "句子總數",
       autoPlay: "▶ 自動播放", apMode: "播放內容", apRep: "每項重複次數",
       modeW: "單字", modeWE: "單字＋例句", modeE: "例句",
       foot: "練習進度只儲存在你的瀏覽器中。"
@@ -281,7 +292,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     en: {
       brand: "Everyday <span>English</span>",
       heroTitle: "From daily chats to deep discussions, one step at a time",
-      heroDesc: "Food, clothing, housing, household items, transport, airports, education, leisure, family, friends, work, working abroad, technology, sports, politics and news. Every topic has 200 words across Basic, Intermediate and Advanced levels, plus useful phrases, dialogues and a quiz. Tap 🔊 to hear any line.",
+      heroDesc: "Food, clothing, housing, household items, transport, airports, education, leisure, family, friends, work, working abroad, technology, sports, politics and news. Every topic has 200 words and 500 sentences (an example for each word plus 300 useful phrases) across Basic, Intermediate and Advanced levels, plus dialogues and a quiz. Tap 🔊 to hear any line.",
       basic: "Basic", inter: "Intermediate", adv: "Advanced",
       basicCefr: "A1–A2", interCefr: "B1–B2", advCefr: "C1",
       statLearned: "Words learned", statTopics: "Topics", statWords: "Total words",
@@ -301,6 +312,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hoverTip: "",
       speed: "Speed", slow: "Slow", normal: "Normal",
       search: "Search words", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
+      searchP: "Search phrases", nSent: (n) => `${n} sentences`, statSent: "Total sentences",
       autoPlay: "▶ Auto-play", apMode: "What to play", apRep: "Repeat each item",
       modeW: "Words", modeWE: "Words + examples", modeE: "Examples",
       foot: "Your progress is saved only in this browser."
@@ -335,6 +347,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   });
   const picFor = (tid, w) => (PICS[tid] || {})[w.toLowerCase()] || "";
   const totalWords = TOPICS.reduce((n, tp) => n + LEVELS.reduce((m, lv) => m + tp[lv].v.length, 0), 0);
+  // Every word's example sentence plus every useful phrase.
+  const totalSent = TOPICS.reduce((n, tp) => n + LEVELS.reduce((m, lv) => m + tp[lv].v.length + tp[lv].p.length, 0), 0);
 
   // ---------- speech ----------
   const synth = window.speechSynthesis;
@@ -459,6 +473,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       <div class="stats">
         <div class="stat"><b>${state.learned.size}</b><small>${t("statLearned")}</small></div>
         <div class="stat"><b>${totalWords}</b><small>${t("statWords")}</small></div>
+        <div class="stat"><b>${totalSent.toLocaleString("en")}</b><small>${t("statSent")}</small></div>
         <div class="stat"><b>${TOPICS.length}</b><small>${t("statTopics")}</small></div>
       </div>
       <div class="grid">${cards}</div>`;
@@ -488,7 +503,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       </div>`;
     }).join("");
 
-    const phrases = L.p.map(([en, z]) => `<li class="row">
+    const phrases = L.p.map(([en, z], i) => `<li class="row" data-q="${esc((en + " " + z).toLowerCase())}">
+        <span class="pn">${i + 1}</span>
         <div class="txt"><div class="en">${esc(en)}</div>${trLine(z)}</div>
         <button class="ibtn" data-say="${esc(en)}" aria-label="${t("speak")}">🔊</button>
       </li>`).join("");
@@ -532,6 +548,13 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <h2><span class="num">2</span>${t("phrases")}
           <span class="h2-act"><button class="tbtn" id="playPhr" type="button">${t("playAll")}</button></span>
         </h2>
+        <div class="vtools">
+          <input type="search" id="pq" placeholder="${t("searchP")}" aria-label="${t("searchP")}">
+          <select class="tbtn" id="pRep" aria-label="${t("apRep")}">
+            ${[1, 2, 3].map((n) => `<option value="${n}"${state.apRep === n ? " selected" : ""}>×${n}</option>`).join("")}
+          </select>
+          <span class="note" id="pcount"></span>
+        </div>
         <ul class="list" id="phr">${phrases}</ul>
       </section>
       <section class="blk">
@@ -563,7 +586,10 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 
     const apBtn = document.getElementById("apBtn");
     document.getElementById("apMode").onchange = (e) => { state.apMode = e.target.value; store.set("apMode", state.apMode); };
-    document.getElementById("apRep").onchange = (e) => { state.apRep = +e.target.value; store.set("apRep", state.apRep); };
+    document.getElementById("apRep").onchange = (e) => {
+      state.apRep = +e.target.value; store.set("apRep", state.apRep);
+      document.getElementById("pRep").value = e.target.value;
+    };
     apBtn.onclick = () => playSeq(apBtn, t("autoPlay"), () =>
       [...app.querySelectorAll(".vcard:not([hidden])")].map((el) => {
         const w = el.querySelector(".vact [data-say]").dataset.say;
@@ -574,7 +600,21 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 
     const phrBtn = document.getElementById("playPhr");
     phrBtn.onclick = () => playSeq(phrBtn, t("playAll"), () =>
-      [...document.querySelectorAll("#phr .row")].map((el, i) => ({ el, parts: [{ text: L.p[i][0] }] })));
+      [...document.querySelectorAll("#phr .row:not([hidden])")].map((el) => ({ el, parts: [{ text: el.querySelector("[data-say]").dataset.say }] })),
+      state.apRep);
+    const pq = document.getElementById("pq"), pcount = document.getElementById("pcount");
+    const filterPhr = () => {
+      const q = pq.value.trim().toLowerCase();
+      let n = 0;
+      document.querySelectorAll("#phr .row").forEach((r) => { r.hidden = !!q && !r.dataset.q.includes(q); if (!r.hidden) n++; });
+      pcount.textContent = t("nSent")(n);
+    };
+    pq.oninput = filterPhr;
+    filterPhr();
+    document.getElementById("pRep").onchange = (e) => {
+      state.apRep = +e.target.value; store.set("apRep", state.apRep);
+      document.getElementById("apRep").value = e.target.value;
+    };
 
     const playBtn = document.getElementById("playAll");
     playBtn.onclick = () => playSeq(playBtn, t("playAll"), () =>

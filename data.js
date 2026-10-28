@@ -1040,3 +1040,18 @@ window.addVocab = function (id, more) {
     });
   });
 };
+
+// Extra useful phrases live in sent-*.js, one per line: "English sentence | 中文".
+window.addPhrases = function (id, more) {
+  const tp = window.TOPICS.find((t) => t.id === id);
+  if (!tp) return;
+  Object.keys(more).forEach((lv) => {
+    const have = new Set(tp[lv].p.map((p) => p[0].toLowerCase()));
+    more[lv].split("\n").map((l) => l.trim()).filter(Boolean).forEach((line) => {
+      const p = line.split("|").map((s) => s.trim());
+      if (p.length < 2 || have.has(p[0].toLowerCase())) return;
+      tp[lv].p.push(p.slice(0, 2));
+      have.add(p[0].toLowerCase());
+    });
+  });
+};
