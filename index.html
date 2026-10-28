@@ -285,6 +285,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       speed: "語速", slow: "慢", normal: "正常",
       search: "搜尋單字或中文", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
       searchP: "搜尋句子或中文", nSent: (n) => `${n} 句`, statSent: "句子總數",
+      cardCount: (w, s) => `${w} 個單字・${s} 個句子`,
       autoPlay: "▶ 自動播放", apMode: "播放內容", apRep: "每項重複次數",
       modeW: "單字", modeWE: "單字＋例句", modeE: "例句",
       foot: "練習進度只儲存在你的瀏覽器中。"
@@ -313,6 +314,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       speed: "Speed", slow: "Slow", normal: "Normal",
       search: "Search words", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
       searchP: "Search phrases", nSent: (n) => `${n} sentences`, statSent: "Total sentences",
+      cardCount: (w, s) => `${w} words · ${s} sentences`,
       autoPlay: "▶ Auto-play", apMode: "What to play", apRep: "Repeat each item",
       modeW: "Words", modeWE: "Words + examples", modeE: "Examples",
       foot: "Your progress is saved only in this browser."
@@ -462,6 +464,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         ${zh() ? `<div class="sub">${esc(tp.en)}</div>` : ""}
         <div class="bar"><i style="width:${(d / n * 100).toFixed(0)}%"></i></div>
         <div class="pct">${t("learnedOf")(d, n)}</div>
+        <div class="pct">${t("cardCount")(n, LEVELS.reduce((m, lv) => m + tp[lv].v.length + tp[lv].p.length, 0))}</div>
       </a>`;
     }).join("");
     app.innerHTML = `
