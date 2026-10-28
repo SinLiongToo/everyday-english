@@ -138,7 +138,8 @@ select.tbtn { font: inherit; font-size: .9rem; color: var(--fg); cursor: pointer
 .vcard.done { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--card)); }
 .vword { font-size: 1.2rem; font-weight: 700; }
 .vzh { color: var(--muted); }
-.vcard.haspic { grid-template-columns: 64px 1fr auto; column-gap: 12px; }
+.vcard.haspic { grid-template-columns: 64px minmax(0, 1fr) auto; column-gap: 12px; }
+.vword { min-width: 0; overflow-wrap: anywhere; }
 .vpic {
   grid-row: 1 / span 2; width: 64px; height: 64px; border-radius: 14px; background: var(--card-2);
   display: grid; place-items: center; font-size: 2.4rem; line-height: 1;
@@ -209,6 +210,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 
 @media (max-width: 560px) {
   .wide-only { display: none; }
+  .vcard.haspic { grid-template-columns: 52px minmax(0, 1fr) auto; column-gap: 10px; }
+  .vpic { width: 52px; height: 52px; font-size: 2rem; }
+  .vword.long { font-size: 1rem; }
   .top-in { gap: 6px; }
   .tbtn { padding: 5px 10px; }
   .vgrid { grid-template-columns: 1fr; }
@@ -232,6 +236,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 
 <script src="data.js"></script>
 <script src="pictures.js"></script>
+<script src="pictures-more.js"></script>
 <script src="vocab-1.js"></script>
 <script src="vocab-2.js"></script>
 <script src="vocab-3.js"></script>
@@ -472,7 +477,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       const k = key(tp.id, lv, w), done = state.learned.has(k), pic = picFor(tp.id, w);
       return `<div class="vcard${done ? " done" : ""}${pic ? " haspic" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
         ${pic ? `<div class="vpic" aria-hidden="true">${pic}</div>` : ""}
-        <div class="vword">${esc(w)}</div>
+        <div class="vword${w.length > 11 && !w.includes(" ") ? " long" : ""}">${esc(w)}</div>
         <div class="vact">
           <button class="ibtn" data-say="${esc(w)}" title="${t("speak")}" aria-label="${t("speak")}: ${esc(w)}">🔊</button>
           <button class="ibtn${done ? " on" : ""}" data-learn="${esc(k)}" title="${t("markDone")}" aria-label="${t("markDone")}" aria-pressed="${done}">✓</button>
