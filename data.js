@@ -336,6 +336,52 @@ window.TOPICS = [
     }
   },
   {
+    // All words for this topic are in vocab-8.js.
+    id: "airport", icon: "✈️", zh: "機場", en: "At the Airport",
+    basic: {
+      v: [],
+      p: [
+        ["Where is the check-in counter?", "報到櫃台在哪裡？"],
+        ["Window or aisle?", "靠窗還是靠走道？"],
+        ["Have a nice flight!", "祝你旅途愉快！"]
+      ],
+      d: [
+        ["A", "Passport, please.", "請出示護照。"],
+        ["B", "Here you are.", "在這裡。"],
+        ["A", "Window or aisle?", "靠窗還是走道？"],
+        ["B", "Window, please.", "靠窗，謝謝。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [
+        ["I'd like to check in for my flight to Tokyo.", "我要辦理飛往東京班機的報到。"],
+        ["How many bags can I check?", "我可以託運幾件行李？"],
+        ["My luggage didn't arrive.", "我的行李沒有到。"]
+      ],
+      d: [
+        ["A", "Do you have any bags to check?", "有行李要託運嗎？"],
+        ["B", "Just this one. Is it overweight?", "只有這件，有超重嗎？"],
+        ["A", "It's 24 kilos, so it's one kilo over the allowance.", "24 公斤，超過限額一公斤。"],
+        ["B", "I'll move a few things to my carry-on.", "我把一些東西移到隨身行李。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [
+        ["We've been rebooked on a later flight at no extra cost.", "我們被免費改到較晚的航班。"],
+        ["Due to a ground stop, all departures are on hold.", "因地面停飛命令，所有離境航班暫停。"],
+        ["I'd like to file a claim for my damaged suitcase.", "我想為損壞的行李箱提出索賠。"]
+      ],
+      d: [
+        ["A", "Our flight is overbooked, and they're asking for volunteers.", "我們的班機超賣了，他們在徵求自願改票的人。"],
+        ["B", "What's the compensation?", "賠償是什麼？"],
+        ["A", "A 400-dollar voucher, a hotel night, and a seat on tomorrow's first flight.", "400 美元抵用券、一晚飯店，加上明天第一班的座位。"],
+        ["B", "Tempting, but I have a connection in Singapore I can't miss.", "很誘人，但我在新加坡有一班不能錯過的轉機。"]
+      ]
+    }
+  },
+  {
     id: "education", icon: "📚", zh: "育・教育", en: "Education",
     basic: {
       v: [
@@ -728,6 +774,52 @@ window.TOPICS = [
         ["B", "I'm torn. The career growth is great, but my parents are getting older.", "很掙扎。職涯發展很好，但父母年紀越來越大。"],
         ["A", "Have you talked to HR about repatriation options?", "你跟人資談過調回的選項嗎？"],
         ["B", "Yes. They'll try to find me a regional role based in Taipei.", "談過，他們會試著幫我找駐台北的區域職位。"]
+      ]
+    }
+  },
+  {
+    // All words for this topic are in vocab-8.js.
+    id: "tech", icon: "💻", zh: "科技", en: "Technology",
+    basic: {
+      v: [],
+      p: [
+        ["What's the Wi-Fi password?", "Wi-Fi 密碼是什麼？"],
+        ["My phone is dead.", "我的手機沒電了。"],
+        ["Can you send me the link?", "可以把連結傳給我嗎？"]
+      ],
+      d: [
+        ["A", "My computer is so slow.", "我的電腦好慢。"],
+        ["B", "Did you try turning it off and on again?", "你試過重新開機嗎？"],
+        ["A", "No. Let me try... Oh, it works now!", "沒有，我試試……喔，現在可以了！"],
+        ["B", "Great!", "太好了！"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [
+        ["Have you tried restarting it?", "你試過重新啟動嗎？"],
+        ["My phone keeps freezing.", "我的手機一直卡住。"],
+        ["Can you send me a screenshot of the error?", "可以把錯誤畫面截圖給我嗎？"]
+      ],
+      d: [
+        ["A", "I can't log in. It says my password is wrong.", "我登不進去，它說密碼錯誤。"],
+        ["B", "Did you turn on two-factor authentication?", "你有開雙重驗證嗎？"],
+        ["A", "Yes, but I didn't get a verification code.", "有，但我沒收到驗證碼。"],
+        ["B", "Check your spam folder, or try the authenticator app.", "看看垃圾郵件匣，或試試驗證器 App。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [
+        ["The update patched a critical security vulnerability.", "這次更新修補了一個嚴重的安全漏洞。"],
+        ["We need to scale our infrastructure before the launch.", "上線前我們需要擴充基礎架構。"],
+        ["AI should augment human judgment, not replace it.", "AI 應該輔助人類判斷，而不是取代它。"]
+      ],
+      d: [
+        ["A", "Should we use a large language model for customer support?", "客服要用大型語言模型嗎？"],
+        ["B", "It could cut costs, but we'd need safeguards against wrong answers.", "可以降低成本，但需要防止錯誤回答的機制。"],
+        ["A", "And data privacy. Customers share sensitive information.", "還有資料隱私，客戶會分享敏感資訊。"],
+        ["B", "Right. Let's run a small pilot and review every response first.", "對。先小規模試行，並先審查每一則回覆。"]
       ]
     }
   },
