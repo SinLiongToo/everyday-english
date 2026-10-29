@@ -712,6 +712,64 @@ window.TOPICS = [
     }
   },
   {
+    // All words are in vocab-14.js and all phrases in sent-10.js. Each dialogue is a full mock interview.
+    id: "interview", icon: "🤝", zh: "面試", en: "Job Interviews",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Hi, are you here for the interview?", "嗨，你是來面試的嗎？"],
+        ["B", "Yes, I'm Amy Chen. Nice to meet you.", "是的，我是陳艾美，很高興認識你。"],
+        ["A", "Nice to meet you too. Please sit down. Are you a student?", "我也很高興認識你，請坐。你是學生嗎？"],
+        ["B", "Yes, I'm in my second year of college.", "是的，我大學二年級。"],
+        ["A", "Why do you want to work at our café?", "你為什麼想在我們咖啡店工作？"],
+        ["B", "I love coffee, and I enjoy talking to people.", "我喜歡咖啡，也喜歡和人聊天。"],
+        ["A", "Have you worked in a café before?", "你以前在咖啡店工作過嗎？"],
+        ["B", "No, but I learn fast and I work hard.", "沒有，但我學得很快，工作也很認真。"],
+        ["A", "Can you work on weekends?", "你週末可以上班嗎？"],
+        ["B", "Yes, I'm free on Saturdays and Sundays.", "可以，我星期六、日都有空。"],
+        ["A", "Great. Can you start next Monday?", "太好了，你下星期一可以開始上班嗎？"],
+        ["B", "Yes! Thank you so much.", "可以！非常謝謝你。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Thanks for coming in today. Could you tell me a little about yourself?", "謝謝你今天過來。可以簡單介紹一下你自己嗎？"],
+        ["B", "Sure. I majored in business and did a six-month internship in marketing.", "好的。我主修企管，在行銷部門實習過六個月。"],
+        ["A", "Why are you interested in this position?", "你為什麼對這個職位有興趣？"],
+        ["B", "I like your brand, and the role matches my skills in social media.", "我喜歡貴公司的品牌，而且這個職位符合我在社群媒體方面的專長。"],
+        ["A", "What would you say is your greatest strength?", "你覺得你最大的優點是什麼？"],
+        ["B", "I'm very organized. During my internship, I managed the content calendar for three accounts.", "我很有條理。實習時我負責管理三個帳號的內容排程。"],
+        ["A", "And a weakness?", "那缺點呢？"],
+        ["B", "I used to find public speaking hard, so I joined a speaking club, and it's helped a lot.", "我以前不太擅長公開演講，所以參加了演講社，幫助很大。"],
+        ["A", "Where do you see yourself in five years?", "你五年後的目標是什麼？"],
+        ["B", "I'd like to be leading campaigns and mentoring new team members.", "我希望能主導行銷活動，並指導新進同事。"],
+        ["A", "Do you have any questions for us?", "你有什麼問題想問我們嗎？"],
+        ["B", "Yes. What does a typical day look like for this role?", "有的。這個職位一天的工作大概是什麼樣子？"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Tell me about a time you had to lead a team through a difficult change.", "請談談你帶領團隊度過一次困難變革的經驗。"],
+        ["B", "Last year our department merged with another team, and morale dropped sharply.", "去年我們部門和另一個團隊合併，士氣大幅下滑。"],
+        ["B", "My task was to keep delivery on track while rebuilding trust.", "我的任務是在重建信任的同時，讓交付進度不落後。"],
+        ["B", "I held one-on-ones with everyone, clarified roles, and set up weekly cross-team check-ins.", "我和每個人一對一談話、釐清角色，並建立每週的跨團隊例會。"],
+        ["B", "Within three months, we hit every deadline and turnover fell by a third.", "三個月內我們達成了每個截止期限，人員流動率也下降了三分之一。"],
+        ["A", "Impressive. How would you describe your leadership style?", "很令人印象深刻。你會怎麼形容你的領導風格？"],
+        ["B", "Collaborative but decisive. I gather input, then I make the call and own the outcome.", "重視合作但果斷。我會先蒐集意見，再做決定並對結果負責。"],
+        ["A", "What are your salary expectations?", "你的期望薪資是多少？"],
+        ["B", "Based on the scope of the role and market rates, I'm looking at a range of 1.6 to 1.8 million a year.", "根據這個職位的職責範圍和市場行情，我期望年薪在 160 萬到 180 萬之間。"],
+        ["A", "That's at the top of our budget. Would you consider a lower base with a performance bonus?", "這在我們預算的上限。你願意考慮較低的底薪加上績效獎金嗎？"],
+        ["B", "I'm open to that, provided the bonus targets are clear and achievable.", "我可以考慮，前提是獎金目標要明確且可達成。"],
+        ["A", "Fair enough. We'll put that in writing in the offer.", "合理。我們會在錄取通知中以書面寫明。"]
+      ]
+    }
+  },
+  {
     id: "overseas", icon: "✈️", zh: "海外工作", en: "Working Abroad",
     basic: {
       v: [
