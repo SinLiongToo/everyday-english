@@ -1,4 +1,5 @@
 // Body & Health (all words), plus a few body words for Family Life. "word | 中文 | example | emoji"
+// The second health block (看醫生・科別) is at the end of this file.
 addVocab("family", {
   basic: `
 snot | 鼻涕 | Wipe the snot off your face with a tissue. | 🤧
@@ -316,5 +317,67 @@ gut health | 腸道健康 | Fiber is good for gut health. | 🥦
 microbiome | 微生物群 | The gut microbiome affects your mood. | 🔬
 hormone | 荷爾蒙 | Stress raises the hormone cortisol. | 🧪
 menopause | 更年期 | Menopause can affect sleep. | 🌸
+`
+});
+
+// 看醫生・科別: seeing a doctor in Taiwan and hospital departments.
+addVocab("health", {
+  basic: `
+eye doctor | 眼科醫生 | My eyes are red, so I'm going to the eye doctor. | 👁️
+family doctor | 家庭醫師 | Our family doctor knows us all very well. | 👨‍⚕️
+front desk | 櫃台；掛號處 | Ask at the front desk where to go. | 🛎️
+health insurance card | 健保卡 | Please show your health insurance card. | 💳
+`,
+  inter: `
+registration | 掛號 | Go to registration before you see the doctor. | 📝
+registration fee | 掛號費 | The registration fee is 150 dollars. | 💵
+first visit | 初診 | It's my first visit to this hospital. | 1️⃣
+follow-up visit | 複診 | Come back for a follow-up visit next week. | 🔁
+queue number | 看診號碼 | My queue number is 23. | 🔢
+consultation room | 診間 | Please wait outside consultation room 5. | 🚪
+outpatient clinic | 門診 | The outpatient clinic opens at 8:30. | 🏥
+referral | 轉診（單） | The clinic gave me a referral to the hospital. | 📨
+pick up | 領（藥） | Pick up your medicine at window 3. | 💊
+cashier | 批價櫃台 | Pay at the cashier before you get your medicine. | 💰
+ward | 病房 | My grandfather is in Ward 7. | 🛏️
+hospitalized | 住院的 | She was hospitalized for three days. | 🏥
+internal medicine | 內科 | For a fever and cough, register for internal medicine. | 🩺
+general surgery | 一般外科 | He was sent to general surgery for his appendix. | 🔪
+pediatrics | 小兒科 | Take your son to pediatrics. | 🧸
+OB-GYN | 婦產科 | She has a check-up at OB-GYN every month. | 🤰
+ENT | 耳鼻喉科 | For a sore throat or blocked nose, register for ENT. | 👂
+dermatology | 皮膚科 | For a skin rash, go to dermatology. | 🧴
+ophthalmology | 眼科 | The ophthalmology department is on the second floor. | 👁️
+dentistry | 牙科 | The dentistry clinic is very busy. | 🦷
+orthopedics | 骨科 | After the fall, I went to orthopedics for an X-ray. | 🦴
+family medicine | 家醫科 | If you're not sure, start with family medicine. | 🏠
+pediatrician | 小兒科醫師 | Our pediatrician is very gentle with kids. | 👩‍⚕️
+dermatologist | 皮膚科醫師 | The dermatologist gave me a cream for my acne. | 🧴
+`,
+  adv: `
+cardiology | 心臟內科 | He was referred to cardiology for chest pain. | ❤️
+neurology | 神經內科 | Frequent migraines should be checked by neurology. | 🧠
+neurosurgery | 神經外科 | The patient was transferred to neurosurgery. | 🧠
+psychiatry | 精神科（身心科） | Psychiatry clinics are seeing more young patients. | 💭
+urology | 泌尿科 | Kidney stones are treated in urology. | 🚽
+gastroenterology | 腸胃科 | Gastroenterology handles stomach and liver problems. | 🫃
+endocrinology | 新陳代謝科 | Diabetes patients usually see endocrinology. | 🧪
+pulmonology | 胸腔內科 | A long-lasting cough may need pulmonology. | 🫁
+nephrology | 腎臟科 | Dialysis patients are followed by nephrology. | 💧
+oncology | 腫瘤科 | The oncology team planned her treatment. | 🎗️
+radiology | 放射科 | Radiology will read your scan. | 🩻
+anesthesiology | 麻醉科 | Anesthesiology checks you before surgery. | 💤
+infectious diseases | 感染科 | Infectious diseases handles tropical fevers. | 🦠
+plastic surgery | 整形外科 | Burn victims are treated in plastic surgery. | 🩹
+physical medicine and rehabilitation | 復健科 | After the stroke, he was seen by physical medicine and rehabilitation. | 🏋️
+attending physician | 主治醫師 | The attending physician will explain the results. | 👨‍⚕️
+resident | 住院醫師 | A resident checked on me during the night. | 🌙
+head nurse | 護理長 | The head nurse runs the ward. | 👩‍⚕️
+medical center | 醫學中心 | Serious cases are sent to a medical center. | 🏥
+regional hospital | 區域醫院 | A regional hospital can handle most surgeries. | 🏨
+tiered healthcare | 分級醫療 | Tiered healthcare encourages people to start at local clinics. | 🪜
+inpatient | 住院病人 | Inpatients can order meals from the hospital kitchen. | 🛏️
+outpatient | 門診病人 | Most outpatients leave within an hour. | 🚶
+medical history | 病史 | The doctor asked about my medical history. | 📂
 `
 });

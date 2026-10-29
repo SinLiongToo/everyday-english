@@ -843,7 +843,11 @@ window.TOPICS = [
         ["A", "Good morning. What seems to be the problem?", "早安，哪裡不舒服？"],
         ["B", "I've had a cough and a rash for about a week.", "我咳嗽、起疹子大概一個星期了。"],
         ["A", "Are you allergic to any medication?", "你對任何藥物過敏嗎？"],
-        ["B", "Not that I know of. Will I need antibiotics?", "就我所知沒有。我需要吃抗生素嗎？"]
+        ["B", "Not that I know of. Will I need antibiotics?", "就我所知沒有。我需要吃抗生素嗎？"],
+        ["A", "Not yet. If it isn't better in three days, come back for a follow-up visit.", "先不用。如果三天後沒有好轉，再回來複診。"],
+        ["B", "Okay. Where do I pick up my medicine?", "好的。我要在哪裡領藥？"],
+        ["A", "Pay at the cashier first, then take the slip to the pharmacy window.", "先去批價，再拿單子到藥局窗口領藥。"],
+        ["B", "Thank you, doctor.", "謝謝醫生。"]
       ]
     },
     adv: {

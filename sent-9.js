@@ -307,3 +307,43 @@ You can't pour from an empty cup. | 你無法從空杯子裡倒出水來（先�
 Burnout is a warning sign, not a badge of honor. | 過勞是警訊，不是榮譽勳章。
 `
 });
+
+// 看醫生・科別
+addPhrases("health", {
+  basic: `
+I want to see a doctor. | 我想看醫生。
+Where is the eye doctor? | 眼科在哪裡？
+Here is my health insurance card. | 這是我的健保卡。
+Please take a number. | 請抽號碼牌。
+Please wait until your number is called. | 請等候叫號。
+It's your turn now. | 現在輪到你了。
+Do I pay now or later? | 我現在付錢還是之後付？
+Where do I get my medicine? | 我要在哪裡領藥？
+`,
+  inter: `
+Which department should I register for? | 我應該掛哪一科？
+I'd like to register for internal medicine. | 我要掛內科。
+For a skin rash, register for dermatology. | 皮膚起疹子要掛皮膚科。
+For a sore throat or blocked nose, go to ENT. | 喉嚨痛或鼻塞就掛耳鼻喉科。
+Children should see a pediatrician. | 小孩要看小兒科。
+For a sprained ankle, go to orthopedics. | 腳踝扭傷要看骨科。
+Is this your first visit or a follow-up? | 這是初診還是複診？
+Can I register online? | 可以線上掛號嗎？
+Which doctor is seeing patients this afternoon? | 今天下午是哪位醫師看診？
+The morning clinic is fully booked. | 上午的門診已經額滿了。
+What number is the doctor on now? | 現在看到幾號了？
+Please pay at the cashier, then pick up your medicine. | 請先去批價，再去領藥。
+When is my follow-up appointment? | 我下次複診是什麼時候？
+Could you give me a referral to the hospital? | 可以幫我開轉診單到醫院嗎？
+`,
+  adv: `
+In Taiwan, you can usually see a specialist without a referral. | 在台灣，通常不需要轉診就能看專科醫師。
+Tiered healthcare aims to keep minor cases out of medical centers. | 分級醫療的目的是讓小病不必去醫學中心。
+Going straight to a big hospital is convenient but overloads it. | 直接去大醫院很方便，但會讓醫院負擔過重。
+A referral can lower your co-payment at large hospitals. | 有轉診單可以降低在大醫院的部分負擔。
+Choosing the right department saves time and a second registration fee. | 掛對科可以省時間，也省下第二次掛號費。
+If you're unsure which department to choose, ask the information desk. | 如果不確定要掛哪一科，可以問服務台。
+Many hospitals let you track the queue number online. | 許多醫院可以上網查看看診進度。
+The attending physician reviews every case on morning rounds. | 主治醫師在早上巡房時查看每個病例。
+`
+});
