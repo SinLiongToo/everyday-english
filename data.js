@@ -986,6 +986,92 @@ window.TOPICS = [
     }
   },
   {
+    // All words are in vocab-15.js and all phrases in sent-11.js.
+    id: "running", icon: "🏃", zh: "跑步・馬拉松", en: "Running & Marathon",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you want to run with me in the park tomorrow?", "你明天要跟我去公園跑步嗎？"],
+        ["B", "Sure! What time?", "好啊！幾點？"],
+        ["A", "Six in the morning, before it gets hot.", "早上六點，趁天氣還沒變熱。"],
+        ["B", "That's early! How far do you run?", "好早！你跑多遠？"],
+        ["A", "About five kilometers. We can go slowly.", "大概五公里，我們可以慢慢跑。"],
+        ["B", "Okay. I'll bring water and see you at the gate.", "好，我會帶水，大門口見。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Are you ready for the Taipei Marathon next month?", "下個月的台北馬拉松準備好了嗎？"],
+        ["B", "Almost. I did a 32-kilometer long run last Sunday.", "差不多了，上星期天我跑了 32 公里的長距離。"],
+        ["A", "Nice! What pace are you aiming for?", "厲害！你打算跑什麼配速？"],
+        ["B", "About six minutes per kilometer. I want to finish under four and a half hours.", "大約每公里六分鐘，我想在四個半小時內完賽。"],
+        ["A", "Don't start too fast. Most people hit the wall around 30K.", "別一開始衝太快，很多人在 30 公里左右撞牆。"],
+        ["B", "I know. I'll take an energy gel every 45 minutes and drink at every water station.", "我知道，我每 45 分鐘吃一包能量膠，每個水站都喝水。"],
+        ["A", "Good plan. And start tapering this week.", "好計畫。這星期開始減量吧。"],
+        ["B", "Will do. See you at the finish line!", "會的，終點線見！"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Your splits were remarkably even. Was that deliberate?", "你的分段配速非常平均，是刻意的嗎？"],
+        ["B", "Yes. I ran just below my lactate threshold and aimed for a slight negative split.", "是的。我跑在乳酸閾值稍下方，目標是後半程稍微加快。"],
+        ["A", "How much of your training was easy running?", "你的訓練裡有多少是輕鬆跑？"],
+        ["B", "About eighty percent. Zone 2 work built my aerobic base, and intervals did the rest.", "大約八成。二區訓練打下有氧基礎，其餘靠間歇訓練。"],
+        ["A", "Did the carbon-plated shoes make a difference?", "碳板跑鞋有差嗎？"],
+        ["B", "They improve running economy, but they're no substitute for consistent mileage.", "它們能提升跑步經濟性，但取代不了穩定的跑量。"],
+        ["A", "What about fueling? Plenty of runners bonk in the heat.", "補給呢？很多跑者在高溫下會能量耗盡。"],
+        ["B", "I practiced gut training for weeks, so I could take ninety grams of carbs an hour.", "我練了好幾週的腸胃耐受，所以每小時能吃下 90 克碳水。"]
+      ]
+    }
+  },
+  {
+    // All words are in vocab-15.js and all phrases in sent-11.js.
+    id: "basketball", icon: "🏀", zh: "籃球", en: "Basketball",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you want to play basketball after school?", "放學後要不要去打籃球？"],
+        ["B", "Yes! Where?", "要！在哪裡？"],
+        ["A", "At the court in the park. Bring your ball.", "公園的球場，帶你的球來。"],
+        ["B", "Okay. Can my brother play too?", "好。我弟弟也可以一起打嗎？"],
+        ["A", "Sure. Then we have three on each team.", "當然，這樣每隊就有三個人了。"],
+        ["B", "Great! The first team to 21 points wins.", "太好了！先得 21 分的隊伍贏。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Did you watch the game last night?", "你昨晚有看比賽嗎？"],
+        ["B", "Yes! What a buzzer-beater at the end!", "有！最後那記壓哨球太猛了！"],
+        ["A", "They were down by eight in the fourth quarter.", "他們第四節還落後八分。"],
+        ["B", "Their point guard took over. He had 35 points and 10 assists.", "他們的控球後衛接管比賽，拿下 35 分 10 助攻。"],
+        ["A", "And their defense finally stopped the fast breaks.", "而且他們的防守終於擋住了快攻。"],
+        ["B", "I think they'll make the playoffs this year.", "我覺得他們今年會打進季後賽。"],
+        ["A", "Want to shoot some hoops this weekend?", "這週末要不要去投幾球？"],
+        ["B", "Sure. I need to work on my free throws.", "好啊，我需要練罰球。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Why do they keep losing close games?", "他們為什麼一直輸掉膠著的比賽？"],
+        ["B", "Their spacing collapses late. Everyone stands around for isolation plays.", "他們末段的空間拉不開，大家都站著看單打。"],
+        ["A", "The analytics say they take too many mid-range jumpers.", "數據顯示他們投太多中距離跳投。"],
+        ["B", "Exactly. They need more corner threes and shots at the rim.", "沒錯，他們需要更多底角三分和籃下出手。"],
+        ["A", "Their defense isn't helping either. The drop coverage gets torched by pull-up shooters.", "防守也沒幫上忙，後撤防守被急停跳投的射手打爆。"],
+        ["B", "If they don't make a trade before the deadline, they'll end up in the lottery.", "如果交易截止日前不做交易，他們會落入樂透區。"]
+      ]
+    }
+  },
+  {
     id: "politics", icon: "🏛️", zh: "政治", en: "Politics & Society",
     basic: {
       v: [
