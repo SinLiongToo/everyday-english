@@ -824,6 +824,40 @@ window.TOPICS = [
     }
   },
   {
+    // All words are in vocab-13.js and all phrases in sent-9.js.
+    id: "health", icon: "🩺", zh: "身體・健康", en: "Body & Health",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "What's wrong? You don't look well.", "怎麼了？你看起來不太舒服。"],
+        ["B", "I have a runny nose and a sore throat.", "我流鼻水，喉嚨也痛。"],
+        ["A", "Do you have a fever?", "你有發燒嗎？"],
+        ["B", "A little. I'll take some medicine and go to bed early.", "有一點。我會吃點藥，早點睡。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Good morning. What seems to be the problem?", "早安，哪裡不舒服？"],
+        ["B", "I've had a cough and a rash for about a week.", "我咳嗽、起疹子大概一個星期了。"],
+        ["A", "Are you allergic to any medication?", "你對任何藥物過敏嗎？"],
+        ["B", "Not that I know of. Will I need antibiotics?", "就我所知沒有。我需要吃抗生素嗎？"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "My father was just diagnosed with hypertension.", "我爸爸剛被診斷出高血壓。"],
+        ["B", "Is it chronic, or could lifestyle changes bring it down?", "是慢性的嗎？還是改變生活習慣就能降下來？"],
+        ["A", "The doctor says diet and exercise matter as much as medication.", "醫生說飲食和運動跟藥物一樣重要。"],
+        ["B", "That's encouraging. Preventive care makes such a difference.", "那很令人鼓舞。預防保健的影響真的很大。"]
+      ]
+    }
+  },
+  {
     id: "sports", icon: "⚽", zh: "運動", en: "Sports & Fitness",
     basic: {
       v: [
