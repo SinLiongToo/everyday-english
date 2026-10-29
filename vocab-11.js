@@ -33,6 +33,8 @@ holiday | 假日 | We visit Grandma every holiday. | 🏖️
 goldfish | 金魚 | My brother has a goldfish. | 🐠
 hamster | 倉鼠 | Our hamster sleeps all day. | 🐹
 rabbit | 兔子 | My sister wants a rabbit. | 🐰
+booger | 鼻屎 | There's a booger on your face. Use a tissue! | 👃
+earwax | 耳屎 | Don't clean earwax with your finger. | 👂
 `,
   inter: `
 brother-in-law | 姊夫；妹夫；大伯；小叔 | My brother-in-law is a chef. | 👨
@@ -69,6 +71,7 @@ budget | 預算 | We need a family budget. | 📒
 savings | 存款 | We used our savings for the house. | 🏦
 nursing home | 安養院 | Grandpa moved into a nursing home. | 🏥
 funeral | 喪禮 | The whole family attended the funeral. | ⚱️
+eye discharge | 眼屎（口語常說 sleep / eye crust） | Wipe the eye discharge with a clean, wet cloth. | 👁️
 `,
   adv: `
 primogeniture | 長子繼承制 | Primogeniture gave everything to the eldest son. | 👑
