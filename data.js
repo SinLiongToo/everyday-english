@@ -836,6 +836,88 @@ window.TOPICS = [
     }
   },
   {
+    // All words and phrases for this topic are in vocab-19.js and sent-15.js.
+    id: "tax", icon: "🧾", zh: "報稅", en: "Taxes",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Did you do your taxes yet?", "你報稅了嗎？"],
+        ["B", "Not yet. When is the deadline?", "還沒，截止日是什麼時候？"],
+        ["A", "May 31. You can file on your phone.", "5 月 31 日，用手機就可以報。"],
+        ["B", "Really? Is it hard?", "真的嗎？會很難嗎？"],
+        ["A", "Not at all. Just check the numbers and confirm.", "一點也不難，核對數字然後確認就好。"],
+        ["B", "Great. I hope I get a refund!", "太好了，希望我能退稅！"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Should I take the standard deduction or itemize?", "我該用標準扣除額還是列舉扣除？"],
+        ["B", "Add up your receipts first: insurance, medical bills and donations.", "先把收據加起來：保險費、醫藥費和捐款。"],
+        ["A", "It's only about 90,000 dollars.", "大概只有九萬元。"],
+        ["B", "Then the standard deduction is higher. Take that.", "那標準扣除額比較高，用標準的。"],
+        ["A", "My mom lives with me. Can I claim her as a dependent?", "我媽跟我住，我可以把她列為受扶養親屬嗎？"],
+        ["B", "If she's over sixty and you support her, yes.", "如果她滿六十歲而且由你扶養，可以。"],
+        ["A", "And I rent my apartment. Is there anything for that?", "我是租屋族，這有什麼可以扣的嗎？"],
+        ["B", "Yes, there's a rent deduction. Keep your lease and payment records.", "有，有房屋租金扣除額，把租約和付款紀錄留好。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The government keeps running big surpluses. Shouldn't taxes be cut?", "政府一直有大筆超徵，不是該減稅嗎？"],
+        ["B", "Some want cash handouts; others want to invest in energy and defense.", "有人想普發現金，也有人想投資能源和國防。"],
+        ["A", "Handouts feel good, but they don't fix the structure.", "發錢讓人開心，但解決不了結構問題。"],
+        ["B", "Right. The tax base is narrow. Stock gains, for example, aren't taxed.", "沒錯，稅基太窄，例如股票交易所得就不課稅。"],
+        ["A", "When the government tried to tax them in 2012, the market reacted badly.", "2012 年政府想課徵證所稅時，市場反應很差。"],
+        ["B", "That's the dilemma: tax fairness versus market confidence.", "這就是兩難：租稅公平和市場信心之間的取捨。"]
+      ]
+    }
+  },
+  {
+    // All words and phrases for this topic are in vocab-20.js and sent-16.js.
+    id: "stocks", icon: "📈", zh: "股市投資", en: "Stock Market",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I want to start investing, but I don't know how.", "我想開始投資，但不知道怎麼做。"],
+        ["B", "Start with an ETF, like 0050.", "從 ETF 開始，像 0050。"],
+        ["A", "Is it safe?", "安全嗎？"],
+        ["B", "No stock is totally safe, but an ETF spreads the risk.", "沒有股票是完全安全的，但 ETF 能分散風險。"],
+        ["A", "How much money do I need?", "我需要多少錢？"],
+        ["B", "Not much. You can buy odd lots with a few thousand dollars.", "不用很多，幾千元就可以買零股。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "TSMC hit a new high today!", "台積電今天創新高！"],
+        ["B", "Are you going to buy more?", "你要加碼嗎？"],
+        ["A", "I'm thinking about it, but the P/E ratio looks high.", "我在考慮，但本益比看起來偏高。"],
+        ["B", "I just use dollar-cost averaging every month.", "我就是每個月定期定額。"],
+        ["A", "Smart. Then you don't have to time the market.", "聰明，這樣就不用抓進出場時機。"],
+        ["B", "And I never use margin. Good sleep is worth more than extra profit.", "而且我從不融資，睡得好比多賺一點重要。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Foreign investors dumped chip stocks today.", "外資今天大賣半導體股。"],
+        ["B", "Probably taking profits after the long AI rally.", "大概是 AI 行情漲了很久之後獲利了結。"],
+        ["A", "The concentration risk worries me. TSMC is a huge part of the TAIEX.", "集中風險讓我擔心，台積電在加權指數裡占比太大了。"],
+        ["B", "That's why I hold global index funds as well.", "所以我也持有全球指數基金。"],
+        ["A", "Do you rebalance?", "你會做再平衡嗎？"],
+        ["B", "Once a year. It forces me to sell high and buy low.", "一年一次，它逼我高賣低買。"]
+      ]
+    }
+  },
+  {
     // All words for this topic are in vocab-8.js.
     id: "tech", icon: "💻", zh: "科技", en: "Technology",
     basic: {
