@@ -126,6 +126,18 @@ section.blk > h2 .num { color: var(--accent); }
 .vtools label { display: inline-flex; align-items: center; gap: 6px; font-size: .92rem; cursor: pointer; }
 .vtools input[type="checkbox"] { accent-color: var(--accent); width: 18px; height: 18px; }
 .vcard[hidden], .row[hidden] { display: none; }
+.gsearch { margin: 0 0 20px; }
+.gsearch input[type="search"] {
+  width: 100%; font: inherit; font-size: 1.05rem; color: var(--fg); background: var(--card);
+  border: 2px solid var(--border); border-radius: 12px; padding: 11px 14px;
+}
+.gsearch input[type="search"]:focus { border-color: var(--accent); outline: none; }
+.gsearch .note { margin: 8px 2px 0; }
+#gres { margin-top: 12px; }
+#gres:empty, .grid[hidden] { display: none; }
+.vmeta { grid-column: 1 / -1; font-size: .85rem; margin-top: 4px; }
+.vmeta a { text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.vmeta a:hover { text-decoration: underline; }
 #phr { max-height: 70vh; overflow-y: auto; overscroll-behavior: contain; padding: 2px 4px 2px 2px; }
 .row .pn { color: var(--muted); font-size: .8rem; min-width: 2.2em; padding-top: 3px; font-variant-numeric: tabular-nums; }
 .vcard.playing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
@@ -322,6 +334,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       cardCount: (w, s) => `${w} 個單字・${s} 個句子`,
       autoPlay: "▶ 自動播放", apMode: "播放內容", apRep: "每項重複次數",
       modeW: "單字", modeWE: "單字＋例句", modeE: "例句",
+      gsearch: "🔍 搜尋全部單字（英文或中文）",
+      gFound: (n, shown) => n > shown ? `找到 ${n} 個單字，顯示前 ${shown} 個` : `找到 ${n} 個單字`,
+      gNone: "找不到符合的單字，試試其他拼法或中文。",
       foot: "練習進度只儲存在你的瀏覽器中。"
     },
     en: {
@@ -356,6 +371,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       cardCount: (w, s) => `${w} words · ${s} sentences`,
       autoPlay: "▶ Auto-play", apMode: "What to play", apRep: "Repeat each item",
       modeW: "Words", modeWE: "Words + examples", modeE: "Examples",
+      gsearch: "🔍 Search all words",
+      gFound: (n, shown) => n > shown ? `${n} words found, showing the first ${shown}` : `${n} words found`,
+      gNone: "No matching words. Try another spelling.",
       foot: "Your progress is saved only in this browser."
     }
   };
@@ -520,6 +538,46 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     return [d, n];
   }
 
+  // One word card. `meta` adds a line under it (used by the all-topics search to show where the word lives).
+  function vcardHTML(tp, lv, [w, m, ex], meta = "") {
+    const k = key(tp.id, lv, w), done = state.learned.has(k), pic = picFor(tp.id, w);
+    return `<div class="vcard${done ? " done" : ""}${pic ? " haspic" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
+        ${pic ? `<div class="vpic" aria-hidden="true">${pic}</div>` : ""}
+        <div class="vword${w.length > 11 && !w.includes(" ") ? " long" : ""}">${esc(w)}</div>
+        <div class="vact">
+          <button class="ibtn" data-say="${esc(w)}" title="${t("speak")}" aria-label="${t("speak")}: ${esc(w)}">🔊</button>
+          <button class="ibtn${done ? " on" : ""}" data-learn="${esc(k)}" title="${t("markDone")}" aria-label="${t("markDone")}" aria-pressed="${done}">✓</button>
+        </div>
+        ${zh() ? `<div class="vzh tr">${esc(m)}</div>` : "<div></div>"}
+        <div class="vex">${esc(ex)} <button class="ibtn" style="height:28px;min-width:28px;font-size:.8rem" data-say="${esc(ex)}" aria-label="${t("speak")}">🔊</button></div>
+        ${meta}
+      </div>`;
+  }
+
+  // ---------- search across every topic ----------
+  const ALL = [];
+  TOPICS.forEach((tp) => LEVELS.forEach((lv) => tp[lv].v.forEach((e) =>
+    ALL.push({ tp, lv, e, w: e[0].toLowerCase(), m: e[1] }))));
+  const G_MAX = 60;
+  let gq = "";
+  function searchAll(q) {
+    const wordStart = new RegExp("\\b" + reEsc(q), "i");
+    const rank = (x) => x.w === q ? 0 : x.w.startsWith(q) ? 1 : wordStart.test(x.w) ? 2 : x.w.includes(q) ? 3 : x.m.includes(q) ? 4 : -1;
+    return ALL.map((x) => ({ x, r: rank(x) })).filter((o) => o.r >= 0)
+      .sort((a, b) => a.r - b.r || a.x.w.length - b.x.w.length || a.x.w.localeCompare(b.x.w))
+      .map((o) => o.x);
+  }
+  function renderSearch() {
+    const q = gq.trim().toLowerCase();
+    const box = document.getElementById("gres"), info = document.getElementById("ginfo");
+    document.getElementById("tgrid").hidden = !!q;
+    if (!q) { box.innerHTML = ""; info.textContent = ""; return; }
+    const hits = searchAll(q);
+    info.textContent = hits.length ? t("gFound")(hits.length, Math.min(hits.length, G_MAX)) : t("gNone");
+    box.innerHTML = hits.slice(0, G_MAX).map(({ tp, lv, e }) => vcardHTML(tp, lv, e,
+      `<div class="vmeta"><a href="#/${tp.id}/${lv}/${encodeURIComponent(e[0])}"><span aria-hidden="true">${tp.icon}</span>${esc(zh() ? tp.zh : tp.en)} · <span class="dot ${lv}"></span>${t(lv)} →</a></div>`)).join("");
+  }
+
   function renderHome() {
     document.title = zh() ? "生活英語 Everyday English" : "Everyday English";
     const levels = LEVELS.map((lv) =>
@@ -541,16 +599,25 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <p>${esc(t("heroDesc"))}</p>
         <div class="levels">${levels}</div>
       </section>
+      <div class="gsearch">
+        <input type="search" id="gq" placeholder="${t("gsearch")}" aria-label="${t("gsearch")}" autocomplete="off">
+        <p class="note" id="ginfo" aria-live="polite"></p>
+        <div class="vgrid" id="gres"></div>
+      </div>
       <div class="stats">
         <div class="stat"><b>${state.learned.size}</b><small>${t("statLearned")}</small></div>
         <div class="stat"><b>${totalWords}</b><small>${t("statWords")}</small></div>
         <div class="stat"><b>${totalSent.toLocaleString("en")}</b><small>${t("statSent")}</small></div>
         <div class="stat"><b>${TOPICS.length}</b><small>${t("statTopics")}</small></div>
       </div>
-      <div class="grid">${cards}</div>`;
+      <div class="grid" id="tgrid">${cards}</div>`;
+    const gin = document.getElementById("gq");
+    gin.value = gq;
+    gin.oninput = () => { gq = gin.value; renderSearch(); };
+    renderSearch();
   }
 
-  function renderTopic(tp, lv) {
+  function renderTopic(tp, lv, word = "") {
     const L = tp[lv];
     const idx = TOPICS.indexOf(tp);
     const prev = TOPICS[(idx - 1 + TOPICS.length) % TOPICS.length];
@@ -560,19 +627,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     const tabs = LEVELS.map((l) =>
       `<button class="tab ${l}" role="tab" aria-selected="${l === lv}" data-lv="${l}">${t(l)} <small>${t(l + "Cefr")}</small></button>`).join("");
 
-    const vocab = L.v.map(([w, m, ex]) => {
-      const k = key(tp.id, lv, w), done = state.learned.has(k), pic = picFor(tp.id, w);
-      return `<div class="vcard${done ? " done" : ""}${pic ? " haspic" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
-        ${pic ? `<div class="vpic" aria-hidden="true">${pic}</div>` : ""}
-        <div class="vword${w.length > 11 && !w.includes(" ") ? " long" : ""}">${esc(w)}</div>
-        <div class="vact">
-          <button class="ibtn" data-say="${esc(w)}" title="${t("speak")}" aria-label="${t("speak")}: ${esc(w)}">🔊</button>
-          <button class="ibtn${done ? " on" : ""}" data-learn="${esc(k)}" title="${t("markDone")}" aria-label="${t("markDone")}" aria-pressed="${done}">✓</button>
-        </div>
-        ${zh() ? `<div class="vzh tr">${esc(m)}</div>` : "<div></div>"}
-        <div class="vex">${esc(ex)} <button class="ibtn" style="height:28px;min-width:28px;font-size:.8rem" data-say="${esc(ex)}" aria-label="${t("speak")}">🔊</button></div>
-      </div>`;
-    }).join("");
+    const vocab = L.v.map((e) => vcardHTML(tp, lv, e)).join("");
 
     const phrases = L.p.map(([en, z], i) => `<li class="row" data-q="${esc((en + " " + z).toLowerCase())}">
         <span class="pn">${i + 1}</span>
@@ -644,8 +699,11 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       </nav>`;
 
     app.querySelectorAll(".tab").forEach((b) => b.onclick = () => { location.hash = `#/${tp.id}/${b.dataset.lv}`; });
-    document.getElementById("vq").oninput = filterVocab;
+    const vq = document.getElementById("vq");
+    vq.oninput = filterVocab;
     document.getElementById("vun").onchange = filterVocab;
+    // Arriving from the all-topics search: show just that word.
+    if (word) vq.value = word;
     filterVocab();
     // Speed changes apply to the next sentence, so an auto-play in progress keeps going.
     const speedBtn = document.getElementById("speedBtn");
@@ -776,7 +834,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       const on = state.learned.has(k);
       lb.classList.toggle("on", on); lb.setAttribute("aria-pressed", String(on));
       lb.closest(".vcard").classList.toggle("done", on);
-      filterVocab();
+      if (document.getElementById("vq")) filterVocab();
     }
     // tap to reveal a hidden translation on touch screens
     const row = e.target.closest(".row, .vcard");
@@ -786,12 +844,14 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   // ---------- router ----------
   function render() {
     stopSpeech();
-    const [, id, lv] = location.hash.replace(/^#\/?/, "#/").split("/");
+    const [, id, lv, w] = location.hash.replace(/^#\/?/, "#/").split("/");
     const tp = TOPICS.find((x) => x.id === id);
     if (tp) {
       const level = LEVELS.includes(lv) ? lv : state.level;
       state.level = level; store.set("level", level);
-      renderTopic(tp, level);
+      let word = "";
+      try { word = w ? decodeURIComponent(w) : ""; } catch (e) {}
+      renderTopic(tp, level, word);
     } else {
       renderHome();
     }
