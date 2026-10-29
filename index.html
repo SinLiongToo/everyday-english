@@ -141,6 +141,8 @@ section.blk > h2 .num { color: var(--accent); }
 #phr { max-height: 70vh; overflow-y: auto; overscroll-behavior: contain; padding: 2px 4px 2px 2px; }
 .row .pn { color: var(--muted); font-size: .8rem; min-width: 2.2em; padding-top: 3px; font-variant-numeric: tabular-nums; }
 .vcard.playing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+/* Keep the item being read clear of the sticky header. */
+.vcard, .row { scroll-margin-top: 72px; scroll-margin-bottom: 16px; }
 .aptools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
 .tbtn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); font-weight: 700; }
 select.tbtn { font: inherit; font-size: .9rem; color: var(--fg); cursor: pointer; }
@@ -248,6 +250,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 <header class="top">
   <div class="top-in">
     <a class="brand" href="#/" id="brand"></a>
+    <button class="tbtn primary" id="stopBtn" type="button" hidden></button>
     <button class="tbtn" id="trBtn" type="button"></button>
     <button class="tbtn" id="langBtn" type="button" aria-label="Language">🌐 <span id="langLbl"></span></button>
     <button class="tbtn" id="themeBtn" type="button" aria-label="Theme"></button>
@@ -453,7 +456,10 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   }
   let playToken = 0;
   // Cancelling right before speaking makes some phones drop the next sentence, so only cancel when busy.
-  function stopSpeech() { playToken++; if (synth && (synth.speaking || synth.pending)) synth.cancel(); }
+  // The header's Stop button stays on screen while a long list is read aloud.
+  const stopBtn = document.getElementById("stopBtn");
+  function stopSpeech() { playToken++; stopBtn.hidden = true; if (synth && (synth.speaking || synth.pending)) synth.cancel(); }
+  stopBtn.onclick = stopSpeech;
 
   // In-app browsers (LINE, Facebook, Instagram, WeChat) usually can't speak at all.
   const UA = navigator.userAgent;
@@ -481,6 +487,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     stopSpeech();
     const my = playToken;
     btn.dataset.on = "1"; btn.textContent = t("stop");
+    stopBtn.hidden = false;
     for (const it of getItems()) {
       if (my !== playToken) break;
       it.el.classList.add("playing");
@@ -496,6 +503,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       if (my === playToken) await wait(state.slow ? 800 : 450);
     }
     delete btn.dataset.on; btn.textContent = label;
+    if (my === playToken) stopBtn.hidden = true;
   }
 
   // ---------- header ----------
@@ -517,6 +525,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     trBtn.textContent = state.hideTr ? t("trHide") : t("trShow");
     trBtn.setAttribute("aria-pressed", String(state.hideTr));
     document.getElementById("foot").textContent = t("foot");
+    stopBtn.textContent = t("stop");
   }
   document.getElementById("langBtn").onclick = () => {
     state.lang = state.lang === "zh" ? "en" : "zh"; store.set("lang", state.lang); applyChrome(); render();
