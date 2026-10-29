@@ -646,6 +646,46 @@ window.TOPICS = [
     }
   },
   {
+    // All words and phrases for this topic are in vocab-21.js and sent-17.js.
+    id: "movie", icon: "🎬", zh: "電影口語", en: "Movie & TV Talk",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Come on, let's go see a movie.", "走啦，我們去看電影。"],
+        ["B", "Now? I'm beat.", "現在？我累壞了。"],
+        ["A", "Seriously? It's the new superhero movie!", "真的假的？是那部新的超級英雄電影耶！"],
+        ["B", "Fine, I'm in. But you're buying the popcorn.", "好啦，算我一份。但爆米花你請。"],
+        ["A", "Deal!", "成交！"],
+        ["B", "And no talking during the movie. I mean it.", "還有看電影時不准講話，我是認真的。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I need a favor.", "我需要你幫個忙。"],
+        ["B", "What's in it for me?", "我有什麼好處？"],
+        ["A", "Just humor me. Help me move this Saturday, and dinner's on me.", "就順著我一次嘛。這週六幫我搬家，晚餐我請。"],
+        ["B", "Let me guess. You live on the fifth floor with no elevator.", "我猜猜，你住五樓而且沒電梯。"],
+        ["A", "Long story short... yes.", "長話短說……對。"],
+        ["B", "You've got to be kidding me. Fine, but you owe me big time.", "你一定是在開玩笑。好啦，但你欠我一次大的。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Let's address the elephant in the room. The project is three weeks behind.", "我們來談談大家都避而不談的問題吧，專案落後三週了。"],
+        ["B", "Somebody dropped the ball, but let's not throw anyone under the bus.", "有人出了包，但我們別把任何人推出去當替死鬼。"],
+        ["A", "Agreed. The bottom line is we need more time.", "同意。重點是我們需要更多時間。"],
+        ["B", "Then I'll bite the bullet and tell the client today.", "那我就硬著頭皮今天告訴客戶。"],
+        ["A", "Good call. Better to come clean now than get caught later.", "好決定，現在坦白總比之後被抓到好。"],
+        ["B", "It's now or never. Wish me luck.", "機不可失，祝我好運吧。"]
+      ]
+    }
+  },
+  {
     id: "work", icon: "💼", zh: "工作職場", en: "Work & Career",
     basic: {
       v: [
