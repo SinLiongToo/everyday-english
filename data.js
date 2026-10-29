@@ -1072,6 +1072,172 @@ window.TOPICS = [
     }
   },
   {
+    // Baseball and Badminton words are in vocab-16.js, phrases in sent-12.js.
+    id: "baseball", icon: "⚾", zh: "棒球", en: "Baseball",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you want to play catch?", "要不要來玩傳接球？"],
+        ["B", "Sure! Do you have a glove for me?", "好啊！你有手套可以借我嗎？"],
+        ["A", "Yes, here you go. I'll throw it slowly.", "有，給你。我會丟慢一點。"],
+        ["B", "I caught it! Now I'll throw it back.", "我接到了！換我丟回去。"],
+        ["A", "Nice throw! Let's watch the game tonight too.", "丟得好！我們今晚也一起看比賽吧。"],
+        ["B", "Great idea. Which team do you like?", "好主意。你支持哪一隊？"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "What inning is it?", "現在第幾局？"],
+        ["B", "Bottom of the eighth. We're down by one.", "八局下，我們落後一分。"],
+        ["A", "Runners on first and second, one out.", "一、二壘有人，一出局。"],
+        ["B", "Their closer is warming up in the bullpen.", "他們的終結者在牛棚熱身了。"],
+        ["A", "Here's the pitch... it's a line drive to left field!", "投出……左外野平飛球！"],
+        ["B", "The runner scores! It's a tie game!", "跑者回來得分！比數追平了！"],
+        ["A", "Let's go! One more hit and we take the lead.", "加油！再一支安打就超前了。"],
+        ["B", "This is why I love baseball.", "這就是我愛棒球的原因。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Why did the manager pull the starter after only five innings?", "總教練為什麼只投五局就把先發換下來？"],
+        ["B", "The third time through the order, hitters get much better against him.", "第三輪面對打線時，打者對他的表現會好很多。"],
+        ["A", "His spin rate also dropped, and his velocity was down two miles an hour.", "他的轉速也下降了，球速掉了兩英里。"],
+        ["B", "Exactly. The analytics department has a strict pitch count for him.", "沒錯，數據部門給他嚴格的用球數限制。"],
+        ["A", "Old-school fans hate it. They want complete games.", "老派球迷很討厭這樣，他們想看完投。"],
+        ["B", "But protecting his arm matters more than one game in May.", "但保護他的手臂比五月的一場比賽更重要。"]
+      ]
+    }
+  },
+  {
+    id: "badminton", icon: "🏸", zh: "羽球", en: "Badminton",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you want to play badminton after school?", "放學後要不要打羽球？"],
+        ["B", "Sure! I have two rackets.", "好啊！我有兩支球拍。"],
+        ["A", "Great. I'll bring the shuttlecocks.", "太好了，我帶羽毛球。"],
+        ["B", "Let's play in the gym. It's too windy outside.", "去體育館打吧，外面風太大了。"],
+        ["A", "Who serves first?", "誰先發球？"],
+        ["B", "You can serve first. Ready? Go!", "你先發。準備好了嗎？開始！"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Let's play doubles tonight. Can you book a court?", "今晚打雙打吧。你可以訂場地嗎？"],
+        ["B", "Done. Court 3 from eight to ten.", "訂好了，三號場八點到十點。"],
+        ["A", "Remember, when we attack, I'll stay at the net and you cover the back.", "記得，我們進攻時我守網前，你顧後場。"],
+        ["B", "Got it. And when we defend, we go side by side.", "了解。防守時我們就左右站。"],
+        ["A", "Their smashes are strong, so let's lift high and deep.", "他們殺球很重，我們挑高挑深一點。"],
+        ["B", "And use drop shots to pull them forward.", "再用切球把他們引到前場。"],
+        ["A", "Good plan. Did you restring your racket?", "好計畫。你球拍重新穿線了嗎？"],
+        ["B", "Yes, 26 pounds. It feels great now.", "穿了，26 磅，現在手感很好。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Taiwan's men's doubles pair won Olympic gold again.", "台灣男雙又拿下奧運金牌了。"],
+        ["B", "Their rotation is seamless. They never leave a gap on the court.", "他們的輪轉天衣無縫，場上從不留空檔。"],
+        ["A", "And their flat drives give opponents no time to react.", "他們的平抽擋也讓對手來不及反應。"],
+        ["B", "The deception in their net play is world-class.", "他們網前的假動作是世界級的。"],
+        ["A", "It's amazing how badminton went from a backyard game to a national passion.", "羽球從後院遊戲變成全民熱愛的運動，真了不起。"],
+        ["B", "Success at the top inspires a whole generation of kids to pick up a racket.", "頂尖的成功能激勵一整個世代的孩子拿起球拍。"]
+      ]
+    }
+  },
+  {
+    // Swimming and Cycling words are in vocab-17.js, phrases in sent-13.js.
+    id: "swimming", icon: "🏊", zh: "游泳", en: "Swimming",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Can you swim?", "你會游泳嗎？"],
+        ["B", "A little. I'm still learning.", "會一點，我還在學。"],
+        ["A", "Let's go to the pool on Saturday.", "我們星期六去游泳池吧。"],
+        ["B", "Okay. Don't forget your swimsuit and goggles.", "好，別忘了你的泳衣和蛙鏡。"],
+        ["A", "And a swim cap. It's required at the pool.", "還有泳帽，游泳池規定要戴。"],
+        ["B", "Got it. Let's stay in the shallow end at first.", "知道了。我們先在淺水區就好。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "How many laps did you swim today?", "你今天游了幾趟？"],
+        ["B", "Forty laps, mostly freestyle, with some breaststroke to rest.", "四十趟，大多是自由式，中間用蛙式休息。"],
+        ["A", "Nice. How's your breathing?", "不錯。你的換氣怎麼樣？"],
+        ["B", "Much better. I can breathe on both sides now.", "好多了，我現在可以兩邊換氣。"],
+        ["A", "Want to try open water swimming at Sun Moon Lake?", "要不要試試日月潭的公開水域游泳？"],
+        ["B", "Maybe. I'm nervous about swimming without a wall to rest on.", "也許吧，沒有池壁可以休息讓我有點緊張。"],
+        ["A", "There are lifeguards and buoys all along the route.", "整條路線都有救生員和浮標。"],
+        ["B", "Okay, I'll sign up if you swim with me.", "好吧，你陪我游的話我就報名。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Your stroke rate is high, but your distance per stroke is short.", "你的划頻很高，但每划的距離很短。"],
+        ["B", "So I'm spinning my arms without catching enough water?", "所以我手臂一直轉，卻沒抓到足夠的水？"],
+        ["A", "Exactly. Work on an early vertical forearm to improve your catch.", "沒錯，練習早期垂直前臂來改善抓水。"],
+        ["B", "Should I also do more kick sets?", "我也應該多做踢腿組嗎？"],
+        ["A", "Yes, a stronger kick will keep your hips high and reduce drag.", "對，更強的踢腿能讓臀部保持在高位，減少阻力。"],
+        ["B", "Then I'll focus on technique before adding more volume.", "那我先專注技術，再增加訓練量。"]
+      ]
+    }
+  },
+  {
+    id: "cycling", icon: "🚴", zh: "自行車", en: "Cycling",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Let's ride bikes along the river this weekend.", "這週末我們沿著河邊騎腳踏車吧。"],
+        ["B", "Sounds fun! I'll rent a YouBike.", "聽起來好好玩！我會租 YouBike。"],
+        ["A", "Don't forget your helmet.", "別忘了你的安全帽。"],
+        ["B", "I won't. How far do you want to ride?", "不會的。你想騎多遠？"],
+        ["A", "About twenty kilometers. We can stop for ice cream.", "大約二十公里，我們可以停下來吃冰淇淋。"],
+        ["B", "Perfect. See you at the bike path at nine.", "完美，九點自行車道見。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I'm planning to cycle around Taiwan next month.", "我計畫下個月單車環島。"],
+        ["B", "Wow! How many days will it take?", "哇！要騎幾天？"],
+        ["A", "About nine days, around 100 kilometers a day.", "大約九天，一天騎一百公里左右。"],
+        ["B", "Which way are you going?", "你要往哪個方向騎？"],
+        ["A", "Counterclockwise, so the wind is behind me on the west coast.", "逆時針，這樣在西部會是順風。"],
+        ["B", "Bring spare tubes and a pump. Flats happen.", "帶備用內胎和打氣筒，一定會爆胎的。"],
+        ["A", "I will. And I'll wear bright clothes and use lights in the tunnels.", "會的。我也會穿亮色衣服，進隧道時開燈。"],
+        ["B", "Send me photos from the South Link Highway!", "到南迴公路要傳照片給我喔！"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "How did the climb up Wuling go?", "武嶺那段爬坡騎得怎麼樣？"],
+        ["B", "Brutal. I paced by power and stayed just under my FTP.", "很硬。我用功率控制配速，維持在 FTP 稍下方。"],
+        ["A", "Smart. Most people go into the red on the first steep section.", "聰明，大多數人在第一個陡坡就爆了。"],
+        ["B", "I also fueled every twenty minutes so I wouldn't bonk.", "我還每二十分鐘補給一次，以免能量耗盡。"],
+        ["A", "What gearing did you use?", "你用什麼齒比？"],
+        ["B", "A compact crankset with a 34-tooth cog. My knees thanked me.", "用小盤搭 34 齒的飛輪，我的膝蓋很感謝我。"]
+      ]
+    }
+  },
+  {
     id: "politics", icon: "🏛️", zh: "政治", en: "Politics & Society",
     basic: {
       v: [
