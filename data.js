@@ -1304,6 +1304,47 @@ window.TOPICS = [
     }
   },
   {
+    id: "military", icon: "🪖", zh: "軍事國防", en: "Military & Defense",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "My brother starts his military service next week.", "我哥下週要去當兵了。"],
+        ["B", "Is he nervous?", "他會緊張嗎？"],
+        ["A", "A little. He has to get up at six every day.", "有一點，他每天六點就得起床。"],
+        ["B", "Can your family visit him?", "你們家人可以去看他嗎？"],
+        ["A", "Yes, families can visit on Sundays.", "可以，星期天可以會客。"],
+        ["B", "Tell him good luck from me. One year goes by fast.", "幫我跟他說加油，一年很快就過了。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I got a call-up notice for reserve training.", "我收到教育召集的通知了。"],
+        ["B", "Oh no. How long is it?", "噢不，要多久？"],
+        ["A", "Two weeks. We'll do live-fire training at the range, first aid and urban defense.", "兩個星期，要到靶場實彈射擊，還有急救和城鎮防禦訓練。"],
+        ["B", "Will your boss let you go?", "你老闆會讓你去嗎？"],
+        ["A", "He has to. By law, employers must give reservists leave for it.", "他一定得讓，依法雇主必須給後備軍人公假。"],
+        ["B", "Is it during the Han Kuang exercise?", "是在漢光演習期間嗎？"],
+        ["A", "Right after. There'll be an air raid drill in the city that week too.", "就在演習之後，那週市區也會有防空演習。"],
+        ["B", "Good thing to know. I'll get indoors when the siren goes off.", "好險有先知道，警報響時我會待在室內。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you think asymmetric warfare really works for a small country?", "你覺得不對稱作戰對小國真的有用嗎？"],
+        ["B", "The idea is to make an invasion too costly: mobile missiles, drones and sea mines.", "它的想法是讓入侵代價太高：機動飛彈、無人機和水雷。"],
+        ["A", "But a blockade might be the bigger threat than a landing.", "但比起登陸，封鎖可能是更大的威脅。"],
+        ["B", "True. That's why energy security and undersea cables matter as much as weapons.", "沒錯，所以能源安全和海底電纜跟武器一樣重要。"],
+        ["A", "So resilience is part of deterrence.", "所以韌性也是嚇阻的一部分。"],
+        ["B", "Exactly. Deterrence only works if the other side believes you can hold out.", "正是，只有對方相信你撐得住，嚇阻才會有效。"]
+      ]
+    }
+  },
+  {
     id: "news", icon: "📰", zh: "新聞時事", en: "News & Current Events",
     basic: {
       v: [
