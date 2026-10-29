@@ -307,3 +307,84 @@ civilian casualties | 平民傷亡 | Precision weapons aim to reduce civilian ca
 defense spending | 國防支出 | Many countries are raising defense spending. | 💰
 `
 });
+
+// 軍演 Military exercises
+addVocab("military", {
+  basic: `
+military exercise | 軍事演習 | The military exercise lasts five days. | 🎯
+practice | 練習；演練 | This is only practice. | 🔁
+pretend | 假裝 | Soldiers pretend the enemy is coming. | 🎭
+real | 真的 | Is it real or a drill? | ❓
+smoke | 煙 | Smoke rose over the beach. | 💨
+explosion | 爆炸 | We heard an explosion far away. | 💥
+boom | 轟隆聲 | Boom! Did you hear that? | 🔊
+detour | 繞道 | Take a detour around the closed road. | ↪️
+alert | 警報；快訊 | My phone got an alert. | 📲
+calm | 冷靜的 | Stay calm. | 😌
+go inside | 進到室內 | Go inside now. | 🚪
+sky | 天空 | Jets flew across the sky. | 🌤️
+beach | 海灘 | Tanks drove onto the beach. | 🏖️
+reporter | 記者 | A reporter filmed the drill. | 🎥
+schedule | 時間表 | The drill schedule is on the news. | 🗓️
+noise | 噪音 | Sorry for the noise. | 📢
+flash | 閃光 | We saw a flash in the sky. | ⚡
+worry | 擔心 | Don't worry, it's a drill. | 😟
+ready | 準備好的 | Are you ready? | 👍
+open day | 營區開放日 | The base has an open day. | 🎪
+`,
+  inter: `
+joint exercise | 聯合演習 | The two navies held a joint exercise. | 🤝
+annual exercise | 年度演習 | Han Kuang is Taiwan's biggest annual exercise. | 📅
+tabletop exercise | 桌上推演 | The tabletop exercise came before the field drills. | 🗺️
+computer-assisted wargame | 電腦輔助兵推 | The computer-assisted wargame is held before the live drills. | 💻
+live-fire zone | 實彈射擊區 | Fishing boats must avoid the live-fire zone. | 🎯
+navigation warning | 航行警告 | The navy issued a navigation warning. | ⚠️
+no-fly zone | 禁航區 | A no-fly zone was set up during the exercise. | 🚫
+urban resilience exercise | 城鎮韌性演習 | The urban resilience exercise tests the whole city. | 🏙️
+evacuation drill | 疏散演練 | The school held an evacuation drill. | 🏃
+traffic control | 交通管制 | Traffic control starts at 1:30 p.m. | 🚦
+red team | 紅軍（假想敵） | The red team played the enemy. | 🟥
+blue team | 藍軍 | The blue team defended the beach. | 🟦
+opposing force | 對抗部隊；假想敵 | The opposing force tried to land at night. | ⚔️
+simulated attack | 模擬攻擊 | The drill began with a simulated attack. | 💥
+counter-landing | 反登陸 | Troops practiced counter-landing operations. | 🏖️
+beach defense | 灘岸防禦 | Beach defense starts at the waterline. | 🌊
+highway landing | 戰備道起降 | Fighter jets practiced a highway landing. | 🛬
+rapid response | 快速應變 | The drill tested rapid response. | ⚡
+observe | 觀摩；觀察 | Foreign officials came to observe the exercise. | 👀
+press release | 新聞稿 | The ministry issued a press release about the drill. | 📰
+scenario | 想定；情境 | The scenario was a sudden blockade. | 📋
+debrief | 檢討會 | After the drill, there was a debrief. | 🗣️
+lessons learned | 經驗教訓 | The report listed lessons learned. | 📝
+decoy | 誘餌；假目標 | Inflatable decoys can fool enemy drones. | 🎈
+camouflage net | 偽裝網 | Soldiers hid the launcher under a camouflage net. | 🕸️
+`,
+  adv: `
+encirclement | 包圍 | The drills simulated an encirclement of the island. | ⭕
+Joint Sword | 聯合利劍（共軍演習） | Joint Sword-2024A followed the presidential inauguration. | 🗡️
+Strait Thunder | 海峽雷霆（共軍演習） | Strait Thunder-2025A was held in April 2025. | ⚡
+Eastern Theater Command | 東部戰區 | The Eastern Theater Command announced the drills. | 🧭
+combat readiness patrol | 戰備警巡 | The PLA announced a joint combat readiness patrol near Taiwan. | 🚢
+rocket force | 火箭軍 | The rocket force fired missiles into the sea. | 🚀
+show of force | 武力展示 | The drills were a show of force. | 💪
+signaling | 傳遞訊號 | Military drills are a form of political signaling. | 📶
+intimidation | 恫嚇 | The aim was intimidation, not invasion. | 😠
+rehearsal | 預演 | Some analysts see the drills as a rehearsal for a blockade. | 🎬
+normalization | 常態化 | The normalization of drills makes warning harder. | 🔁
+warning time | 預警時間 | Frequent drills can shrink warning time. | ⏱️
+snap drill | 突擊演習 | A snap drill was announced with no warning. | ⏰
+exclusion zone | 禁區 | Ships avoided the exclusion zone. | 🚫
+unscripted | 不預設腳本的 | Han Kuang now includes unscripted drills. | 🎲
+round-the-clock | 全天候的 | The 2025 drills ran round-the-clock for ten days. | 🕛
+multinational exercise | 多國聯合演習 | RIMPAC is a large multinational exercise held near Hawaii. | 🌐
+Balikatan | 肩並肩演習（美菲） | Balikatan is an annual US–Philippine exercise. | 🇵🇭
+freedom of navigation operation | 航行自由行動 | A freedom of navigation operation challenges excessive maritime claims. | ⛵
+transit | 通過（海峽） | A US destroyer made a transit through the Taiwan Strait. | ➡️
+carrier strike group | 航艦打擊群 | A carrier strike group joined the exercise. | 🛳️
+anti-submarine warfare | 反潛作戰 | The exercise focused on anti-submarine warfare. | 🔊
+mine countermeasures | 反水雷作戰 | Mine countermeasures are slow and dangerous work. | 💣
+force projection | 兵力投射 | Carrier groups enable force projection far from home. | 🌍
+escalation ladder | 升級階梯 | Each drill moves a step up the escalation ladder. | 🪜
+after-action review | 戰後檢討 | The after-action review found gaps in communication. | 🔍
+`
+});

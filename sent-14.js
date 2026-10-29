@@ -307,3 +307,93 @@ Peace is not the absence of threats, but the ability to manage them. | 和平不
 Security is built in peacetime, not in a crisis. | 安全是在承平時期建立的，不是在危機中。
 `
 });
+
+// 軍演 Military exercises
+addPhrases("military", {
+  basic: `
+Is this a drill? | 這是演習嗎？
+Don't worry, it's only a drill. | 別擔心，只是演習。
+Is it real? | 是真的嗎？
+What's that noise? | 那是什麼聲音？
+The army is practicing today. | 軍隊今天在演練。
+I heard loud booms this morning. | 我今天早上聽到很大的轟隆聲。
+The jets are flying very low. | 噴射機飛得好低。
+The road is closed today. | 今天道路封閉。
+We have to take a detour. | 我們得繞道。
+My phone just got an alert. | 我的手機剛收到警報。
+Please stay calm. | 請保持冷靜。
+Go inside the nearest building. | 進入最近的建築物。
+Follow the police officer's directions. | 聽從警察的指揮。
+The drill ends at two o'clock. | 演習兩點結束。
+You can go out again after the drill. | 演習結束後可以再出去。
+Tanks are driving down the street! | 坦克開在街上！
+Let's watch the drill from here. | 我們從這裡看演習吧。
+Don't fly drones near the drill. | 不要在演習附近飛無人機。
+The base has an open day this weekend. | 基地這週末開放參觀。
+Kids can sit in a real tank! | 小朋友可以坐進真的坦克！
+`,
+  inter: `
+When is this year's Han Kuang exercise? | 今年的漢光演習是什麼時候？
+It usually takes place in summer. | 通常在夏天舉行。
+The computer-assisted wargame comes first. | 電腦兵推會先進行。
+Then come the live drills. | 接著是實兵演練。
+The navy issued a navigation warning. | 海軍發布了航行警告。
+Fishing boats must stay out of the area. | 漁船必須遠離該區域。
+Some flights were rerouted. | 部分航班改道。
+Traffic control starts at 1:30 p.m. | 交通管制下午一點半開始。
+Cars must pull over during the drill. | 演習期間車輛必須靠邊停。
+Shops will close for thirty minutes. | 商店會暫停營業三十分鐘。
+Everyone should take shelter indoors. | 所有人都應進入室內避難。
+The metro station serves as a shelter. | 捷運站可作為避難處。
+This year's drill tests the whole city. | 今年的演習測試整座城市的應變。
+Hospitals practiced handling mass casualties. | 醫院演練大量傷患處理。
+Fighter jets landed on a highway. | 戰機在高速公路上起降。
+The highway was closed for the landing drill. | 高速公路因起降演練封閉。
+Troops practiced defending the beach. | 部隊演練灘岸防禦。
+The red team played the enemy. | 紅軍扮演敵軍。
+The opposing force landed at night. | 對抗部隊在夜間登陸。
+The scenario was a surprise attack. | 想定是突襲。
+They practiced moving missiles at night. | 他們演練夜間機動飛彈。
+Reservists joined the exercise this year. | 今年後備軍人也加入演習。
+Foreign observers watched the drill. | 外國觀察員觀摩演習。
+The drill exposed some problems. | 演習暴露了一些問題。
+Communication broke down during the drill. | 演習中通訊中斷。
+That's why we practice. | 這就是我們要演練的原因。
+Better to make mistakes in a drill than in a real war. | 寧可在演習中犯錯，也不要在真正的戰爭中犯錯。
+The two navies held a joint exercise. | 兩國海軍舉行聯合演習。
+Was anyone hurt during the drill? | 演習中有人受傷嗎？
+The drill went smoothly. | 演習進行順利。
+`,
+  adv: `
+China announced large-scale drills around Taiwan. | 中國宣布在台灣周邊舉行大規模軍演。
+The Eastern Theater Command named the drills Strait Thunder. | 東部戰區將演習命名為「海峽雷霆」。
+The drills simulated a blockade of major ports. | 演習模擬封鎖主要港口。
+Coast guard ships practiced boarding and inspection. | 海警船演練登臨檢查。
+In 2022, missiles were fired over Taiwan. | 2022 年有飛彈飛越台灣上空。
+Some missiles landed in Japan's exclusive economic zone. | 部分飛彈落入日本專屬經濟海域。
+The drills followed the president's inauguration. | 演習發生在總統就職之後。
+Large-scale drills are becoming routine. | 大規模軍演逐漸常態化。
+Routine drills shorten warning time. | 常態化演習縮短了預警時間。
+An exercise could turn into an attack with little warning. | 演習可能在幾乎沒有預警的情況下轉為攻擊。
+Intelligence agencies watch for unusual signs. | 情報單位監看異常跡象。
+The drills are a form of political signaling. | 演習是一種政治訊號。
+The message is aimed at both Taipei and Washington. | 訊息同時針對台北和華府。
+Taiwan responded calmly and monitored the situation. | 台灣冷靜應對並監控情勢。
+The defense ministry set up a response center. | 國防部成立應變中心。
+Our ships shadowed their warships. | 我方艦艇監控跟蹤對方軍艦。
+Han Kuang now includes unscripted drills. | 漢光演習現在包含不預設腳本的演練。
+In 2025, Han Kuang ran for ten days, around the clock. | 2025 年漢光演習連續十天全天候進行。
+Realistic training reveals real weaknesses. | 貼近實戰的訓練才能暴露真正弱點。
+The after-action review matters as much as the drill itself. | 戰後檢討和演習本身一樣重要。
+RIMPAC is held every two years near Hawaii. | 環太平洋軍演每兩年在夏威夷附近舉行。
+Taiwan has not been invited to RIMPAC. | 台灣尚未受邀參加環太平洋軍演。
+Multinational exercises build trust among allies. | 多國聯合演習建立盟友間的互信。
+Allied navies sail through the strait from time to time. | 盟國海軍不時通過台灣海峽。
+Joint drills send a message of deterrence. | 聯合演習傳遞嚇阻訊息。
+Exercises are diplomacy by other means. | 演習是另一種形式的外交。
+Each side watches the other's drills closely. | 雙方都密切關注對方的演習。
+A miscalculation during a drill could be dangerous. | 演習中的誤判可能很危險。
+Close encounters at sea raise the risk of accidents. | 海上近距離接觸提高了意外風險。
+Clear communication channels help prevent a crisis. | 暢通的溝通管道有助於避免危機。
+`
+});
