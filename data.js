@@ -417,6 +417,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-24.js, phrases in sent-20.js.
+    id: "fire", icon: "🧯", zh: "消防安全", en: "Fire Safety",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you smell smoke?", "你有聞到煙味嗎？"],
+        ["B", "Yes! The pan is on fire!", "有！鍋子著火了！"],
+        ["A", "Don't use water! Turn off the stove and put the lid on.", "不要用水！關掉爐火，蓋上鍋蓋。"],
+        ["B", "Okay, the lid is on. The fire is out.", "好，蓋上了，火熄了。"],
+        ["A", "Good. Leave the lid on until the pan cools down.", "很好。等鍋子冷卻前都不要掀開。"],
+        ["B", "That was scary. We need a fire extinguisher in the kitchen.", "好可怕。我們廚房需要放一支滅火器。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The fire alarm is ringing, and there's smoke in the hallway.", "火警警報在響，走廊有煙。"],
+        ["B", "Feel the door first. Is it hot?", "先摸摸門，燙不燙？"],
+        ["A", "Yes, it's hot, and the smoke is getting thicker.", "很燙，而且煙越來越濃了。"],
+        ["B", "Then don't open it. Small fire, get out fast. Thick smoke, close the door.", "那就不要開。小火快逃，濃煙關門。"],
+        ["A", "Okay. I'll put wet towels under the door and call 119.", "好，我用濕毛巾塞住門縫，然後打 119。"],
+        ["B", "Tell them your address and floor, then wave something bright from the window.", "告訴他們地址和樓層，然後從窗戶揮動顏色鮮豔的東西。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The inspection report says our building's fire doors are always propped open.", "檢查報告說我們大樓的防火門總是被撐開。"],
+        ["B", "That's dangerous. In a fire, the stairwell would act like a chimney.", "那很危險。一旦失火，樓梯間就會變成煙囪。"],
+        ["A", "The stairwell is also full of scooters and junk.", "樓梯間還堆滿了機車和雜物。"],
+        ["B", "Remember the 2021 fire in Kaohsiung? Clutter and old wiring made it deadly.", "記得 2021 年高雄城中城大火嗎？雜物和老舊線路讓它變得致命。"],
+        ["A", "We should raise it at the residents' meeting and ask the fire department to inspect.", "我們應該在住戶大會上提出，並請消防局來檢查。"],
+        ["B", "And we should check that every unit has a working residential fire alarm.", "還要確認每一戶都有能正常運作的住宅用火災警報器。"]
+      ]
+    }
+  },
+  {
     // All words for this topic are in vocab-8.js.
     id: "airport", icon: "✈️", zh: "機場", en: "At the Airport",
     basic: {
