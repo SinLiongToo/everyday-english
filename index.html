@@ -120,6 +120,20 @@ main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
 .tabs { display: flex; gap: 2px; margin-left: auto; }
 .tbar #speedBtn { margin-bottom: 4px; }
 .narrow-only { display: none; }
+/* Auto-play and the word filter sit in the bar, so they can be reached while reading. */
+.tctl { display: flex; align-items: center; gap: 6px 8px; flex: none; margin-bottom: 4px; }
+.tbar { flex-wrap: nowrap; }
+.tt { flex: 0 1 auto; }
+.tt h1 { overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 1000px) {
+  .tbar { flex-wrap: wrap; }
+  .tt { flex: 1 1 0; }
+  .tctl { order: 5; flex: 1 1 100%; }
+}
+.tbar .tbtn { padding: 4px 10px; font-size: .88rem; }
+.tun { display: inline-flex; align-items: center; gap: 5px; font-size: .88rem; cursor: pointer; white-space: nowrap; }
+.tun input { accent-color: var(--accent); width: 16px; height: 16px; margin: 0; }
+.tctl .note { font-size: .82rem; white-space: nowrap; }
 .tab {
   border: 0; background: none; padding: 8px 12px; border-bottom: 3px solid transparent;
   color: var(--muted); font-weight: 600; margin-bottom: -1px; white-space: nowrap;
@@ -254,9 +268,13 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   .hq { order: 3; flex: 1 1 100%; max-width: none; margin: 0; padding: 6px 12px; }
   .tbtn { padding: 5px 10px; }
   .vgrid { grid-template-columns: 1fr; }
-  .tbar { padding: 2px 10px 0 6px; margin: -24px -16px 14px; gap: 4px; flex-wrap: nowrap; }
+  .tbar { padding: 2px 10px 0 6px; margin: -24px -16px 14px; gap: 4px; }
   .tbar .ic { display: none; }
-  .tt { flex: 1 1 auto; }
+  .tt { flex: 1 1 0; }
+  .tctl { order: 5; flex: 1 1 100%; padding-left: 4px; gap: 5px; flex-wrap: nowrap; }
+  .tctl .note { display: none; }
+  .tbar .tctl .tbtn { padding: 3px 7px; font-size: .84rem; }
+  .tctl #apMode { flex: 0 1 auto; min-width: 0; max-width: 110px; }
   .tt h1 { font-size: 1rem; overflow: hidden; text-overflow: ellipsis; }
   .tabs { flex: none; }
   .narrow-only { display: inline; }
@@ -364,7 +382,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hintBrowser: "建議使用 Chrome（Android）或 Safari（iPhone）。Android 可在「設定 → 文字轉語音」安裝英文語音。",
       hoverTip: "譯文已隱藏，滑過或點一下可查看。",
       speed: "語速", slow: "慢", normal: "正常",
-      search: "🔍 搜尋本頁單字（英文或中文）", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
+      search: "🔍 搜尋本頁單字（英文或中文）", unlearned: "只看未學會", unlearnedS: "未學會", nWords: (n) => `${n} 個單字`,
       searchP: "搜尋句子或中文", nSent: (n) => `${n} 句`, statSent: "句子總數",
       cardCount: (w, s) => `${w} 個單字・${s} 個句子`,
       autoPlay: "▶ 自動播放", apMode: "播放內容", apRep: "每項重複次數",
@@ -402,7 +420,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hintBrowser: "Use Chrome (Android) or Safari (iPhone). On Android, install an English voice in Settings → Text-to-speech.",
       hoverTip: "",
       speed: "Speed", slow: "Slow", normal: "Normal",
-      search: "🔍 Search words on this page", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
+      search: "🔍 Search words on this page", unlearned: "Unlearned only", unlearnedS: "New only", nWords: (n) => `${n} words`,
       searchP: "Search phrases", nSent: (n) => `${n} sentences`, statSent: "Total sentences",
       cardCount: (w, s) => `${w} words · ${s} sentences`,
       autoPlay: "▶ Auto-play", apMode: "What to play", apRep: "Repeat each item",
@@ -676,7 +694,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     document.title = `${zh() ? tp.zh : tp.en} · Everyday English`;
 
     const tabs = LEVELS.map((l) =>
-      `<button class="tab ${l}" role="tab" aria-selected="${l === lv}" data-lv="${l}"><span class="wide-only">${t(l)}</span><span class="narrow-only">${t(l + "S")}</span> <small>${t(l + "Cefr")}</small></button>`).join("");
+      `<button class="tab ${l}" role="tab" aria-selected="${l === lv}" data-lv="${l}" title="${t(l)} ${t(l + "Cefr")}">${t(l + "S")}</button>`).join("");
 
     const vocab = L.v.map((e) => vcardHTML(tp, lv, e)).join("");
 
@@ -696,18 +714,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       <div class="tbar">
         <a class="tback" href="#/" aria-label="${t("back")}" title="${t("back")}">←</a>
         <span class="ic" aria-hidden="true">${tp.icon}</span>
-        <div class="tt"><h1>${esc(zh() ? tp.zh : tp.en)}</h1>${zh() ? `<span class="sub">${esc(tp.en)}</span>` : ""}</div>
-        <div class="tabs" role="tablist">${tabs}</div>
-        <button class="tbtn" id="speedBtn" type="button" aria-pressed="${state.slow}"><span class="wide-only">${t("speed")}: </span>${state.slow ? t("slow") : t("normal")}</button>
-      </div>
-      ${state.hideTr && zh() ? `<p class="note">${t("hoverTip")}</p>` : ""}
-      <section class="blk">
-        <h2><span class="num">1</span>${t("vocab")}</h2>
-        <div class="vtools">
-          <label><input type="checkbox" id="vun"> ${t("unlearned")}</label>
-          <span class="note" id="vcount"></span>
-        </div>
-        <div class="aptools">
+        <div class="tt"><h1 title="${esc(tp.en)}">${esc(zh() ? tp.zh : tp.en)}</h1></div>
+        <div class="tctl">
           <button class="tbtn primary" id="apBtn" type="button">${t("autoPlay")}</button>
           <select class="tbtn" id="apMode" aria-label="${t("apMode")}">
             ${[["w", "modeW"], ["we", "modeWE"], ["e", "modeE"]].map(([v, k]) =>
@@ -716,7 +724,15 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
           <select class="tbtn" id="apRep" aria-label="${t("apRep")}">
             ${[1, 2, 3].map((n) => `<option value="${n}"${state.apRep === n ? " selected" : ""}>×${n}</option>`).join("")}
           </select>
+          <label class="tun"><input type="checkbox" id="vun"> <span class="wide-only">${t("unlearned")}</span><span class="narrow-only">${t("unlearnedS")}</span></label>
+          <span class="note" id="vcount"></span>
         </div>
+        <div class="tabs" role="tablist">${tabs}</div>
+        <button class="tbtn" id="speedBtn" type="button" aria-pressed="${state.slow}" title="${t("speed")}" aria-label="${t("speed")}: ${state.slow ? t("slow") : t("normal")}">${state.slow ? t("slow") : t("normal")}</button>
+      </div>
+      ${state.hideTr && zh() ? `<p class="note">${t("hoverTip")}</p>` : ""}
+      <section class="blk">
+        <h2><span class="num">1</span>${t("vocab")}</h2>
         <div class="vgrid">${vocab}</div>
       </section>
       <section class="blk">
@@ -763,7 +779,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     const speedBtn = document.getElementById("speedBtn");
     speedBtn.onclick = () => {
       state.slow = !state.slow; store.set("slow", state.slow);
-      speedBtn.innerHTML = `<span class="wide-only">${t("speed")}: </span>${state.slow ? t("slow") : t("normal")}`;
+      speedBtn.textContent = state.slow ? t("slow") : t("normal");
+      speedBtn.setAttribute("aria-label", `${t("speed")}: ${speedBtn.textContent}`);
       speedBtn.setAttribute("aria-pressed", String(state.slow));
     };
 
