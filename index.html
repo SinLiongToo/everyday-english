@@ -56,7 +56,13 @@ a { color: var(--accent); }
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
 }
-.top-in { max-width: 1040px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+.top-in { max-width: 1040px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 8px; }
+/* Search lives in the sticky header so it is reachable from anywhere on the page. */
+.hq {
+  flex: 1 1 200px; min-width: 0; max-width: 460px; margin: 0 8px; font: inherit; font-size: .95rem;
+  color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px;
+}
+.hq:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 2px var(--accent-soft); }
 .brand {
   font-weight: 800; font-size: 1.1rem; text-decoration: none; color: var(--fg); margin-right: auto;
   white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis;
@@ -127,12 +133,8 @@ section.blk > h2 .num { color: var(--accent); }
 .vtools input[type="checkbox"] { accent-color: var(--accent); width: 18px; height: 18px; }
 .vcard[hidden], .row[hidden] { display: none; }
 .gsearch { margin: 0 0 20px; }
-.gsearch input[type="search"] {
-  width: 100%; font: inherit; font-size: 1.05rem; color: var(--fg); background: var(--card);
-  border: 2px solid var(--border); border-radius: 12px; padding: 11px 14px;
-}
-.gsearch input[type="search"]:focus { border-color: var(--accent); outline: none; }
-.gsearch .note { margin: 8px 2px 0; }
+.gsearch .note { margin: 0 2px; }
+.gsearch .note:empty { display: none; }
 #gres { margin-top: 12px; }
 #gres:empty, .grid[hidden] { display: none; }
 .vmeta { grid-column: 1 / -1; font-size: .85rem; margin-top: 4px; }
@@ -142,7 +144,7 @@ section.blk > h2 .num { color: var(--accent); }
 .row .pn { color: var(--muted); font-size: .8rem; min-width: 2.2em; padding-top: 3px; font-variant-numeric: tabular-nums; }
 .vcard.playing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
 /* Keep the item being read clear of the sticky header. */
-.vcard, .row { scroll-margin-top: 72px; scroll-margin-bottom: 16px; }
+.vcard, .row, section.blk { scroll-margin-top: 72px; scroll-margin-bottom: 16px; }
 .aptools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
 .tbtn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); font-weight: 700; }
 select.tbtn { font: inherit; font-size: .9rem; color: var(--fg); cursor: pointer; }
@@ -237,7 +239,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   .vcard.haspic { grid-template-columns: 52px minmax(0, 1fr) auto; column-gap: 10px; }
   .vpic { width: 52px; height: 52px; font-size: 2rem; }
   .vword.long { font-size: 1rem; }
-  .top-in { gap: 6px; }
+  .top-in { gap: 6px; flex-wrap: wrap; row-gap: 6px; padding: 6px 12px; }
+  .hq { order: 3; flex: 1 1 100%; max-width: none; margin: 0; padding: 6px 12px; }
+  .vcard, .row, section.blk { scroll-margin-top: 108px; }
   .tbtn { padding: 5px 10px; }
   .vgrid { grid-template-columns: 1fr; }
   .tab { padding: 8px 10px; }
@@ -250,6 +254,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 <header class="top">
   <div class="top-in">
     <a class="brand" href="#/" id="brand"></a>
+    <input type="search" id="hq" class="hq" autocomplete="off" enterkeyhint="search">
     <button class="tbtn primary" id="stopBtn" type="button" hidden></button>
     <button class="tbtn" id="trBtn" type="button"></button>
     <button class="tbtn" id="langBtn" type="button" aria-label="Language">🌐 <span id="langLbl"></span></button>
@@ -334,7 +339,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hintBrowser: "建議使用 Chrome（Android）或 Safari（iPhone）。Android 可在「設定 → 文字轉語音」安裝英文語音。",
       hoverTip: "譯文已隱藏，滑過或點一下可查看。",
       speed: "語速", slow: "慢", normal: "正常",
-      search: "搜尋單字或中文", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
+      search: "🔍 搜尋本頁單字（英文或中文）", unlearned: "只看未學會", nWords: (n) => `${n} 個單字`,
       searchP: "搜尋句子或中文", nSent: (n) => `${n} 句`, statSent: "句子總數",
       cardCount: (w, s) => `${w} 個單字・${s} 個句子`,
       autoPlay: "▶ 自動播放", apMode: "播放內容", apRep: "每項重複次數",
@@ -371,7 +376,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       hintBrowser: "Use Chrome (Android) or Safari (iPhone). On Android, install an English voice in Settings → Text-to-speech.",
       hoverTip: "",
       speed: "Speed", slow: "Slow", normal: "Normal",
-      search: "Search words", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
+      search: "🔍 Search words on this page", unlearned: "Unlearned only", nWords: (n) => `${n} words`,
       searchP: "Search phrases", nSent: (n) => `${n} sentences`, statSent: "Total sentences",
       cardCount: (w, s) => `${w} words · ${s} sentences`,
       autoPlay: "▶ Auto-play", apMode: "What to play", apRep: "Repeat each item",
@@ -458,6 +463,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   // Cancelling right before speaking makes some phones drop the next sentence, so only cancel when busy.
   // The header's Stop button stays on screen while a long list is read aloud.
   const stopBtn = document.getElementById("stopBtn");
+  const hq = document.getElementById("hq");
   function stopSpeech() { playToken++; stopBtn.hidden = true; if (synth && (synth.speaking || synth.pending)) synth.cancel(); }
   stopBtn.onclick = stopSpeech;
 
@@ -611,7 +617,6 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <div class="levels">${levels}</div>
       </section>
       <div class="gsearch">
-        <input type="search" id="gq" placeholder="${t("gsearch")}" aria-label="${t("gsearch")}" autocomplete="off">
         <p class="note" id="ginfo" aria-live="polite"></p>
         <div class="vgrid" id="gres"></div>
       </div>
@@ -622,9 +627,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <div class="stat"><b>${TOPICS.length}</b><small>${t("statTopics")}</small></div>
       </div>
       <div class="grid" id="tgrid">${cards}</div>`;
-    const gin = document.getElementById("gq");
-    gin.value = gq;
-    gin.oninput = () => { gq = gin.value; renderSearch(); };
+    hq.value = gq;
+    hq.placeholder = t("gsearch"); hq.setAttribute("aria-label", t("gsearch"));
+    hq.oninput = () => { gq = hq.value; renderSearch(); };
     renderSearch();
   }
 
@@ -665,7 +670,6 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
           <span class="h2-act"><button class="tbtn" id="speedBtn" type="button" aria-pressed="${state.slow}">${t("speed")}: ${state.slow ? t("slow") : t("normal")}</button></span>
         </h2>
         <div class="vtools">
-          <input type="search" id="vq" placeholder="${t("search")}" aria-label="${t("search")}">
           <label><input type="checkbox" id="vun"> ${t("unlearned")}</label>
           <span class="note" id="vcount"></span>
         </div>
@@ -710,11 +714,16 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       </nav>`;
 
     app.querySelectorAll(".tab").forEach((b) => b.onclick = () => { location.hash = `#/${tp.id}/${b.dataset.lv}`; });
-    const vq = document.getElementById("vq");
-    vq.oninput = filterVocab;
+    // The header search filters this page's words. Arriving from the all-topics search shows just that word.
+    if (word !== null) hq.value = word;
+    hq.placeholder = t("search"); hq.setAttribute("aria-label", t("search"));
+    hq.oninput = () => {
+      filterVocab();
+      // If the word cards are off screen, bring them into view so the results can be seen.
+      const g = app.querySelector(".vgrid"), r = g.getBoundingClientRect();
+      if (r.bottom < 80 || r.top > innerHeight) g.closest("section").scrollIntoView({ block: "start" });
+    };
     document.getElementById("vun").onchange = filterVocab;
-    // Arriving from the all-topics search: show just that word.
-    if (word) vq.value = word;
     filterVocab();
     // Speed changes apply to the next sentence, so an auto-play in progress keeps going.
     const speedBtn = document.getElementById("speedBtn");
@@ -763,7 +772,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   }
 
   function filterVocab() {
-    const q = document.getElementById("vq").value.trim().toLowerCase();
+    const q = hq.value.trim().toLowerCase();
     const un = document.getElementById("vun").checked;
     let n = 0;
     app.querySelectorAll(".vcard").forEach((c) => {
@@ -845,7 +854,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       const on = state.learned.has(k);
       lb.classList.toggle("on", on); lb.setAttribute("aria-pressed", String(on));
       lb.closest(".vcard").classList.toggle("done", on);
-      if (document.getElementById("vq")) filterVocab();
+      if (document.getElementById("vcount")) filterVocab();
     }
     // tap to reveal a hidden translation on touch screens
     const row = e.target.closest(".row, .vcard");
@@ -853,6 +862,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   });
 
   // ---------- router ----------
+  let lastRoute = "";
   function render() {
     stopSpeech();
     const [, id, lv, w] = location.hash.replace(/^#\/?/, "#/").split("/");
@@ -860,13 +870,22 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     if (tp) {
       const level = LEVELS.includes(lv) ? lv : state.level;
       state.level = level; store.set("level", level);
-      let word = "";
-      try { word = w ? decodeURIComponent(w) : ""; } catch (e) {}
+      // A new page starts with an empty search; re-rendering the same page (language switch) keeps it.
+      const route = location.hash;
+      let word = route === lastRoute ? null : "";
+      try { if (w && word !== null) word = decodeURIComponent(w); } catch (e) {}
+      lastRoute = route;
       renderTopic(tp, level, word);
     } else {
+      lastRoute = "";
       renderHome();
     }
   }
+  // "/" jumps to the search box, Escape clears it.
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) { e.preventDefault(); hq.focus(); }
+    else if (e.key === "Escape" && document.activeElement === hq && hq.value) { hq.value = ""; hq.oninput(); }
+  });
   window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyChrome);
   applyChrome();
