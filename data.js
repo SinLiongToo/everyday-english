@@ -270,6 +270,46 @@ window.TOPICS = [
     }
   },
   {
+    // All words and phrases for this topic are in vocab-22.js and sent-18.js.
+    id: "repairs", icon: "🔧", zh: "居家水電故障", en: "Home Repairs",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The bathroom light won't turn on.", "浴室的燈打不開。"],
+        ["B", "Maybe the bulb is burned out.", "可能是燈泡燒壞了。"],
+        ["A", "I changed it. Still nothing.", "我換過了，還是不亮。"],
+        ["B", "Check the breaker box. Maybe the power tripped.", "去看一下電箱，可能跳電了。"],
+        ["A", "You're right! One switch was down. Now it works.", "你說得對！有一個開關跳下來了，現在好了。"],
+        ["B", "Great. If it trips again, call an electrician.", "太好了。如果又跳電，就找電工來看。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Water is dripping from my bathroom ceiling.", "我浴室的天花板在滴水。"],
+        ["B", "It's probably a leak from the upstairs neighbor's pipes.", "可能是樓上鄰居的水管漏水。"],
+        ["A", "Should I call the landlord first?", "我應該先打給房東嗎？"],
+        ["B", "Yes. Take photos and videos first, then ask the building manager to contact upstairs.", "對，先拍照錄影，再請管理員聯絡樓上。"],
+        ["A", "The plumber says he needs to do leak detection.", "水電師傅說要先抓漏。"],
+        ["B", "Ask for a quote before he starts, and find out who pays.", "動工前先請他報價，也要弄清楚誰付錢。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The breaker trips whenever the air conditioner and microwave run together.", "冷氣和微波爐一起開就跳電。"],
+        ["B", "The circuit is overloaded. The AC should have its own dedicated circuit.", "這個迴路超載了，冷氣應該要有專用迴路。"],
+        ["A", "The electrician also said the outlets aren't grounded. The wiring is forty years old.", "電工也說插座沒有接地，線路已經四十年了。"],
+        ["B", "Then rewiring is worth it. It's expensive, but much cheaper than a fire.", "那重新配線很值得，雖然貴，但比火災便宜多了。"],
+        ["A", "And our gas water heater is on the enclosed balcony.", "還有我們的瓦斯熱水器裝在加蓋的陽台。"],
+        ["B", "Move it outside or switch to a forced-exhaust model. Carbon monoxide poisoning happens every winter.", "把它移到室外，或換成強制排氣型。每年冬天都有一氧化碳中毒事件。"]
+      ]
+    }
+  },
+  {
     id: "transport", icon: "🚇", zh: "行・交通", en: "Transportation",
     basic: {
       v: [
@@ -332,6 +372,47 @@ window.TOPICS = [
         ["B", "In principle, yes. It would cut emissions and ease traffic.", "原則上贊成，能減少排放並紓解交通。"],
         ["A", "But wouldn't it hit low-income commuters the hardest?", "但這不是對低收入通勤族衝擊最大嗎？"],
         ["B", "That's why the revenue should be reinvested in public transit infrastructure.", "所以收入應該再投入大眾運輸的基礎建設。"]
+      ]
+    }
+  },
+  {
+    // All words and phrases for this topic are in vocab-23.js and sent-19.js.
+    id: "accident", icon: "🚑", zh: "交通事故", en: "Traffic Accidents",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Are you okay? Are you hurt?", "你還好嗎？有受傷嗎？"],
+        ["B", "I think I'm fine, but my knee hurts a little.", "我應該沒事，但膝蓋有點痛。"],
+        ["A", "Don't move too fast. I'll call 110 and 119.", "先別急著動，我來打 110 和 119。"],
+        ["B", "Thank you. My scooter is badly scratched.", "謝謝你。我的機車刮得很嚴重。"],
+        ["A", "Take pictures of everything before anyone moves the vehicles.", "在任何人移動車輛前，先把現場都拍下來。"],
+        ["B", "Good idea. Did you see what happened?", "好主意。你有看到發生什麼事嗎？"],
+        ["A", "Yes. The car turned right without looking. I'll stay as a witness.", "有，那台車沒看就右轉。我會留下來當目擊者。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "You hit my car from behind!", "你從後面撞到我的車！"],
+        ["B", "I'm sorry, but you braked suddenly.", "抱歉，但是你突然煞車。"],
+        ["A", "Let's not argue. I'll call the police, and we can let them sort it out.", "我們別吵了，我來報警，讓警察處理。"],
+        ["B", "Should we move our cars? We're blocking traffic.", "要把車移開嗎？我們擋到車流了。"],
+        ["A", "Take photos first and mark the positions. Then we can move to the side.", "先拍照、標記位置，然後再移到路邊。"],
+        ["B", "Okay. My dashcam recorded everything. Here's my insurance information.", "好。我的行車紀錄器都有錄到，這是我的保險資料。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The other driver's insurer offered a settlement, but it barely covers my medical bills.", "對方的保險公司提出和解，但幾乎只夠付我的醫藥費。"],
+        ["B", "Don't sign anything yet. Wait for the preliminary analysis report.", "先什麼都別簽，等初步分析研判表出來。"],
+        ["A", "His own dashcam shows he ran the red light.", "他自己的行車紀錄器顯示他闖紅燈。"],
+        ["B", "Then liability is clear. You can apply for mediation at the district office. It's free.", "那責任就很清楚了。你可以到區公所申請調解，是免費的。"],
+        ["A", "And if mediation fails?", "如果調解不成呢？"],
+        ["B", "Then file a civil claim. For negligent injury, a criminal complaint must be filed within six months.", "那就提民事求償。過失傷害的刑事告訴要在六個月內提出。"]
       ]
     }
   },
