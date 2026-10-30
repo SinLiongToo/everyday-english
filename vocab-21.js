@@ -307,3 +307,93 @@ out of the blue | 突然 | She called me out of the blue. | 🔵
 the point of no return | 不歸點 | We've reached the point of no return. | 🚧
 `
 });
+
+// 戰略・戰爭電影常用說法
+addVocab("movie", {
+  inter: `
+in for a penny, in for a pound | 一不做二不休；既然開始就做到底 | We've come this far. In for a penny, in for a pound. | 🪙
+plan B | 備案 | We need a plan B. | 📋
+exit strategy | 退場策略；退路 | What's our exit strategy? | 🚪
+a decoy | 誘餌；幌子 | The truck was a decoy. | 🦆
+checkmate | 將死；你輸了 | Checkmate. You lose. | ♟️
+a pawn | 棋子；被利用的人 | I was just a pawn in their game. | ♙
+one step ahead | 領先一步 | They're always one step ahead of us. | 👣
+call his bluff | 拆穿他的虛張聲勢 | Let's call his bluff. | 🃏
+an ace up my sleeve | 留一手；王牌 | Relax, I have an ace up my sleeve. | 🂡
+hold the line | 守住防線 | Hold the line! Don't let them through! | 🛡️
+hold the fort | 留守；撐住場面 | Can you hold the fort while I'm out? | 🏰
+rally the troops | 鼓舞士氣；召集大家 | Time to rally the troops. | 📯
+sitting duck | 活靶子 | If we stay here, we're sitting ducks. | 🦆
+a loose cannon | 不受控制、隨時會闖禍的人 | He's a loose cannon. | 💣
+friendly fire | 誤擊友軍 | Two soldiers were hit by friendly fire. | 🔥
+the front line | 前線；第一線 | Nurses are on the front line. | ⚔️
+reinforcements | 援軍 | Reinforcements are on the way. | 🚁
+the cavalry | 救兵 | Relax, the cavalry has arrived. | 🐎
+a ceasefire | 停火 | Both sides agreed to a ceasefire. | 🕊️
+a stalemate | 僵局 | The talks ended in a stalemate. | ♟️
+standoff | 對峙 | The standoff lasted six hours. | 🤠
+a truce | 休戰 | Let's call a truce. | 🏳️
+take the bait | 上鉤 | He didn't take the bait. | 🎣
+retreat | 撤退 | Retreat! Fall back! | 🏃
+fall back | 後撤 | Fall back to the bridge! | ↩️
+outnumbered | 寡不敵眾 | We're outnumbered ten to one. | 👥
+outsmart | 智取 | We can't beat them, but we can outsmart them. | 🧠
+ambush | 埋伏 | It's an ambush! | 🌿
+the high ground | 制高點；道德高地 | Whoever holds the high ground wins. | ⛰️
+live to fight another day | 留得青山在，改天再戰 | Run now, and live to fight another day. | 🏃
+a war room | 作戰室 | We set up a war room downstairs. | 🗺️
+a game plan | 作戰計畫 | We need a game plan. | 📝
+a dry run | 預演；演練 | Let's do a dry run first. | 🔁
+go rogue | 擅自行動；脫離組織 | Don't go rogue on me. | 🦹
+radio silence | 無線電靜默；音訊全無 | Keep radio silence until dawn. | 📻
+a double agent | 雙面間諜 | He was a double agent all along. | 🕵️
+a mole | 內鬼 | There's a mole in the agency. | 🐀
+need-to-know | 只告知必要的人 | This is need-to-know only. | 🤫
+`,
+  adv: `
+burn the boats | 破釜沉舟 | Sometimes you have to burn the boats. | ⛵
+cross the Rubicon | 跨過不歸路；下定決心 | Once we sign, we cross the Rubicon. | 🏞️
+the die is cast | 木已成舟；骰子已擲出 | The die is cast. There's no going back. | 🎲
+divide and conquer | 分而治之；各個擊破 | Their strategy was divide and conquer. | ✂️
+a war of attrition | 消耗戰 | This has become a war of attrition. | ⏳
+scorched earth | 焦土政策；不留餘地 | They used a scorched earth strategy. | 🔥
+a Pyrrhic victory | 慘勝；得不償失的勝利 | It was a Pyrrhic victory. | 🏆
+a Trojan horse | 特洛伊木馬；暗藏的陷阱 | The free app was a Trojan horse. | 🐴
+a double-edged sword | 雙面刃 | Fame is a double-edged sword. | 🗡️
+a pincer movement | 鉗形攻勢 | The army launched a pincer movement. | 🦀
+outflank | 包抄；智勝對手 | They tried to outflank the rival company. | ↪️
+outmaneuver | 以策略勝過 | She outmaneuvered every opponent. | 🧭
+endgame | 終局；最終目的 | What's your endgame? | 🏁
+play the long game | 放長線；做長遠打算 | Smart investors play the long game. | ♟️
+lose the battle but win the war | 輸了一仗，贏了整場戰爭 | We may lose the battle but win the war. | ⚔️
+the enemy of my enemy is my friend | 敵人的敵人就是朋友 | The enemy of my enemy is my friend. | 🤝
+the fog of war | 戰爭迷霧 | In the fog of war, mistakes happen. | 🌫️
+a tactical retreat | 戰術性撤退 | It's not running away. It's a tactical retreat. | 🔙
+a calculated risk | 經過盤算的風險 | It's a calculated risk. | 🎯
+a contingency plan | 應變計畫 | Always have a contingency plan. | 🗂️
+a feint | 佯攻；虛晃一招 | The attack in the north was a feint. | 🤺
+a diversion | 聲東擊西；牽制行動 | Create a diversion! | 🎆
+reconnaissance | 偵察 | We need better reconnaissance first. | 🔭
+take no prisoners | 毫不留情 | She plays to win and will take no prisoners. | 💥
+dig in your heels | 堅持不讓步 | Don't dig in your heels over small things. | 👠
+close ranks | 團結一致對外 | When attacked, the party will close ranks. | 🧱
+last stand | 最後的抵抗 | This is our last stand. | 🏴
+a suicide mission | 自殺任務 | This is a suicide mission. | ☠️
+a power vacuum | 權力真空 | His death left a power vacuum. | 🕳️
+leverage | 籌碼；優勢 | Right now we have no leverage. | ⚖️
+a bargaining chip | 談判籌碼 | They used the hostages as a bargaining chip. | 🎰
+a red line | 底線；紅線 | That's a red line for us. | 🟥
+deterrence | 嚇阻 | Nuclear deterrence kept the peace. | ☢️
+mutually assured destruction | 相互保證毀滅 | Mutually assured destruction kept both sides in check. | 💥
+a zero-sum game | 零和遊戲 | Business isn't a zero-sum game. | ➗
+shock and awe | 震撼與威懾 | It was a shock and awe campaign. | ⚡
+collateral damage | 附帶損害；無辜受波及 | Civilians became collateral damage. | 🏚️
+smoking gun | 確鑿證據 | We finally found the smoking gun. | 🔫
+plausible deniability | 合理推諉（讓上級能說不知情） | Keep the boss out of it for plausible deniability. | 🙈
+a sleeper agent | 潛伏特務 | He was a sleeper agent for years. | 😴
+the eleventh hour | 最後一刻 | The deal was saved at the eleventh hour. | 🕚
+Achilles' heel | 致命弱點 | Pride is his Achilles' heel. | 🦶
+a war of nerves | 心理戰；比耐性 | The negotiation became a war of nerves. | 😬
+psychological warfare | 心理戰 | That's psychological warfare. | 🧠
+`
+});

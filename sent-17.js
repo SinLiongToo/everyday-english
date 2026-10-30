@@ -307,3 +307,94 @@ How you doin'? | 你好嗎？（搭訕用語）——《六人行》
 We were on a break! | 我們那時候在冷靜期！——《六人行》
 `
 });
+
+// 戰略・戰爭電影：口語與經典台詞
+addPhrases("movie", {
+  inter: `
+In for a penny, in for a pound. | 一不做，二不休。
+We've come this far. In for a penny, in for a pound. | 都走到這一步了，一不做二不休。
+What's the game plan? | 計畫是什麼？
+We need a plan B. | 我們需要一個備案。
+What's our exit strategy? | 我們的退路是什麼？
+I'm calling your bluff. | 我看穿你在虛張聲勢了。
+I've still got an ace up my sleeve. | 我還留了一手。
+Hold the line! | 守住！
+Can you hold the fort for an hour? | 你能幫我撐一個小時嗎？
+It's an ambush! | 有埋伏！
+Fall back! | 後撤！
+We're outnumbered. | 我們寡不敵眾。
+Reinforcements are on the way. | 援軍正在路上。
+The cavalry is here! | 救兵來了！
+He didn't take the bait. | 他沒上鉤。
+It's a trap! | 這是陷阱！——《星際大戰六部曲：絕地大反攻》
+Let's call a truce. | 我們休戰吧。
+They're always one step ahead of us. | 他們總是比我們早一步。
+I was just a pawn in their game. | 我只是他們的棋子。
+Checkmate. | 將軍，你輸了。
+Let's live to fight another day. | 留得青山在，改天再戰。
+Keep radio silence. | 保持無線電靜默。
+This is need-to-know only. | 這只告訴必要的人。
+Don't go rogue on me. | 別給我擅自行動。
+There's a mole in our team. | 我們團隊裡有內鬼。
+Let's do a dry run first. | 我們先預演一次。
+We can't outgun them, but we can outsmart them. | 我們火力比不過，但可以智取。
+`,
+  adv: `
+We've burned our boats. There's no going back. | 我們已經破釜沉舟，沒有回頭路了。
+We've crossed the Rubicon. | 我們已經跨過不歸路了。
+The die is cast. | 木已成舟。
+Divide and conquer. | 分而治之，各個擊破。
+This is turning into a war of attrition. | 這變成了一場消耗戰。
+It was a Pyrrhic victory. | 那是一場慘勝。
+Fame is a double-edged sword. | 名氣是雙面刃。
+What's your endgame? | 你的最終目的是什麼？
+She's playing the long game. | 她在放長線釣大魚。
+We may lose this battle, but we'll win the war. | 我們也許輸了這一仗，但會贏得整場戰爭。
+The enemy of my enemy is my friend. | 敵人的敵人就是朋友。
+It's a calculated risk. | 這是經過盤算的風險。
+Create a diversion! | 製造混亂，引開他們！
+That's a red line for us. | 那是我們的底線。
+It's not a zero-sum game. | 這不是零和遊戲。
+We found the smoking gun. | 我們找到確鑿證據了。
+It all came down to the eleventh hour. | 一切到最後一刻才見分曉。
+This is our last stand. | 這是我們最後的抵抗。
+All warfare is based on deception. | 兵者，詭道也。——《孫子兵法》
+If you know the enemy and know yourself, you need not fear the result of a hundred battles. | 知己知彼，百戰不殆。——《孫子兵法》
+Every battle is won before it is ever fought. | 每一場仗在開打前就已分出勝負。——《華爾街》
+I love the smell of napalm in the morning. | 我愛死早晨汽油彈的味道。——《現代啟示錄》
+Gentlemen, you can't fight in here! This is the War Room! | 各位，這裡不准打架！這裡是作戰室！——《奇愛博士》
+A strange game. The only winning move is not to play. | 真是奇怪的遊戲，唯一的致勝之道就是不玩。——《戰爭遊戲》（1983）
+Failure is not an option. | 失敗不是選項。——《阿波羅 13 號》
+Earn this. | 別辜負這一切。——《搶救雷恩大兵》
+This is Sparta! | 這就是斯巴達！——《300 壯士：斯巴達的逆襲》
+At my signal, unleash hell. | 聽我號令，全力進攻。——《神鬼戰士》
+What we do in life echoes in eternity. | 我們生前的作為，將在永恆中迴響。——《神鬼戰士》
+Are you not entertained? | 你們還不滿意嗎？——《神鬼戰士》
+Strength and honor. | 力量與榮耀。——《神鬼戰士》
+They may take our lives, but they'll never take our freedom! | 他們可以奪走我們的性命，但永遠奪不走我們的自由！——《英雄本色》
+Every man dies, not every man really lives. | 每個人都會死，但不是每個人都真正活過。——《英雄本色》
+We shall never surrender. | 我們絕不投降。——《最黑暗的時刻》
+We few, we happy few, we band of brothers. | 我們這少數人，幸運的少數人，我們是一群兄弟。——《亨利五世》
+Once more unto the breach, dear friends, once more. | 再衝一次，親愛的朋友們，再衝一次！——《亨利五世》
+Never tell me the odds! | 別跟我說機率！——《星際大戰五部曲：帝國大反擊》
+It's over, Anakin! I have the high ground! | 結束了，安納金！我佔了制高點！——《星際大戰三部曲：西斯大帝的復仇》
+When you play the game of thrones, you win or you die. | 玩權力的遊戲，不成王便成寇。——《權力遊戲》
+Chaos isn't a pit. Chaos is a ladder. | 混亂不是深淵，混亂是階梯。——《權力遊戲》
+It's not personal. It's strictly business. | 這不是私人恩怨，純粹是生意。——《教父》
+Never tell anyone outside the family what you're thinking. | 永遠別讓家族以外的人知道你在想什麼。——《教父》
+Just when I thought I was out, they pull me back in. | 正當我以為脫身了，他們又把我拉回來。——《教父第三集》
+Some men just want to watch the world burn. | 有些人就只是想看世界陷入火海。——《黑暗騎士》
+The needs of the many outweigh the needs of the few. | 多數人的需要，大於少數人的需要。——《星艦迷航記 II》
+I feel the need, the need for speed! | 我渴望，渴望速度！——《捍衛戰士》
+It's not the plane, it's the pilot. | 重要的不是飛機，是飛行員。——《捍衛戰士：獨行俠》
+Adapt or die. | 不適應就淘汰。——《魔球》
+You don't get to 500 million friends without making a few enemies. | 要交到五億個朋友，不可能不樹敵。——《社群網戰》
+Whatever it takes. | 不惜一切代價。——《復仇者聯盟：終局之戰》
+Your mission, should you choose to accept it... | 你的任務，如果你選擇接受的話……——《不可能的任務》
+May the odds be ever in your favor. | 願機率永遠對你有利。——《飢餓遊戲》
+Fear is the mind-killer. | 恐懼是心智的殺手。——《沙丘》
+Even the smallest person can change the course of the future. | 即使是最渺小的人，也能改變未來的走向。——《魔戒首部曲：魔戒現身》
+Now I am become Death, the destroyer of worlds. | 現在我成了死神，世界的毀滅者。——《奧本海默》
+Sometimes it is the people no one imagines anything of who do the things no one can imagine. | 有時候，正是那些沒人看好的人，做出了沒人想像得到的事。——《模仿遊戲》
+`
+});
