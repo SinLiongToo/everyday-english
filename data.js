@@ -635,6 +635,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-25.js, phrases in sent-21.js.
+    id: "camping", icon: "🏕️", zh: "露營", en: "Camping",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "This spot looks good. The ground is flat.", "這個位置看起來不錯，地面很平。"],
+        ["B", "Great. Let's put up the tent before it gets dark.", "太好了。天黑前先把帳篷搭好吧。"],
+        ["A", "Can you hold this pole? I'll put in the pegs.", "你可以扶著這根營柱嗎？我來打營釘。"],
+        ["B", "Sure. Did you bring the flashlight?", "好啊。你有帶手電筒嗎？"],
+        ["A", "Yes, and bug spray too. The mosquitoes are terrible here.", "有，還有防蚊液。這裡蚊子超多。"],
+        ["B", "After dinner, let's roast marshmallows and look at the stars.", "晚餐後我們來烤棉花糖、看星星吧。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "How about pitching the tent right by the river? The view is amazing.", "我們把帳篷搭在河邊好不好？風景超美。"],
+        ["B", "Bad idea. Afternoon thunderstorms are common here, and a flash flood can come fast.", "不好。這裡常有午後雷陣雨，溪水暴漲可能來得很快。"],
+        ["A", "Okay, let's take the site on higher ground, then.", "好吧，那我們選地勢高一點的營位。"],
+        ["B", "And let's set up the tarp over the kitchen in case it rains.", "我們也在廚房區上面搭天幕，以防下雨。"],
+        ["A", "Good call. By the way, never use the gas stove inside the tent.", "好主意。對了，絕對不要在帳篷裡用瓦斯爐。"],
+        ["B", "I know. Carbon monoxide. I'll cook under the tarp.", "我知道，會一氧化碳中毒。我在天幕下煮。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I found a cheap campground by a stream. It has great reviews.", "我找到一個溪邊的便宜露營區，評價很好。"],
+        ["B", "Is it on the list of legal campgrounds? Many sites on slopeland have no permits.", "它在合法露營區名單上嗎？很多山坡地上的營地都沒有許可。"],
+        ["A", "It's not on the list, and they don't mention insurance.", "不在名單上，也沒提到保險。"],
+        ["B", "Then I'd skip it. If there's a heavy rain advisory, a riverside site is the last place you want to be.", "那我會跳過。一旦有豪雨特報，溪邊營地是你最不想待的地方。"],
+        ["A", "Fair enough. Let's book a registered site and check the refund policy for typhoons.", "有道理。我們訂一個合法登記的營地，並看清楚颱風的退款規定。"],
+        ["B", "And remember: leave no trace. Pack out everything, including food scraps.", "還有，記得無痕山林。所有東西都要帶走，包括廚餘。"]
+      ]
+    }
+  },
+  {
     id: "family", icon: "👨‍👩‍👧", zh: "家庭生活", en: "Family & Daily Life",
     basic: {
       v: [
