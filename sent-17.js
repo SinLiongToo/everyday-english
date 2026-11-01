@@ -398,3 +398,113 @@ Now I am become Death, the destroyer of worlds. | 現在我成了死神，世界
 Sometimes it is the people no one imagines anything of who do the things no one can imagine. | 有時候，正是那些沒人看好的人，做出了沒人想像得到的事。——《模仿遊戲》
 `
 });
+
+// 電影口語：I'm ___ / ___ it 系列
+addPhrases("movie", {
+  basic: `
+I'm over it. | 我已經放下了。
+Don't worry, I'm over it now. | 別擔心，我現在已經不在意了。
+I'm on my way! | 我在路上了！
+Coming! | 來了！
+I'm done with this. | 這件事我受夠了。
+I'm out. Good luck, guys. | 我退出，祝你們好運。
+Free food? I'm sold! | 有免費的食物？我被說服了！
+Sorry, I'm lost. Can you say that again? | 抱歉，我沒聽懂，可以再說一次嗎？
+No thanks, I'm good. | 不用了，謝謝。
+I'm okay, really. | 我真的沒事。
+I'm kind of busy right now. | 我現在有點忙。
+I'm so bored. | 我好無聊。
+I'm late again! | 我又遲到了！
+I'm right here. | 我就在這裡。
+You made it! | 你來了！
+We made it! | 我們成功了！
+No kidding! | 真的假的！
+You know what? You're right. | 你知道嗎？你說得對。
+Here you go. | 給你。
+There you go! | 這就對了！
+Is that it? | 就這樣？
+That's it for today. | 今天就到這裡。
+So, now what? | 那現在怎麼辦？
+Your turn. | 換你了。
+After you. | 你先請。
+Same here. | 我也是。
+Me neither. | 我也不。
+Right back at you. | 你也是。
+Anytime! | 隨時都可以！
+Good call. | 好主意。
+`,
+  inter: `
+Count me in. I'm on board. | 算我一份，我加入。
+Nice try. I'm onto you. | 想得美，我看穿你了。
+I wasn't sure at first, but now I'm really into it. | 我一開始不確定，但現在真的很喜歡。
+A road trip? I'm up for it. | 公路旅行？我有興趣。
+I took the job, but I'm in over my head. | 我接了這份工作，但我應付不來。
+Sorry, I'm a little out of it today. | 抱歉，我今天有點恍神。
+If it saves money, I'm all for it. | 如果能省錢，我完全贊成。
+I'm sick and tired of it. | 我真的受夠了。
+I'm fed up with this traffic. | 我受夠這種塞車了。
+If you're cool with it, so am I. | 如果你覺得可以，我也可以。
+I'm with you on that. | 這點我同意你。
+Sorry, I'm not following you. | 抱歉，我沒聽懂你的意思。
+I'm just looking, thanks. | 我只是看看，謝謝。
+I'm all yours. What do you need? | 我現在有空，你需要什麼？
+I'm flattered, but no thanks. | 我受寵若驚，但不用了，謝謝。
+I'm speechless. | 我無言了。
+I'm really touched. | 我真的很感動。
+I'm kidding! Relax. | 我開玩笑的！放輕鬆。
+Sorry, I'm not myself today. | 抱歉，我今天不太對勁。
+Oh, it's on! | 好啊，放馬過來！
+It's a deal. | 一言為定。
+You got it, boss. | 沒問題，老闆。
+Relax. I've got it covered. | 放輕鬆，我搞定了。
+I'll get it! | 我來接！
+Let's just get it over with. | 我們趕快把它做完吧。
+Get on with it! | 快點開始吧！
+Sorry, I can't help it. | 抱歉，我忍不住。
+Let me think about it. | 讓我考慮一下。
+I'll see what I can do. | 我看看能怎麼幫。
+Don't mention it. | 不客氣。
+It's about time! | 也該是時候了！
+It's right there. You can't miss it. | 就在那裡，你一定找得到。
+What's it to you? | 關你什麼事？
+Make it quick. I'm busy. | 快一點，我很忙。
+Take it or leave it. | 要不要隨你。
+`,
+  adv: `
+I'm over the moon! | 我開心得不得了！
+I'm still on the fence. | 我還在猶豫。
+I've been on cloud nine all week. | 我這整個禮拜都樂翻了。
+I'm at my wits' end. | 我已經束手無策了。
+I'm at a loss for words. | 我不知道該說什麼。
+I'm on a roll today! | 我今天狀況超好！
+Sorry, I'm off the clock. | 抱歉，我已經下班了。
+I'm swamped right now. Can it wait? | 我現在忙翻了，可以晚點嗎？
+I haven't slept in two days. I'm running on empty. | 我兩天沒睡了，快撐不住了。
+Leave it to me. I'm all over it. | 交給我，我馬上全力處理。
+I'm calling it now: he's the killer. | 我現在就先預言：他就是兇手。
+I'm just not cut out for this. | 我就是不是這塊料。
+I know his name, but I'm drawing a blank. | 我知道他的名字，但腦袋一片空白。
+I'm not losing any sleep over it. | 我才不會為這件事煩惱。
+She was beside herself with worry. | 她擔心得快發瘋了。
+Shh, I'm in the zone. | 噓，我正專注中。
+Take what he says with a grain of salt. | 他說的話聽聽就好。
+Oh, get over yourself. | 喔，別自以為了不起。
+You messed up. Own it. | 你搞砸了，就勇於承擔吧。
+You nailed it! | 你做得太棒了！
+Go out there and crush it! | 上場去大顯身手吧！
+I didn't prepare. I'm just going to wing it. | 我沒準備，打算臨場發揮。
+Don't blow it! | 別搞砸了！
+Fake it till you make it. | 先假裝，直到成真。
+We hit it off right away. | 我們一見如故。
+You paid for lunch, I paid for coffee. Let's call it even. | 你請午餐，我請咖啡，我們扯平了。
+I think it's time to call it quits. | 我想是時候收手了。
+I'll let it slide this time. | 這次就放過你。
+All right, you won. No need to rub it in. | 好啦，你贏了，不用一直提。
+Don't sugarcoat it. Just tell me. | 不用說好聽話，直接告訴我。
+Come on, spit it out! | 快點，有話就說！
+That was cutting it close. | 剛剛真是千鈞一髮。
+Step on it! | 開快一點！
+Zip it! | 閉嘴！
+Save it for someone who cares. | 省省吧，去說給在乎的人聽。
+`
+});

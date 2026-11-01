@@ -397,3 +397,115 @@ a war of nerves | 心理戰；比耐性 | The negotiation became a war of nerves
 psychological warfare | 心理戰 | That's psychological warfare. | 🧠
 `
 });
+
+// 電影口語：I'm ___ / ___ it 系列
+addVocab("movie", {
+  basic: `
+I'm over it | 我已經放下了；不在意了 | That was last year. I'm over it. | 🙌
+I'm on my way | 我在路上了 | Hold on, I'm on my way. | 🚗
+I'm coming | 我來了 | Wait! I'm coming! | 🏃
+I'm done | 我受夠了；我做完了 | That's it. I'm done. | ✋
+I'm out | 我退出；我不玩了 | This is too risky. I'm out. | 🚪
+I'm sold | 我被說服了 | Free pizza? I'm sold. | 🤝
+I'm lost | 我聽不懂了；我迷路了 | Wait, I'm lost. Say that again. | 😵
+I'm good | 我不用了；我很好 | More cake? No thanks, I'm good. | 👍
+I'm okay | 我沒事 | Don't worry, I'm okay. | 🙂
+I'm busy | 我在忙 | Not now, I'm busy. | 📵
+I'm bored | 好無聊 | I'm bored. Let's go out. | 🥱
+I'm late | 我遲到了 | Oh no, I'm late! | ⏰
+I'm here | 我在這裡 | Don't worry, I'm here. | 📍
+you made it | 你來了；你成功了 | You made it! Come on in. | 🎉
+I made it | 我趕上了；我成功了 | I made it just in time. | 🏁
+no kidding | 真的假的；還用說 | No kidding? That's great! | 😮
+you know what | 你知道嗎 | You know what? Let's just go. | 💡
+here you go | 給你 | Here you go. | 🤲
+there you go | 這就對了 | There you go! You did it. | 👏
+is that it | 就這樣？ | Is that it? That was easy. | 🤔
+that's it | 就這樣；夠了 | That's it! I'm leaving. | ✋
+now what | 現在怎麼辦 | The car broke down. Now what? | 😩
+my turn | 換我了 | It's my turn. | 🔄
+after you | 你先請 | After you. | 🚪
+so long | 再見 | So long, see you next year. | 👋
+how about you | 那你呢 | I'm fine. How about you? | 🙋
+same here | 我也是 | Same here. | 🤝
+me too | 我也是 | Me too! | ✋
+me neither | 我也不 | Me neither. I hate spiders. | 🙅
+right back at you | 彼此彼此；你也是 | Right back at you! | 🔁
+anytime | 隨時；不客氣 | Anytime. That's what friends are for. | 🙂
+good call | 好主意；判斷得好 | Good call. Let's leave early. | 👍
+`,
+  inter: `
+I'm on board | 我同意加入 | Great plan. I'm on board. | 🚢
+I'm onto you | 我看穿你了 | Nice try. I'm onto you. | 🕵️
+I'm into it | 我很喜歡；我很投入 | This show is weird, but I'm into it. | 😍
+I'm up for it | 我有興趣；我願意 | A night hike? I'm up for it. | 🙋
+I'm in over my head | 我能力不足、應付不來 | Honestly, I'm in over my head. | 🌊
+I'm out of it | 我恍神了；狀況外 | Sorry, I'm out of it today. | 😶‍🌫️
+I'm all for it | 我完全贊成 | A day off? I'm all for it. | 👍
+I'm sick of it | 我受夠了 | I'm sick of it! | 🤢
+I'm fed up | 我受夠了 | I'm fed up with his excuses. | 😤
+I'm cool with it | 我覺得可以 | If you want to stay, I'm cool with it. | 😎
+I'm with you | 我支持你；我懂你的意思 | I'm with you on this one. | 🤝
+I'm not following | 我沒聽懂 | Sorry, I'm not following. | 🤷
+I'm just looking | 我只是看看 | No thanks, I'm just looking. | 👀
+I'm all yours | 我現在有空，你說吧 | Okay, I'm all yours. What's up? | 🙋
+I'm flattered | 我受寵若驚 | Wow, I'm flattered. | 😊
+I'm speechless | 我無言了 | I'm speechless. | 😶
+I'm touched | 我很感動 | I'm touched. Thank you. | 🥹
+I'm kidding | 我開玩笑的 | Relax, I'm kidding! | 😜
+I'm not myself today | 我今天不太對勁 | Sorry, I'm not myself today. | 😔
+it's on | 開戰了；就這麼說定 | Oh, it's on! | 🔥
+it's a deal | 一言為定 | It's a deal! | 🤝
+you got it | 沒問題；包在我身上 | Two coffees? You got it. | 👌
+got it covered | 搞定了 | Don't worry, I've got it covered. | ✅
+I'll get it | 我來接（電話）；我來開門 | The phone's ringing. I'll get it. | 📞
+get it over with | 趕快把它做完 | Let's just get it over with. | ⏩
+get on with it | 快點開始；繼續 | Stop talking and get on with it. | ▶️
+I can't help it | 我忍不住 | I can't help it. It's so funny. | 🤭
+I'll think about it | 我考慮看看 | I'll think about it. | 🤔
+I'll see what I can do | 我看看能做什麼 | Leave it with me. I'll see what I can do. | 🛠️
+don't mention it | 不客氣 | Don't mention it. | 🙂
+it's about time | 也該是時候了 | You're here! It's about time. | ⏰
+you can't miss it | 你一定找得到 | It's the big red building. You can't miss it. | 📍
+what's it to you | 關你什麼事 | What's it to you? | 😒
+make it quick | 快一點 | Make it quick. | ⏱️
+take it or leave it | 要不要隨你 | That's my final offer. Take it or leave it. | 🤷
+`,
+  adv: `
+I'm over the moon | 我開心得不得了 | I'm over the moon about the news. | 🌙
+I'm on the fence | 我還在猶豫 | I'm on the fence about moving. | 🤔
+I'm on cloud nine | 我樂翻了 | She said yes! I'm on cloud nine. | ☁️
+I'm at my wits' end | 我束手無策 | I'm at my wits' end with this printer. | 😫
+I'm at a loss for words | 我不知道該說什麼 | I'm at a loss for words. | 😶
+I'm on a roll | 我手氣正旺；我狀況正好 | Three wins in a row. I'm on a roll! | 🎲
+I'm off the clock | 我下班了 | Don't call me about work. I'm off the clock. | 🕔
+I'm swamped | 我忙翻了 | I'm swamped this week. | 📚
+I'm running on empty | 我快撐不住了 | I'm running on empty. | 🪫
+I'm all over it | 我馬上全力處理 | Don't worry about the report. I'm all over it. | 💨
+I'm calling it | 我先預言；我宣布 | I'm calling it: they'll get married. | 📣
+I'm not cut out for this | 我不是這塊料 | I'm not cut out for this job. | ✂️
+I'm drawing a blank | 我腦袋一片空白 | Sorry, I'm drawing a blank. | 🫥
+I'm not losing sleep over it | 我才不會為這煩惱 | He's mad, but I'm not losing sleep over it. | 😴
+I'm beside myself | 我急得／氣得快發瘋 | I'm beside myself with worry. | 😰
+I'm in the zone | 我超專注、進入狀態 | Don't talk to me. I'm in the zone. | 🎯
+take it with a grain of salt | 半信半疑；持保留態度 | Take it with a grain of salt. | 🧂
+get over yourself | 別自以為了不起 | Oh, get over yourself. | 🙄
+own it | 坦然面對；勇於承擔 | You made a mistake. Own it. | 💪
+nail it | 做得超好 | You're going to nail it. | 🔨
+crush it | 表現超好 | You'll crush it! | 🏆
+wing it | 臨場發揮 | I didn't prepare. I'll just wing it. | 🪽
+blow it | 搞砸 | Don't blow it this time. | 💥
+fake it till you make it | 假裝到成真 | Fake it till you make it. | 🎭
+hit it off | 一見如故 | We hit it off right away. | 🤝
+call it even | 扯平 | Let's call it even. | ⚖️
+call it quits | 收手；喊停 | Let's call it quits for today. | 🛑
+let it slide | 放過一次 | I'll let it slide this time. | 🛝
+rub it in | 一直提來刺激人 | Okay, I lost. Don't rub it in. | 😒
+sugarcoat it | 修飾；說好聽的 | Don't sugarcoat it. Tell me the truth. | 🍬
+spit it out | 有話快說 | Come on, spit it out! | 💬
+cut it close | 時間抓得很緊 | Don't cut it close next time. | ⏳
+step on it | 開快一點 | Step on it! We're late. | 🏎️
+zip it | 閉嘴 | Zip it! | 🤐
+save it | 省省吧 | Save it. I don't want to hear your excuses. | ✋
+`
+});
