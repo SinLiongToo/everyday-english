@@ -397,3 +397,99 @@ Close encounters at sea raise the risk of accidents. | 海上近距離接觸提�
 Clear communication channels help prevent a crisis. | 暢通的溝通管道有助於避免危機。
 `
 });
+
+// 緊急應變・EDC・民防準備
+addPhrases("military", {
+  basic: `
+What's in your EDC? | 你隨身都帶些什麼？
+I always carry a flashlight and a power bank. | 我總是帶著手電筒和行動電源。
+Do you have a go bag at home? | 你家有緊急避難包嗎？
+Keep it by the front door. | 把它放在大門旁邊。
+Pack enough water for three days. | 準備三天份的水。
+Don't forget your medicine. | 別忘了你的藥。
+Bring some cash in small bills. | 帶一些小鈔現金。
+Put copies of your ID in the bag. | 把身分證影本放進包包裡。
+Write down phone numbers on paper. | 把電話號碼寫在紙上。
+Your phone might die. | 你的手機可能會沒電。
+Charge your power bank tonight. | 今晚把行動電源充飽。
+Where do we meet if we get separated? | 如果我們走散了，要在哪裡會合？
+Let's meet at the school gate. | 我們在學校門口會合。
+The power is out. | 停電了。
+Where's the flashlight? | 手電筒在哪裡？
+Don't open the fridge too often. | 不要太常開冰箱。
+Fill the bathtub with water. | 把浴缸裝滿水。
+My phone got an emergency alert. | 我的手機收到緊急警報。
+Is this a drill or real? | 這是演習還是真的？
+Listen to the radio for news. | 聽收音機了解消息。
+Stay away from the windows. | 遠離窗戶。
+Go to the basement. | 到地下室去。
+Help the elderly first. | 先幫助長者。
+Check on your neighbors. | 關心一下你的鄰居。
+Everyone should be ready. | 每個人都應該做好準備。
+Being ready is not being scared. | 做好準備不等於害怕。
+`,
+  inter: `
+A good EDC kit is small enough to carry every day. | 好的 EDC 裝備要小到每天都帶得動。
+I keep a multitool, a whistle and a small flashlight on my keychain. | 我的鑰匙圈上掛著多功能工具、哨子和小手電筒。
+Build a 72-hour kit for every family member. | 幫每位家人準備一個 72 小時避難包。
+Store at least three liters of water per person per day. | 每人每天至少儲備三公升水。
+Choose non-perishable food that doesn't need cooking. | 選不需要烹煮、不易腐壞的食物。
+Rotate your stored food every six months. | 每六個月輪替一次儲備食物。
+Check the expiration dates twice a year. | 一年檢查兩次有效期限。
+Keep copies of documents in a waterproof bag. | 把證件影本放在防水袋裡。
+A crank radio works even when the batteries die. | 就算電池沒電，手搖收音機也能用。
+An emergency blanket can prevent hypothermia. | 急救保溫毯可以預防失溫。
+Learn how to use a tourniquet before you need one. | 在需要之前，先學會用止血帶。
+Press hard on the wound to stop the bleeding. | 用力壓住傷口止血。
+Make a communication plan with your family. | 和家人訂好聯絡計畫。
+Text instead of calling. Texts get through more easily. | 傳簡訊比打電話好，簡訊比較容易傳出去。
+Pick an out-of-town contact everyone can reach. | 選一位大家都聯絡得到的外地聯絡人。
+When the air raid alert sounds, go to the nearest shelter. | 防空警報響起時，前往最近的避難處所。
+Look for the shelter sign on buildings. | 留意建築物上的避難處所標示。
+You can find nearby shelters with an app. | 你可以用 app 找附近的避難處所。
+Many underground parking lots and MRT stations are shelters. | 許多地下停車場和捷運站都是避難處所。
+If you can't get to a shelter, stay in an interior room. | 如果到不了避難處所，就待在室內無窗的房間。
+Keep your fuel tank at least half full. | 油箱至少保持半滿。
+Never run a generator indoors. | 絕對不要在室內使用發電機。
+Don't believe everything you see online. | 不要相信網路上看到的一切。
+Get your news from official sources. | 從官方消息來源獲取資訊。
+Don't forward rumors. | 不要轉傳謠言。
+GPS may fail, so carry a paper map. | GPS 可能失靈，所以要帶紙本地圖。
+Do you know where the water shutoff is? | 你知道總水閥在哪裡嗎？
+Learn basic first aid and CPR. | 學會基本急救和心肺復甦術。
+Take a first aid course with your family. | 和家人一起去上急救課。
+Preparing is a habit, not a one-time task. | 準備是一種習慣，不是一次性的工作。
+`,
+  adv: `
+Taiwan's civil defense handbook tells people how to prepare for disasters and military threats. | 台灣的全民防衛手冊教民眾如何為災害和軍事威脅做準備。
+Whole-of-society resilience means every citizen has a role. | 全社會防衛韌性代表每個公民都有角色。
+The urban resilience exercise combines air raid drills with disaster response. | 城鎮韌性演習結合了防空演練和災害應變。
+An attack on critical infrastructure could cause a grid failure. | 對關鍵基礎設施的攻擊可能導致電網癱瘓。
+In 2023, cut undersea cables left Matsu with slow internet for weeks. | 2023 年海底電纜斷裂，讓馬祖的網路好幾週都很慢。
+Satellite internet can serve as a backup for communications. | 衛星網路可以作為通訊的備援。
+Taiwan imports almost all of its energy. | 台灣幾乎所有能源都仰賴進口。
+LNG reserves would run out quickly in a blockade. | 在封鎖情況下，液化天然氣存量很快就會用完。
+Food self-sufficiency is a national security issue. | 糧食自給率是國家安全議題。
+Panic buying makes shortages worse. | 恐慌性搶購會讓短缺更嚴重。
+Buy a little extra each week instead of hoarding. | 每週多買一點，而不是囤積。
+Cognitive warfare aims to make people give up before a fight. | 認知作戰的目的是讓人民不戰而降。
+Calm, informed citizens are hard to manipulate. | 冷靜且掌握資訊的公民很難被操弄。
+Situational awareness is the most important thing you carry. | 情勢警覺是你身上最重要的裝備。
+Massive bleeding can kill in minutes, before an ambulance arrives. | 大出血可能在救護車抵達前幾分鐘內致命。
+Apply a tourniquet high and tight on the limb. | 止血帶要綁在肢體的高處並綁緊。
+Pack deep wounds with hemostatic gauze. | 用止血紗布填塞深的傷口。
+A chest seal treats an open chest wound. | 胸封貼用來處理開放性胸部傷口。
+Keep a trauma kit in your car and at work. | 在車上和公司各放一個創傷急救包。
+Most experts say to bug in unless your home is unsafe. | 大多數專家建議，除非家裡不安全，否則就留在家中。
+Your bug-out bag should be light enough to carry for hours. | 你的逃生包要輕到可以背好幾個小時。
+Two is one, one is none. Always have a backup. | 一個等於沒有，兩個才算一個。永遠要有備用品。
+Redundancy matters most for light, water and communication. | 照明、飲水和通訊最需要備援。
+Neighborhood mutual aid is faster than any government response. | 鄰里互助比任何政府應變都快。
+The village chief keeps a list of residents who need help. | 里長有一份需要協助的住戶名單。
+Check on vulnerable groups, such as the elderly and people with disabilities. | 關心長者和身心障礙者等弱勢族群。
+Civil defense volunteers help run shelters and distribute supplies. | 民防志工協助管理避難處所和發放物資。
+Businesses need continuity of operations plans. | 企業需要營運持續計畫。
+Self-reliance buys time until help arrives. | 自立自救能爭取時間，直到救援抵達。
+Preparation is a form of deterrence. | 做好準備本身就是一種嚇阻。
+`
+});

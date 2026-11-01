@@ -388,3 +388,94 @@ escalation ladder | 升級階梯 | Each drill moves a step up the escalation lad
 after-action review | 戰後檢討 | The after-action review found gaps in communication. | 🔍
 `
 });
+
+// 緊急應變・EDC（隨身必備物品）・民防準備
+addVocab("military", {
+  basic: `
+EDC | 隨身必備物品（EDC） | EDC means everyday carry. | 🎒
+everyday carry | 隨身攜帶物品 | My everyday carry fits in one small pouch. | 👝
+go bag | 緊急避難包 | Keep a go bag by the front door. | 🎒
+flashlight | 手電筒 | I always carry a small flashlight. | 🔦
+whistle | 哨子 | A whistle can help rescuers find you. | 📯
+power bank | 行動電源 | Keep your power bank charged. | 🔋
+cash | 現金 | Carry some cash. Card machines may not work in a blackout. | 💵
+ID card | 身分證 | Always carry your ID card. | 🪪
+health insurance card | 健保卡 | Put your health insurance card in your go bag. | 💳
+bottled water | 瓶裝水 | Store bottled water at home. | 💧
+canned food | 罐頭 | Canned food lasts for years. | 🥫
+energy bar | 能量棒 | Pack a few energy bars. | 🍫
+spare batteries | 備用電池 | Don't forget spare batteries. | 🔋
+mask | 口罩 | Pack a few masks. | 😷
+work gloves | 工作手套 | Work gloves protect your hands. | 🧤
+raincoat | 雨衣 | A raincoat keeps you dry and warm. | 🧥
+lighter | 打火機 | A lighter is small and useful. | 🔥
+pocket knife | 小刀 | A pocket knife is a classic EDC item. | 🔪
+tape | 膠帶 | Duct tape fixes almost anything. | 🩹
+medicine | 藥品 | Bring your daily medicine. | 💊
+glasses | 眼鏡 | Pack a spare pair of glasses. | 👓
+phone number | 電話號碼 | Write important phone numbers on paper. | ☎️
+meeting place | 集合地點 | Choose a family meeting place. | 📍
+family plan | 家庭應變計畫 | Make a family plan together. | 👨‍👩‍👧
+blackout | 停電 | The blackout lasted all night. | 🌑
+emergency | 緊急情況 | Stay calm in an emergency. | 🚨
+`,
+  inter: `
+multitool | 多功能工具鉗 | A multitool has pliers, a knife and screwdrivers. | 🛠️
+tourniquet | 止血帶 | Learn how to use a tourniquet. | 🩸
+pressure bandage | 加壓繃帶 | Apply a pressure bandage to stop the bleeding. | 🩹
+bleeding control | 止血 | Bleeding control saves lives. | 🩸
+crank radio | 手搖收音機 | A crank radio works without batteries. | 📻
+emergency blanket | 急救保溫毯 | An emergency blanket weighs almost nothing. | 🪙
+water purification tablets | 淨水錠 | Pack some water purification tablets. | 💊
+72-hour kit | 72 小時避難包 | Build a 72-hour kit for each person. | 🎒
+non-perishable food | 不易腐壞的食物 | Store non-perishable food. | 🥫
+rotate | 輪替（存貨） | Rotate your stored food every six months. | 🔄
+expiration date | 有效期限 | Check the expiration date on your water. | 📅
+copies of documents | 證件影本 | Keep copies of documents in a waterproof bag. | 📄
+waterproof bag | 防水袋 | Put your phone in a waterproof bag. | 💧
+headlamp | 頭燈 | A headlamp keeps your hands free. | 🔦
+paper map | 紙本地圖 | GPS may fail, so carry a paper map. | 🗺️
+landline | 市話 | Landlines may still work when cell networks are down. | ☎️
+cell network | 行動網路 | The cell network went down. | 📶
+communication plan | 聯絡計畫 | Every family needs a communication plan. | 📞
+out-of-town contact | 外地聯絡人 | Choose an out-of-town contact. | 👤
+air raid alert | 防空警報 | When you hear an air raid alert, go to a shelter. | 🚨
+shelter sign | 避難處所標示 | Look for the shelter sign on the building. | 🪧
+underground parking | 地下停車場 | Many shelters are underground parking lots. | 🅿️
+basement | 地下室 | Go down to the basement. | 🏢
+MRT station | 捷運站 | Some MRT stations can be used as shelters. | 🚇
+shelter in place | 就地避難 | If you can't reach a shelter, shelter in place. | 🏠
+interior room | 室內無窗房間 | Stay in an interior room away from windows. | 🚪
+debris | 碎片；瓦礫 | Flying debris can injure you. | 🧱
+fuel tank | 油箱 | Keep your fuel tank at least half full. | ⛽
+generator | 發電機 | Never run a generator indoors. | ⚙️
+misinformation | 錯誤訊息 | Don't share misinformation in a crisis. | 🚫
+official sources | 官方消息來源 | Get news from official sources. | 📢
+`,
+  adv: `
+civil defense handbook | 全民防衛手冊 | The government published a civil defense handbook. | 📘
+continuity of operations | 營運持續 | Hospitals need continuity of operations plans. | 🏥
+grid failure | 電網癱瘓 | A grid failure could last for weeks. | 🔌
+satellite internet | 衛星網路 | Satellite internet can back up broken cables. | 🛰️
+LNG reserves | 液化天然氣存量 | Taiwan's LNG reserves would last days, not months. | 🛢️
+food self-sufficiency | 糧食自給率 | Taiwan's food self-sufficiency is only about 30 percent. | 🌾
+rationing | 配給 | Rationing may begin in a long crisis. | 🧾
+hoarding | 囤積 | Panic hoarding empties the shelves. | 🛒
+panic buying | 恐慌性搶購 | Panic buying started before the typhoon. | 🛒
+trauma kit | 創傷急救包 | Carry a trauma kit in your car. | 🩹
+hemorrhage | 大出血 | Massive hemorrhage can kill in minutes. | 🩸
+hemostatic gauze | 止血紗布 | Pack the wound with hemostatic gauze. | 🩹
+wound packing | 傷口填塞 | Wound packing stops deep bleeding. | 🩹
+chest seal | 胸封貼 | A chest seal treats an open chest wound. | 🩹
+gray man | 低調不顯眼的人 | In a crisis, try to be a gray man. | 🕶️
+bug-out bag | 逃生包 | A bug-out bag holds 72 hours of supplies. | 🎒
+bug in | 留守在家 | Most experts say to bug in unless your home is unsafe. | 🏠
+self-reliance | 自立自救 | Self-reliance buys time until help arrives. | 💪
+neighborhood mutual aid | 鄰里互助 | Neighborhood mutual aid saves lives after disasters. | 🤝
+village chief | 里長 | The village chief knows who needs help. | 🧑‍💼
+vulnerable groups | 弱勢族群 | Check on vulnerable groups like the elderly. | 🧓
+civil defense volunteer | 民防志工 | She trained as a civil defense volunteer. | 🦺
+redundancy | 備援 | Redundancy means having a backup for every critical tool. | 🔁
+two is one, one is none | 一個等於沒有，兩個才算一個 | Two is one, one is none. | ✌️
+`
+});
