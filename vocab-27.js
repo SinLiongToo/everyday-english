@@ -204,6 +204,28 @@ on the right track | 方向正確 | Keep going, you're on the right track. | �
 almost there | 快到了 | Don't stop now, you're almost there. | 🏁
 keep at it | 堅持下去 | Keep at it and you'll see results. | 🔨
 willpower | 意志力 | It takes willpower to wake up early. | 🧲
+no guts, no glory | 不入虎穴，焉得虎子；沒膽識就沒榮耀 | No guts, no glory — just ask her out! | 🦁
+no pain, no gain | 一分耕耘，一分收穫；不吃苦就沒收穫 | My legs hurt, but no pain, no gain. | 🏋️
+no risk, no reward | 不冒險就沒有回報 | No risk, no reward — I'm taking the job. | 🎲
+nothing ventured, nothing gained | 不入虎穴，焉得虎子 | Apply anyway. Nothing ventured, nothing gained. | 🧭
+go big or go home | 要嘛做大，要嘛回家 | It's the final, so go big or go home! | 🚀
+now or never | 機不可失 | It's now or never, so let's do it. | ⏰
+do or die | 不成功便成仁 | This is a do or die game for our team. | ⚔️
+sink or swim | 不進則退；自生自滅 | On my first day, it was sink or swim. | 🏊
+all in | 全力投入 | I'm all in on this project. | 🃏
+give it 110% | 拿出百分之一百一十的努力 | Give it 110% in the last lap! | 💯
+dig deep | 拿出全部力量；咬牙撐住 | You're tired, but dig deep and finish strong. | ⛏️
+bring it on | 放馬過來 | A harder test? Bring it on! | 🥊
+game on | 比賽開始；來吧 | You think you can beat me? Game on! | 🎮
+no excuses | 沒有藉口 | No excuses — we train today. | 🚫
+mind over matter | 意志勝過一切 | Running a marathon is mind over matter. | 🧠
+where there's a will, there's a way | 有志者事竟成 | Don't worry; where there's a will, there's a way. | 🛤️
+practice makes perfect | 熟能生巧 | Keep playing the piano. Practice makes perfect. | 🎹
+actions speak louder than words | 行動勝於言語 | Actions speak louder than words, so show them. | 🎬
+the early bird catches the worm | 早起的鳥兒有蟲吃 | I get up at six. The early bird catches the worm. | 🐦
+it ain't over till it's over | 不到最後不算結束 | We're down by ten, but it ain't over till it's over. | ⏳
+sweat now, shine later | 現在流汗，將來發光 | Sweat now, shine later — one more set! | 💦
+leave it all on the field | 在場上拚盡全力 | It's the last game. Leave it all on the field. | 🏟️
 `,
   adv: `
 resilience | 韌性；復原力 | Resilience is built through hard times. | 🌳
@@ -306,5 +328,14 @@ the best is yet to come | 最好的還在後頭 | Cheer up — the best is yet t
 fall seven times, stand up eight | 七跌八起 | Remember: fall seven times, stand up eight. | 🎎
 what doesn't kill you makes you stronger | 殺不死你的會讓你更強大 | They say what doesn't kill you makes you stronger. | 💪
 conviction | 信念；堅定的信心 | She spoke with quiet conviction. | 🗣️
+fortune favors the brave | 幸運眷顧勇者 | Fortune favors the brave, so make your move. | 🍀
+when the going gets tough, the tough get going | 越是艱難，強者越往前衝 | When the going gets tough, the tough get going. | 🧗
+who dares wins | 敢者勝 | Who dares wins — that's my motto. | 🦅
+fake it till you make it | 先裝出自信，直到真的做到 | Nervous? Fake it till you make it. | 🎭
+no man is an island | 沒有人是一座孤島 | Ask for help; no man is an island. | 🏝️
+the harder you work, the luckier you get | 越努力越幸運 | The harder you work, the luckier you get. | 🍀
+champions are made, not born | 冠軍是練出來的，不是天生的 | Remember, champions are made, not born. | 🏆
+hustle | 拚勁；拚命努力 | Talent is nothing without hustle. | 🏃
+grind | 苦幹；日復一日的努力 | Success comes from the daily grind. | ⚙️
 `
 });

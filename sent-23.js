@@ -204,6 +204,25 @@ That was a huge step forward. | 那是一大步的進展。
 Look at how much you've grown. | 看看你成長了多少。
 You make a difference. | 你帶來了改變。
 Keep shining. | 繼續發光吧。
+No guts, no glory. | 沒膽識就沒榮耀。
+No pain, no gain. | 一分耕耘，一分收穫。
+No risk, no reward. | 不冒險就沒有回報。
+Nothing ventured, nothing gained. | 不入虎穴，焉得虎子。
+Go big or go home. | 要嘛做大，要嘛回家。
+It's do or die. | 不成功便成仁。
+I'm all in. | 我全力投入。
+Dig deep! | 咬牙撐住！
+Bring it on! | 放馬過來！
+Game on! | 來吧，開始！
+No excuses. | 沒有藉口。
+It's mind over matter. | 意志勝過一切。
+Where there's a will, there's a way. | 有志者事竟成。
+Practice makes perfect. | 熟能生巧。
+Actions speak louder than words. | 行動勝於言語。
+The early bird catches the worm. | 早起的鳥兒有蟲吃。
+It ain't over till it's over. | 不到最後不算結束。
+Sweat now, shine later. | 現在流汗，將來發光。
+Leave it all on the field. | 在場上拚盡全力。
 `,
   adv: `
 Don't underestimate yourself; others certainly won't make that mistake twice. | 別低估自己，別人可不會犯第二次這種錯。
@@ -306,5 +325,14 @@ One day, you'll thank yourself for not giving up. | 總有一天，你會感謝�
 The view from the top is worth every step of the climb. | 山頂的風景值得攀登的每一步。
 Never mistake a single defeat for a final defeat. | 別把一次失敗當成最終的失敗。
 The best is yet to come, and it's closer than you think. | 最好的還在後頭，而且比你想的更近。
+Fortune favors the brave. | 幸運眷顧勇者。
+When the going gets tough, the tough get going. | 越是艱難，強者越往前衝。
+Who dares wins. | 敢者勝。
+Fake it till you make it. | 先裝出自信，直到真的做到。
+No man is an island. | 沒有人是一座孤島。
+The harder you work, the luckier you get. | 越努力越幸運。
+Champions are made, not born. | 冠軍是練出來的，不是天生的。
+Hard work beats talent, but only if you hustle. | 努力勝過天分，前提是你肯拚。
+Fall in love with the grind. | 愛上日復一日的努力。
 `
 });
