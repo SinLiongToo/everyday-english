@@ -675,6 +675,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-26.js, phrases in sent-22.js.
+    id: "survival", icon: "🧭", zh: "野外求生", en: "Wilderness Survival",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I can't see the trail anymore. I think we're lost.", "我看不到步道了，我覺得我們迷路了。"],
+        ["B", "Don't panic. Let's stop and think.", "別慌，我們先停下來想一想。"],
+        ["A", "Should we keep walking?", "我們要繼續走嗎？"],
+        ["B", "No. It's getting dark. Let's stay here and call 119.", "不要，天快黑了。我們待在這裡，打 119。"],
+        ["A", "I have one bar of signal. I'll send our location.", "我有一格訊號，我來傳我們的位置。"],
+        ["B", "Good. Put on all your clothes and blow the whistle three times every few minutes.", "很好。把衣服都穿上，每隔幾分鐘吹三聲哨子。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Let's follow this stream down. It should lead to a road.", "我們沿著這條溪往下走吧，應該會通到馬路。"],
+        ["B", "That's a common mistake. In Taiwan, streams often end at waterfalls and cliffs.", "這是常見的錯誤。在台灣，溪谷常常通到瀑布和斷崖。"],
+        ["A", "Then what should we do?", "那我們該怎麼辦？"],
+        ["B", "Go back up to the ridge. It's easier to get a signal and for helicopters to see us.", "回到稜線上。那裡比較容易收到訊號，直升機也比較容易看到我們。"],
+        ["A", "My clothes are soaked, and I'm starting to shiver.", "我的衣服濕透了，開始發抖了。"],
+        ["B", "Change into dry layers now and eat something. Shivering is an early sign of hypothermia.", "現在就換上乾的衣物並吃點東西。發抖是失溫的早期徵兆。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "We're only an hour from the summit. Let's push on.", "我們離山頂只剩一個小時，繼續衝吧。"],
+        ["B", "It's past our turnaround time, and thunderstorms are building.", "已經過了我們的折返時間，而且雷雨雲正在形成。"],
+        ["A", "But we may never get another chance.", "可是我們可能再也沒機會了。"],
+        ["B", "That's summit fever talking. The mountain will still be here next year.", "那是攻頂執念在作祟。山明年還會在這裡。"],
+        ["A", "You're right. Being on an exposed ridge in lightning is not worth it.", "你說得對。打雷時待在裸露的稜線上不值得。"],
+        ["B", "Let's head down and update our registration so rescuers know our new plan.", "我們下山吧，並更新登山計畫，讓搜救人員知道我們改了行程。"]
+      ]
+    }
+  },
+  {
     id: "family", icon: "👨‍👩‍👧", zh: "家庭生活", en: "Family & Daily Life",
     basic: {
       v: [
