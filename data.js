@@ -887,6 +887,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-27.js, phrases in sent-23.js.
+    id: "inspire", icon: "🌟", zh: "勵志激勵", en: "Inspiration & Motivation",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I failed my English test again.", "我英文考試又不及格了。"],
+        ["B", "Don't give up. You're getting better every week.", "不要放棄，你每個星期都在進步。"],
+        ["A", "But I studied so hard.", "可是我那麼努力讀書。"],
+        ["B", "Your hard work isn't wasted. Look how far you've come.", "你的努力沒有白費。看看你已經進步了多少。"],
+        ["A", "Okay. I'll try again next time.", "好吧，下次我再試一次。"],
+        ["B", "That's the spirit! I believe in you.", "這就對了！我相信你。"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "There's a team leader job open, but I don't think I'm good enough.", "有一個組長的職缺，但我覺得自己不夠好。"],
+        ["B", "Don't sell yourself short. You've trained half the new hires.", "別小看自己。新人有一半是你帶的。"],
+        ["A", "I've never managed anyone officially, though.", "可是我從來沒有正式管過人。"],
+        ["B", "Everyone starts somewhere. Step out of your comfort zone and give it a shot.", "每個人都是從某個地方開始的。走出舒適圈，試試看吧。"],
+        ["A", "What if I don't get it?", "如果我沒上呢？"],
+        ["B", "Then you'll learn something and try again. You've got what it takes.", "那你就學到一些東西，再試一次。你有這個本事。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "My startup failed. I keep wondering if I should have stayed at my old job.", "我的新創失敗了。我一直在想是不是應該待在原本的工作。"],
+        ["B", "It took real courage to take that leap of faith. Most people never try.", "做那次冒險一搏需要真正的勇氣，大多數人從來不敢嘗試。"],
+        ["A", "Courage doesn't pay the rent, though.", "可是勇氣不能拿來付房租。"],
+        ["B", "True, but the skills you built are worth a lot. This could be a blessing in disguise.", "沒錯，但你培養的能力很有價值。這可能是因禍得福。"],
+        ["A", "I suppose I learned more in two years than in the previous ten.", "我想我這兩年學到的比之前十年還多。"],
+        ["B", "Exactly. Every setback is a setup for a comeback. Your story isn't over yet.", "沒錯。每次挫折都是在為東山再起鋪路，你的故事還沒結束。"]
+      ]
+    }
+  },
+  {
     id: "work", icon: "💼", zh: "工作職場", en: "Work & Career",
     basic: {
       v: [
