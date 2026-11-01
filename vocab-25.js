@@ -308,3 +308,103 @@ widowmaker | 會砸落的枯枝 | Look up for widowmakers before you pitch. | �
 terrain | 地形 | The terrain is steep and rocky. | ⛰️
 `
 });
+
+// 露營：防蚊、防曬、護膚、手套與越野跑防護
+addVocab("camping", {
+  basic: `
+gloves | 手套 | Wear gloves when you collect firewood. | 🧤
+lip balm | 護唇膏 | The wind dried my lips. Do you have lip balm? | 💋
+sunglasses | 太陽眼鏡 | Don't forget your sunglasses. | 🕶️
+cap | 鴨舌帽 | Wear a cap to keep the sun off your face. | 🧢
+long sleeves | 長袖 | Long sleeves keep the bugs away. | 👕
+long pants | 長褲 | Wear long pants in tall grass. | 👖
+itchy | 癢的 | My legs are so itchy! | 😣
+itch | 癢；發癢 | Try not to touch the itch. | 🤏
+scratch | 抓（癢） | Don't scratch it, or it will get worse. | 💅
+bite | 叮咬；咬傷 | I have a mosquito bite on my arm. | 🦟
+sting | 螫；螫傷 | A bee sting really hurts. | 🐝
+bee | 蜜蜂 | There's a bee on your hat! | 🐝
+lotion | 乳液 | Put some lotion on your dry hands. | 🧴
+cream | 乳霜；藥膏 | This cream stops the itching. | 🧴
+spray | 噴霧；噴 | Spray it on your arms and legs. | 💨
+bandage | 繃帶；OK繃 | Put a bandage on that cut. | 🩹
+cut | 割傷 | I got a small cut on my hand. | 🩸
+running shoes | 跑鞋 | These running shoes are very light. | 👟
+sweat | 汗；流汗 | I'm covered in sweat. | 💦
+sweaty | 滿身汗的 | My shirt is so sweaty. | 💦
+hand sanitizer | 乾洗手 | Use hand sanitizer if there's no water. | 🧴
+mask | 口罩 | Wear a mask on the dusty road. | 😷
+whistle | 哨子 | Keep a whistle on your backpack. | 📯
+earplugs | 耳塞 | Bring earplugs in case your neighbors snore. | 🦻
+tissue | 面紙 | Can I have a tissue? | 🤧
+`,
+  inter: `
+mosquito net | 蚊帳 | Hang a mosquito net over your bed. | 🕸️
+mosquito coil | 蚊香 | Never burn a mosquito coil inside a tent. | 🌀
+citronella | 香茅 | Citronella candles help a little, but not much. | 🕯️
+repel | 驅趕；防（蟲） | This spray repels mosquitoes for about six hours. | 🚫
+reapply | 重新塗抹 | Reapply sunscreen every two hours. | 🔁
+SPF | 防曬係數 | Use a sunscreen with at least SPF 30. | ☀️
+water-resistant | 耐水的；防汗的 | Choose a water-resistant sunscreen if you'll sweat a lot. | 💧
+after-sun lotion | 曬後修護乳 | Put some after-sun lotion on your shoulders. | 🧴
+anti-itch cream | 止癢膏 | This anti-itch cream works fast. | 🧴
+swelling | 腫脹 | Put ice on it to bring down the swelling. | 🧊
+rash | 疹子 | I got a rash from that plant. | 🔴
+tick | 蜱（壁蝨） | Check your body for ticks after the hike. | 🕷️
+work gloves | 工作手套 | Wear work gloves when you chop wood. | 🧤
+fingerless gloves | 半指手套 | Fingerless gloves let you use your phone. | 🧤
+grip | 抓握力 | These gloves give you a better grip on the rope. | ✊
+trail running | 越野跑 | Trail running is much harder than road running. | 🏃
+trail running shoes | 越野跑鞋 | My trail running shoes are full of mud. | 👟
+hydration vest | 水袋背心 | I carry two soft bottles in my hydration vest. | 🎽
+trekking poles | 登山杖 | Trekking poles save your knees on the way down. | 🥢
+gaiters | 綁腿；鞋套 | Gaiters keep stones out of your shoes. | 🥾
+arm sleeves | 袖套 | Arm sleeves protect you from the sun. | 💪
+neck gaiter | 脖圍；多功能頭巾 | A neck gaiter keeps the sun off your neck. | 🧣
+chafing | 磨擦破皮 | Long runs can cause chafing. | 🔥
+anti-chafe balm | 防磨膏 | Put anti-chafe balm on your feet before the race. | 🧴
+energy gel | 能量果膠 | Take an energy gel every 45 minutes. | ⚡
+electrolytes | 電解質 | Add electrolytes to your water on hot days. | 🧂
+cramp | 抽筋 | I got a cramp in my leg. | 🦵
+reflective | 反光的 | Wear something reflective on the road at night. | 🦺
+windbreaker | 防風外套 | Pack a light windbreaker for the summit. | 🧥
+poncho | 斗篷式雨衣 | A poncho can cover you and your backpack. | 🌧️
+quick-dry | 快乾的 | Quick-dry clothes are great for camping. | 👕
+leech socks | 防螞蝗襪 | Wear leech socks after the rain. | 🧦
+UV | 紫外線 | The UV is much stronger in the mountains. | 🌞
+`,
+  adv: `
+DEET | 敵避（DEET，防蚊成分） | Look for a repellent with DEET or picaridin. | 🧪
+picaridin | 派卡瑞丁（防蚊成分） | Picaridin doesn't smell as strong as DEET. | 🧪
+permethrin | 百滅寧（衣物用防蟲劑） | Permethrin is for clothes, not for skin. | 👕
+concentration | 濃度 | A higher concentration lasts longer, but it isn't stronger. | 📊
+active ingredient | 有效成分 | Check the active ingredient on the label. | 🏷️
+broad-spectrum | 廣譜的（同時防 UVA 和 UVB） | Choose a broad-spectrum sunscreen. | 🌈
+mineral sunscreen | 物理性防曬 | Mineral sunscreen uses zinc oxide or titanium dioxide. | ⛱️
+heat rash | 痱子 | Loose clothes help prevent heat rash. | 🔴
+contact dermatitis | 接觸性皮膚炎 | Some plants can cause contact dermatitis. | 🌿
+antihistamine | 抗組織胺 | Take an antihistamine for the itching. | 💊
+hydrocortisone cream | 氫化可體松藥膏（類固醇止癢膏） | A little hydrocortisone cream calms the rash. | 🧴
+calamine lotion | 爐甘石洗劑 | Dab calamine lotion on the bites. | 🧴
+secondary infection | 繼發性感染 | Scratching can lead to a secondary infection. | 🦠
+fine-tipped tweezers | 尖頭鑷子 | Remove a tick with fine-tipped tweezers. | 🔧
+chigger | 恙蟲 | Chiggers live in tall grass. | 🐛
+scrub typhus | 恙蟲病 | Chigger bites can spread scrub typhus. | 🏥
+dengue fever | 登革熱 | Dengue fever is spread by mosquitoes. | 🦟
+barrier cream | 防護霜；隔離霜 | A barrier cream protects your skin from friction. | 🧴
+friction | 摩擦 | Friction and moisture cause blisters. | 🔥
+hot spot | 快起水泡的發熱點 | Stop and cover a hot spot before it becomes a blister. | 🔥
+taping | 貼紮 | Taping your heels can prevent blisters. | 🩹
+moleskin | 防磨貼 | Put moleskin on your heel. | 🩹
+toe socks | 五趾襪 | Toe socks stop your toes rubbing together. | 🧦
+cut-resistant gloves | 防割手套 | Use cut-resistant gloves when you clean fish. | 🧤
+insulated gloves | 保暖手套 | Bring insulated gloves for the summit. | 🧤
+touchscreen-compatible | 可觸控螢幕的 | These gloves are touchscreen-compatible. | 📱
+technical terrain | 技術性地形 | Gloves protect your hands on technical terrain. | 🧗
+cushioning | 緩震 | These shoes have a lot of cushioning. | 👟
+lug | 鞋底大齒紋 | Shoes with deep lugs grip well in mud. | 🥾
+mandatory gear | 強制裝備 | Check the race's mandatory gear list. | 📋
+emergency blanket | 急救毯 | An emergency blanket weighs almost nothing. | 🪙
+pacing | 配速 | Good pacing matters on long climbs. | ⏱️
+`
+});

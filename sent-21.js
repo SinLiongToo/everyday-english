@@ -308,3 +308,100 @@ Nature doesn't care how experienced you are. | 大自然才不管你有多少經
 When in doubt, turn back. | 有疑慮就折返。
 `
 });
+
+// 露營：防蚊、防曬、護膚、手套與越野跑防護
+addPhrases("camping", {
+  basic: `
+Don't forget your gloves. | 別忘了帶手套。
+Wear gloves when you carry firewood. | 搬木柴時要戴手套。
+My lips are dry. Do you have lip balm? | 我嘴唇好乾，你有護唇膏嗎？
+Put on your sunglasses. The sun is strong. | 戴上太陽眼鏡，太陽很大。
+Wear a hat and long sleeves. | 戴帽子、穿長袖。
+Wear long pants in the grass. | 走草地要穿長褲。
+I got bitten all over! | 我全身都被叮了！
+This bite is so itchy. | 這個包好癢。
+Don't scratch it. | 不要抓。
+Can I use your bug spray? | 可以借用你的防蚊液嗎？
+Spray it on your clothes too. | 衣服上也噴一下。
+Don't spray it near your eyes. | 不要噴到眼睛附近。
+Did you put on sunscreen? | 你擦防曬了嗎？
+Put some on your neck and ears too. | 脖子和耳朵也要擦。
+My face is getting red. | 我的臉開始紅了。
+A bee stung me! | 我被蜜蜂螫了！
+Does it hurt? | 會痛嗎？
+I cut my finger. | 我割到手指了。
+Do you have a bandage? | 你有 OK 繃嗎？
+Wash your hands first. | 先洗手。
+I'm so sweaty. | 我滿身是汗。
+My feet hurt in these shoes. | 穿這雙鞋腳好痛。
+Keep a whistle on your backpack. | 背包上掛個哨子。
+I brought earplugs. | 我帶了耳塞。
+Put the bug spray in the car. | 把防蚊液放到車上。
+`,
+  inter: `
+The mosquitoes here are terrible. | 這裡的蚊子超可怕。
+Close the mosquito net properly. | 把蚊帳關好。
+Don't burn a mosquito coil inside the tent. | 不要在帳篷裡點蚊香。
+Citronella alone isn't enough. | 只靠香茅是不夠的。
+This repellent lasts about six hours. | 這瓶防蚊液大約有效六小時。
+Put sunscreen on first, then bug spray. | 先擦防曬，再噴防蚊液。
+Reapply your sunscreen after swimming. | 游完泳要重新擦防曬。
+Is it SPF 50? | 這是 SPF 50 的嗎？
+The UV is strong even when it's cloudy. | 就算陰天，紫外線還是很強。
+My shoulders are burned. Do you have after-sun lotion? | 我的肩膀曬傷了，你有曬後修護乳嗎？
+Put some anti-itch cream on it. | 擦一點止癢膏。
+The swelling is getting worse. | 腫得越來越厲害了。
+I think I'm allergic to something. I've got a rash. | 我好像對什麼過敏，起疹子了。
+Check each other for ticks after the hike. | 健行後互相檢查身上有沒有壁蝨。
+Wear work gloves when you put in the tent pegs. | 打營釘的時候戴工作手套。
+These gloves have a good grip. | 這雙手套抓握力很好。
+Have you ever tried trail running? | 你試過越野跑嗎？
+Road shoes are too slippery on the trail. | 路跑鞋在山路上太滑了。
+How much water does your hydration vest hold? | 你的水袋背心可以裝多少水？
+Use trekking poles on steep downhills. | 陡下坡要用登山杖。
+Put your gaiters on. It's muddy. | 戴上鞋套，路很泥濘。
+Arm sleeves are cooler than a long-sleeved shirt. | 袖套比長袖上衣涼快。
+My thighs are chafing. | 我的大腿磨破皮了。
+Put anti-chafe balm on before you start. | 出發前先擦防磨膏。
+Take an energy gel before you feel tired. | 在覺得累之前就先吃能量果膠。
+I'm cramping. I need electrolytes. | 我抽筋了，需要補充電解質。
+Wear something reflective if you run at night. | 晚上跑步要穿反光的東西。
+It's windy at the top. Bring a windbreaker. | 山頂風大，帶件防風外套。
+Quick-dry clothes are much better than cotton. | 快乾衣物比棉質好多了。
+Put on leech socks. The trail is wet. | 穿上防螞蝗襪，步道很濕。
+`,
+  adv: `
+Choose a repellent with DEET or picaridin. | 選含 DEET 或派卡瑞丁的防蚊液。
+Natural repellents usually don't last long. | 天然防蚊產品通常效果不持久。
+Spray permethrin on clothes, never on your skin. | 百滅寧噴在衣物上，絕對不要噴在皮膚上。
+Let the clothes dry completely before you wear them. | 衣服要完全乾了再穿。
+A higher concentration means longer protection, not stronger protection. | 濃度越高代表效果越持久，不是越強。
+Read the label for the active ingredient. | 看標籤上的有效成分。
+Use a broad-spectrum sunscreen that blocks both UVA and UVB. | 用能同時阻隔 UVA 和 UVB 的廣譜防曬。
+Mineral sunscreen is gentler on sensitive skin. | 物理性防曬對敏感肌比較溫和。
+Most people don't use enough sunscreen. | 大多數人防曬擦得不夠。
+Snow and water reflect UV rays. | 雪地和水面會反射紫外線。
+Wear loose clothes to avoid heat rash. | 穿寬鬆的衣服避免長痱子。
+Don't touch plants you don't recognize. | 不認識的植物不要亂碰。
+An antihistamine can help if the itching keeps you awake. | 如果癢到睡不著，抗組織胺可以幫忙。
+Use calamine lotion or hydrocortisone cream on the bites. | 被叮的地方擦爐甘石洗劑或氫化可體松藥膏。
+If a bite gets red, hot and painful, it could be infected. | 叮咬處如果紅、熱、痛，可能感染了。
+Grip the tick close to the skin and pull it straight out. | 夾住壁蝨靠近皮膚的地方，直直地拔出來。
+Don't twist it or burn it. | 不要轉也不要用火燒。
+Chiggers live in grassy areas and can spread scrub typhus. | 恙蟲住在草叢裡，可能傳播恙蟲病。
+If you get a fever after a camping trip, tell the doctor where you went. | 露營後發燒，要告訴醫生你去過哪裡。
+Dengue fever is spread by mosquitoes that bite during the day. | 登革熱是由白天叮人的蚊子傳播的。
+Friction plus moisture is the recipe for blisters. | 摩擦加上潮濕，就是起水泡的原因。
+Stop as soon as you feel a hot spot. | 一感覺到發熱點就要停下來。
+Tape your heels before a long race. | 長距離比賽前先貼紮腳跟。
+Moleskin works best before the blister forms. | 防磨貼在水泡出現之前用最有效。
+Toe socks stop your toes from rubbing together. | 五趾襪能防止腳趾互相摩擦。
+Wear cut-resistant gloves when you use a knife or clean fish. | 用刀或殺魚時戴防割手套。
+On a cold summit, insulated gloves make a huge difference. | 在寒冷的山頂上，保暖手套差很多。
+Gloves protect your hands if you fall on technical terrain. | 在技術性地形跌倒時，手套能保護雙手。
+More cushioning helps on long downhill sections. | 長下坡路段，緩震多一點比較好。
+Deep lugs grip mud but feel strange on pavement. | 深齒紋鞋底抓泥地，但在柏油路上感覺怪怪的。
+Every runner must carry the mandatory gear, including an emergency blanket. | 每位跑者都必須攜帶強制裝備，包括急救毯。
+Start slow. Good pacing wins long races. | 慢慢開始，好的配速才能贏得長距離比賽。
+`
+});
