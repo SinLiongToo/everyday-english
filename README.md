@@ -21,6 +21,7 @@
 | `pictures.js`、`pictures-more.js` | 較早加入的單字的圖片 |
 | `vocab-1.js` ~ `vocab-30.js` | 其餘單字，一行一個：`word \| 中文 \| example \| emoji`（emoji 可省略） |
 | `sent-1.js` ~ `sent-26.js` | 其餘實用句，一行一句：`English sentence \| 中文` |
+| `dlg-1.js` | 額外情境對話（例如「帶外國朋友逛夜市」），一行一句：`A \| English \| 中文` |
 | `idioms-1.js` ~ `idioms-4.js` | 每個主題約 30 個慣用語（中級、高級），格式同單字 |
 | `.nojekyll` | 讓 GitHub Pages 直接提供檔案 |
 
@@ -44,5 +45,5 @@ git push -u origin main
 
 ## 新增內容
 
-新主題：在 `data.js` 複製一個主題區塊修改。新單字：在 `vocab-*.js` 對應主題與等級加一行。新句子：在 `sent-*.js` 加一行。
+新主題：在 `data.js` 複製一個主題區塊修改。新單字：在 `vocab-*.js` 對應主題與等級加一行。新句子：在 `sent-*.js` 加一行。新情境對話：在 `dlg-1.js` 用 `addDialog(主題, 等級, {zh, en}, ...)` 加一段。
 每個單字的例句必須包含該單字（測驗會把它挖空）。小測驗每次從該等級隨機出 10 題。

@@ -1927,3 +1927,12 @@ window.addPhrases = function (id, more) {
     });
   });
 };
+
+// Extra scenario dialogues live in dlg-*.js. Lines are "A | English | 中文" (speaker A or B).
+window.addDialog = function (id, lv, title, text) {
+  const tp = window.TOPICS.find((t) => t.id === id);
+  if (!tp) return;
+  const d = text.split("\n").map((l) => l.trim()).filter(Boolean)
+    .map((l) => l.split("|").map((s) => s.trim())).filter((x) => x.length >= 3 && (x[0] === "A" || x[0] === "B"));
+  (tp[lv].dx = tp[lv].dx || []).push({ zh: title.zh, en: title.en, d: d.map((x) => x.slice(0, 3)) });
+};

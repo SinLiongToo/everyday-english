@@ -149,6 +149,7 @@ section.blk { margin-bottom: 32px; }
 section.blk > h2 { font-size: 1.15rem; margin: 0 0 12px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 section.blk > h2 .num { color: var(--accent); }
 .h2-act { margin-left: auto; }
+.dlg-h { font-size: 1rem; margin: 20px 0 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
 .vtools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 12px; }
 .vtools input[type="search"] {
@@ -365,6 +366,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 <script src="idioms-2.js"></script>
 <script src="idioms-3.js"></script>
 <script src="idioms-4.js"></script>
+<script src="dlg-1.js"></script>
 <script>
 (function () {
   "use strict";
@@ -725,11 +727,18 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <button class="ibtn" data-say="${esc(en)}" aria-label="${t("speak")}">🔊</button>
       </li>`).join("");
 
-    const dialog = L.d.map(([s, en, z], i) => `<li class="row" data-line="${i}">
+    const dlgRows = (d) => d.map(([s, en, z], i) => `<li class="row" data-line="${i}">
         <span class="spk ${s}">${s}</span>
         <div class="txt"><div class="en">${esc(en)}</div>${trLine(z)}</div>
         <button class="ibtn" data-say="${esc(en)}" data-alt="${s === "B" ? 1 : ""}" aria-label="${t("speak")}">🔊</button>
       </li>`).join("");
+    const dialog = dlgRows(L.d);
+    // Extra scenario dialogues added with addDialog(), each with its own title and play button.
+    const extraDlg = (L.dx || []).map((x, k) => `
+        <h3 class="dlg-h">${esc(zh() ? x.zh : x.en)}
+          <span class="h2-act"><button class="tbtn" id="playDx${k}" type="button">${t("playAll")}</button></span>
+        </h3>
+        <ul class="list" id="dlgx${k}">${dlgRows(x.d)}</ul>`).join("");
 
     app.innerHTML = `
       <div class="tbar">
@@ -774,6 +783,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
           <span class="h2-act"><button class="tbtn" id="playAll" type="button">${t("playAll")}</button></span>
         </h2>
         <ul class="list" id="dlg">${dialog}</ul>
+        ${extraDlg}
       </section>
       <section class="blk">
         <h2><span class="num">4</span>${t("quiz")}</h2>
@@ -840,6 +850,11 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     const playBtn = document.getElementById("playAll");
     playBtn.onclick = () => playSeq(playBtn, t("playAll"), () =>
       [...document.querySelectorAll("#dlg .row")].map((el, i) => ({ el, parts: [{ text: L.d[i][1], alt: L.d[i][0] === "B" }] })));
+    (L.dx || []).forEach((x, k) => {
+      const b = document.getElementById("playDx" + k);
+      b.onclick = () => playSeq(b, t("playAll"), () =>
+        [...document.querySelectorAll(`#dlgx${k} .row`)].map((el, i) => ({ el, parts: [{ text: x.d[i][1], alt: x.d[i][0] === "B" }] })));
+    });
     startQuiz(tp, lv);
   }
 
