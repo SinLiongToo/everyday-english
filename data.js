@@ -457,6 +457,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-29.js, phrases in sent-25.js.
+    id: "prepare", icon: "🎒", zh: "緊急防災", en: "Emergency Preparedness",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The news says a typhoon is coming tomorrow.", "新聞說明天颱風要來。"],
+        ["B", "Do we have enough water and food?", "我們的水和食物夠嗎？"],
+        ["A", "We have some rice and instant noodles, but not much water.", "我們有一些米和泡麵，但水不多。"],
+        ["B", "Let's buy bottled water and canned food today, and fill the bathtub tonight.", "我們今天去買瓶裝水和罐頭，今晚把浴缸裝滿水。"],
+        ["A", "Good idea. I'll charge the power bank and find the flashlight.", "好主意。我來幫行動電源充電，再把手電筒找出來。"],
+        ["B", "And don't forget food for the cat!", "還有別忘了貓的食物！"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I'm putting together a go-bag for each of us. What should go in it?", "我在幫我們每個人準備緊急避難包。裡面應該放什麼？"],
+        ["B", "Water, ready-to-eat food, a flashlight, a whistle, cash and a week of your medicine.", "水、即食食物、手電筒、哨子、現金，還有一週份的藥。"],
+        ["A", "How much water should we store at home?", "我們在家應該存多少水？"],
+        ["B", "At least three liters per person per day, for three days or more.", "每人每天至少三公升，準備三天以上。"],
+        ["A", "And if the power goes out?", "那如果停電呢？"],
+        ["B", "Eat the food in the fridge first, keep the door closed, and save the canned food for last.", "先吃冰箱裡的食物，冰箱門關好，罐頭留到最後。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Should we really keep two weeks of supplies? It feels excessive.", "我們真的要準備兩週的物資嗎？感覺有點太多了。"],
+        ["B", "After a major earthquake, roads and supply chains could be cut for days.", "大地震之後，道路和供應鏈可能好幾天都中斷。"],
+        ["A", "But I don't want to look like I'm panic buying.", "可是我不想看起來像在恐慌性搶購。"],
+        ["B", "That's the point. Build it slowly, a few items each week, and rotate them.", "重點就在這裡。慢慢累積，每週買幾樣，再輪流使用。"],
+        ["A", "And our building's pumps need electricity, so the water could stop too.", "而且我們大樓的抽水馬達需要電，所以可能連水也會停。"],
+        ["B", "Exactly. Store water in food-grade containers, and check on the elderly couple next door.", "沒錯。用食品級容器儲水，也要關心隔壁那對老夫婦。"]
+      ]
+    }
+  },
+  {
     // All words for this topic are in vocab-8.js.
     id: "airport", icon: "✈️", zh: "機場", en: "At the Airport",
     basic: {
