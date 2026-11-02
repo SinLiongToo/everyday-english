@@ -1325,6 +1325,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-30.js, phrases in sent-26.js.
+    id: "stats", icon: "📊", zh: "統計與工程估算", en: "Statistics & Engineering",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "How many people came to the event?", "活動來了多少人？"],
+        ["B", "I didn't count, but about 200.", "我沒數，不過大約兩百人。"],
+        ["A", "Is that more than last year?", "比去年多嗎？"],
+        ["B", "Yes, almost double. Look at this chart.", "對，差不多兩倍。你看這張圖表。"],
+        ["A", "Wow, the blue bar is much higher.", "哇，藍色的長條高很多。"],
+        ["B", "Right. Next year we need a bigger room!", "沒錯，明年我們需要更大的場地！"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Can you give me a ballpark figure for the total cost?", "你能先給我一個總成本的粗估範圍嗎？"],
+        ["B", "Off the top of my head, around 2 million, give or take 10%.", "我隨口估一下，大約兩百萬，上下差百分之十。"],
+        ["A", "What's driving most of that?", "主要的成本是什麼？"],
+        ["B", "Materials. Steel prices have fluctuated a lot this year.", "材料。今年鋼價波動很大。"],
+        ["A", "Okay. When can you send me a detailed breakdown?", "好。你什麼時候可以給我詳細的成本細目？"],
+        ["B", "Give me two days. I'll double-check the assumptions first.", "給我兩天，我先再確認一次假設。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "The new process cut defects by 40%. The p-value is 0.03.", "新製程讓缺陷減少了百分之四十，p 值是 0.03。"],
+        ["B", "Nice. But what was the sample size, and was there a control group?", "很好。但樣本數是多少？有對照組嗎？"],
+        ["A", "Only 50 units, and we compared them with last month's batch.", "只有五十個，我們是拿上個月那批來比較。"],
+        ["B", "Then the material lot could be a confounding variable.", "那材料批號可能是一個干擾變數。"],
+        ["A", "Fair point. Should we run a proper design of experiments?", "說得有道理。我們要做一個正式的實驗設計嗎？"],
+        ["B", "Yes, and track it on a control chart before we change the spec.", "要，而且在改規格之前，先用管制圖追蹤。"]
+      ]
+    }
+  },
+  {
     // All words are in vocab-13.js and all phrases in sent-9.js.
     id: "health", icon: "🩺", zh: "身體・健康", en: "Body & Health",
     basic: {
