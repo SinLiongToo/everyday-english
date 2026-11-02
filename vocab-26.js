@@ -308,3 +308,119 @@ calorie-dense | 高熱量的 | Pack calorie-dense food like nuts. | 🥜
 signaling device | 求救裝置 | A whistle is the cheapest signaling device. | 📯
 `
 });
+
+// 野外求生：淨水（淨水錠、濾水器、煮沸）與動物攻擊
+addVocab("survival", {
+  basic: `
+clean water | 乾淨的水 | We need clean water. | 💧
+dirty | 髒的 | This water looks dirty. | 🟤
+clear | 清澈的 | Clear water can still make you sick. | 💎
+cloudy | 混濁的 | The water is cloudy after the rain. | 🌫️
+bottle | 瓶子 | Fill your bottle here. | 🍶
+pot | 鍋子 | Boil the water in a pot. | 🍲
+bubble | 冒泡；泡泡 | Wait until the water bubbles. | 🫧
+cool | 放涼 | Let the water cool down. | ❄️
+cloth | 布 | Pour the water through a cloth. | 🧣
+sick | 生病的 | Bad water can make you sick. | 🤢
+stomachache | 肚子痛 | I have a stomachache. | 🤕
+fill | 裝滿 | Fill all the bottles. | 🫗
+flowing | 流動的 | Take water from flowing streams. | 🌊
+dog | 狗 | There's a dog on the trail. | 🐕
+stray dog | 流浪狗 | Watch out for stray dogs. | 🐕
+bark | 吠叫 | The dog is barking at us. | 🐶
+growl | 低吼 | The dog is growling. | 😾
+wild boar | 山豬 | A wild boar ran across the trail. | 🐗
+animal | 動物 | Don't go near wild animals. | 🦊
+wild | 野生的 | These animals are wild. | 🌿
+attack | 攻擊 | The monkey tried to attack me. | ⚠️
+scared | 害怕的 | I'm scared of dogs. | 😨
+run away | 逃跑 | Don't run away from a dog. | 🏃
+stand still | 站著不動 | Stand still and stay calm. | 🧍
+back away | 慢慢後退 | Back away slowly. | 🔙
+loud | 大聲的 | Make a loud noise. | 📢
+noise | 聲音；噪音 | Make some noise as you walk. | 🔊
+food bag | 食物袋 | Keep your food bag closed. | 🛍️
+wash | 清洗 | Wash the bite with soap and water. | 🧼
+soap | 肥皂 | Use soap and lots of water. | 🧼
+doctor | 醫生 | See a doctor after any animal bite. | 🩺
+scratch | 抓傷 | A monkey scratch can get infected. | 🐒
+claw | 爪子 | Bears have long claws. | 🐾
+teeth | 牙齒 | The dog showed its teeth. | 🦷
+`,
+  inter: `
+water source | 水源 | Find a water source before dark. | 🚰
+upstream | 上游 | Collect water upstream of the campsite. | ⬆️
+downstream | 下游 | Don't collect water downstream of a village. | ⬇️
+stagnant | 不流動的；死水的 | Avoid stagnant water. | 🟢
+rolling boil | 大滾 | Bring it to a rolling boil. | ♨️
+purification tablets | 淨水錠 | Add purification tablets and wait. | 💊
+chlorine dioxide | 二氧化氯 | Chlorine dioxide tablets kill most germs. | 🧪
+iodine | 碘 | Iodine makes the water taste bad. | 🧪
+waiting time | 等待時間 | Check the waiting time on the package. | ⏳
+dose | 劑量 | Use the right dose for the amount of water. | 📏
+liter | 公升 | Read how many liters one tablet treats. | 🫙
+taste | 味道；嚐起來 | The water tastes like a swimming pool. | 👅
+squeeze filter | 擠壓式濾水器 | A squeeze filter is light and fast. | 🫳
+gravity filter | 重力式濾水器 | A gravity filter works while you set up camp. | 🪣
+UV purifier | 紫外線淨水器 | A UV purifier needs batteries and clear water. | 🔦
+sediment | 沉澱物 | Let the sediment settle first. | 🪨
+settle | 沉澱 | Let the water settle for an hour. | ⏱️
+prefilter | 預先過濾 | Prefilter cloudy water through a bandana. | 🧣
+bacteria | 細菌 | Boiling kills bacteria. | 🦠
+virus | 病毒 | Most portable filters don't remove viruses. | 🦠
+diarrhea | 腹瀉 | Dirty water can cause diarrhea. | 🚽
+vomit | 嘔吐 | He started to vomit. | 🤮
+Formosan rock macaque | 台灣獼猴 | Formosan rock macaques often steal food. | 🐒
+charge | 衝撞；衝過來 | The boar charged at us. | 🐗
+pack | （狗）群 | A pack of dogs followed us. | 🐕
+territorial | 有領域性的 | Dogs can be territorial near farms. | 🏡
+aggressive | 有攻擊性的 | That dog looks aggressive. | 😠
+eye contact | 眼神接觸 | Don't make eye contact with the monkey. | 👀
+make yourself big | 讓自己看起來更大 | Raise your arms and make yourself big. | 🙌
+centipede | 蜈蚣 | A centipede bite is very painful. | 🐛
+wasp | 胡蜂；黃蜂 | Wasps built a nest by the trail. | 🐝
+nest | 巢 | Stay away from the nest. | 🪺
+rabies | 狂犬病 | Ferret-badgers in Taiwan can carry rabies. | ⚕️
+ferret-badger | 鼬獾 | Don't touch a sick ferret-badger. | 🦡
+bite wound | 咬傷傷口 | Clean the bite wound right away. | 🩹
+tetanus shot | 破傷風針 | You may need a tetanus shot. | 💉
+hang your food | 把食物吊起來 | Hang your food away from the tent. | 🎒
+scent | 氣味 | Animals follow the scent of food. | 👃
+`,
+  adv: `
+microfilter | 微過濾器 | A microfilter removes bacteria and protozoa. | 🔬
+hollow-fiber membrane | 中空纖維膜 | Most squeeze filters use a hollow-fiber membrane. | 🧵
+pore size | 孔徑 | A pore size of 0.1 microns stops bacteria. | 🔍
+micron | 微米 | One micron is a thousandth of a millimeter. | 📐
+protozoa | 原生動物 | Protozoa like giardia cause stomach problems. | 🦠
+Cryptosporidium | 隱孢子蟲 | Cryptosporidium resists ordinary chlorine. | 🦠
+contact time | 接觸時間 | Chlorine dioxide needs a longer contact time in cold water. | ⏲️
+turbidity | 濁度 | High turbidity makes chemical treatment less effective. | 🌫️
+activated carbon | 活性碳 | Activated carbon improves the taste and removes some chemicals. | ⚫
+chemical contamination | 化學污染 | Boiling doesn't remove chemical contamination. | ☣️
+agricultural runoff | 農業逕流 | Streams below farms may contain agricultural runoff. | 🚜
+cross-contamination | 交叉污染 | Keep dirty and clean bottles separate to avoid cross-contamination. | 🔀
+backflush | 反沖洗 | Backflush the filter when the flow slows down. | 🔁
+clog | 堵塞 | Silty water will clog your filter. | 🚫
+freeze | 結冰 | Don't let a hollow-fiber filter freeze. | 🧊
+boiling point | 沸點 | At high altitude, the boiling point of water is lower. | 🌡️
+disinfect | 消毒 | Disinfect the water before you drink it. | 🧴
+potable | 可飲用的 | Is this water potable? | 🚰
+provoke | 激怒 | Don't provoke the animal. | 😤
+predatory | 掠食性的 | Most attacks aren't predatory. | 🐺
+defensive | 防衛性的 | A mother boar with piglets can be very defensive. | 🛡️
+habituated | 習慣人類的 | Habituated monkeys have lost their fear of people. | 🐒
+food-conditioned | 被餵食而習慣討食的 | Food-conditioned animals become dangerous. | 🍞
+bluff charge | 假衝撞；虛張聲勢的衝撞 | Bears sometimes make a bluff charge. | 🐻
+bear spray | 防熊噴霧 | Keep the bear spray within easy reach. | 🧯
+deterrent | 嚇阻物 | A loud whistle can be a good deterrent. | 📯
+fight back | 反擊 | If a black bear attacks you, fight back. | 👊
+protect your neck | 保護頸部 | Curl up and protect your neck. | 🧣
+post-exposure prophylaxis | 暴露後預防（接種） | Rabies post-exposure prophylaxis should start as soon as possible. | 💉
+rabies vaccine | 狂犬病疫苗 | You'll need a course of rabies vaccine. | 💉
+zoonotic disease | 人畜共通傳染病 | Rabies is a zoonotic disease. | 🦠
+tusk | 獠牙 | A boar's tusks can cause deep wounds. | 🐗
+envenomation | 螫咬中毒 | Multiple stings can cause serious envenomation. | ☠️
+apex predator | 頂級掠食者 | The Formosan black bear is Taiwan's apex predator. | 🐻
+`
+});

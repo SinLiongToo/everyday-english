@@ -308,3 +308,119 @@ If symptoms get worse, descending is the best treatment. | 如果症狀惡化，
 A wet sleeping bag loses most of its warmth. | 濕掉的睡袋會失去大部分保暖力。
 `
 });
+
+// 野外求生：淨水（淨水錠、濾水器、煮沸）與動物攻擊
+addPhrases("survival", {
+  basic: `
+Is this water safe to drink? | 這水可以喝嗎？
+Clear water isn't always clean. | 清澈的水不一定乾淨。
+The water is too dirty. | 這水太髒了。
+Let's find another stream. | 我們找別的溪流吧。
+Take water from where it's flowing. | 從水在流動的地方取水。
+Fill the pot with water. | 把鍋子裝滿水。
+Wait until it bubbles. | 等它冒泡。
+Let it cool before you drink. | 放涼再喝。
+Pour it through a cloth first. | 先用布過濾一下。
+Did you bring the water tablets? | 你有帶淨水錠嗎？
+Put one tablet in your bottle. | 在瓶子裡放一顆淨水錠。
+Wait before you drink it. | 等一下再喝。
+Don't drink it yet. | 先不要喝。
+It tastes funny. | 味道怪怪的。
+I feel sick. | 我覺得不舒服。
+My stomach hurts. | 我肚子痛。
+Don't wash your feet in the drinking water. | 不要在飲用水裡洗腳。
+There's a dog. Don't run. | 有狗，不要跑。
+Stand still. | 站著不要動。
+Don't look it in the eye. | 不要直視牠的眼睛。
+Walk away slowly. | 慢慢走開。
+The dog is barking. Stay calm. | 狗在叫，保持冷靜。
+Keep your backpack between you and the dog. | 把背包擋在你和狗之間。
+There's a wild boar! | 有山豬！
+Get behind a tree. | 躲到樹後面。
+The monkey wants our food. | 猴子想要我們的食物。
+Hide your food. | 把食物藏起來。
+Don't eat in front of the monkeys. | 不要在猴子面前吃東西。
+Let go of the bag. | 把袋子放手。
+Make a loud noise. | 發出很大的聲音。
+I got bitten by a dog. | 我被狗咬了。
+Wash it with soap and water. | 用肥皂和水清洗。
+We need to see a doctor. | 我們需要看醫生。
+Don't touch wild animals. | 不要碰野生動物。
+`,
+  inter: `
+Always treat water from streams, even in the mountains. | 就算在山上，溪水也一定要處理過再喝。
+Collect water upstream of the campsite. | 在營地上游取水。
+Avoid stagnant water. | 避開死水。
+Look for a water source before it gets dark. | 天黑前先找水源。
+Let the cloudy water settle, then pour off the top. | 讓混濁的水沉澱，再把上層倒出來。
+Prefilter it through a bandana. | 先用方巾預先過濾。
+Bring the water to a rolling boil for one minute. | 把水煮到大滾一分鐘。
+Above two thousand meters, boil it for three minutes. | 海拔兩千公尺以上，要煮三分鐘。
+Read the instructions on the purification tablets. | 看淨水錠上的說明。
+How many liters does one tablet treat? | 一顆淨水錠可以處理幾公升？
+Wait the full time before you drink. | 等到規定時間再喝。
+Cold water needs a longer waiting time. | 冷水需要更長的等待時間。
+Don't forget to treat the bottle cap and threads. | 別忘了瓶蓋和瓶口螺紋也要處理。
+Iodine tablets aren't for pregnant women. | 孕婦不適合使用碘片。
+The water tastes like chlorine, but it's safe. | 水有氯味，但很安全。
+My squeeze filter is getting slow. | 我的擠壓式濾水器越來越慢了。
+Most portable filters don't remove viruses. | 大多數攜帶型濾水器無法去除病毒。
+A UV purifier doesn't work well in cloudy water. | 紫外線淨水器在混濁的水裡效果不好。
+Carry a backup, like tablets or a stove. | 帶個備案，例如淨水錠或爐子。
+He's got diarrhea. Make sure he drinks enough. | 他拉肚子了，要確定他喝夠水。
+If a dog growls, stop and stand side-on. | 如果狗低吼，就停下來側身站著。
+Don't turn your back and run. | 不要轉身就跑。
+Use your trekking pole to keep the dog away. | 用登山杖讓狗保持距離。
+A pack of dogs is more dangerous than one dog. | 一群狗比一隻狗更危險。
+Stray dogs are often territorial near farms and temples. | 流浪狗在農場和廟宇附近常常有領域性。
+If a boar charges, get behind a tree or climb onto a rock. | 如果山豬衝過來，躲到樹後或爬上石頭。
+Give a mother boar and her piglets plenty of space. | 給母山豬和小豬很大的空間。
+Formosan rock macaques can grab bags and food. | 台灣獼猴會搶包包和食物。
+Don't show your teeth or smile at a monkey. | 不要對猴子露齒或微笑。
+Showing teeth is a threat to them. | 露出牙齒對牠們來說是威脅。
+Stay away from wasp nests. | 遠離胡蜂巢。
+Shake out your boots. Centipedes like to hide inside. | 抖一抖靴子，蜈蚣喜歡躲在裡面。
+Hang your food bag away from the tent. | 把食物袋吊在離帳篷遠一點的地方。
+Clean any bite wound for at least fifteen minutes. | 任何咬傷都要清洗至少十五分鐘。
+Any mammal bite could carry rabies. | 任何哺乳動物的咬傷都可能帶有狂犬病。
+Ask the doctor about a tetanus shot. | 問醫生是否需要打破傷風針。
+`,
+  adv: `
+Boiling is the most reliable way to disinfect water. | 煮沸是最可靠的消毒方式。
+At high altitude, water boils at a lower temperature. | 在高海拔，水的沸點比較低。
+A microfilter removes bacteria and protozoa, but not viruses. | 微過濾器可以去除細菌和原生動物，但無法去除病毒。
+Chlorine dioxide also works against Cryptosporidium, given enough time. | 只要時間足夠，二氧化氯也能對付隱孢子蟲。
+High turbidity shields germs from chemicals and UV light. | 高濁度會讓病菌躲過化學藥劑和紫外線。
+Prefiltering extends the life of your filter. | 預先過濾可以延長濾水器的壽命。
+Backflush the filter whenever the flow slows down. | 每當流速變慢，就反沖洗濾水器。
+A frozen hollow-fiber filter may be damaged, and you can't tell by looking. | 結過冰的中空纖維濾水器可能已經受損，而且外表看不出來。
+Sleep with your filter in your sleeping bag on cold nights. | 寒冷的晚上把濾水器放進睡袋裡一起睡。
+Never let dirty water touch the clean side of the filter. | 千萬別讓髒水碰到濾水器的乾淨端。
+Use separate bottles for dirty and clean water. | 髒水和淨水要用不同的瓶子。
+Filters and boiling don't remove pesticides or heavy metals. | 過濾和煮沸都無法去除農藥或重金屬。
+Avoid water below farms, mines or roads. | 避免取用農場、礦場或道路下方的水。
+Activated carbon can improve taste and remove some chemicals. | 活性碳可以改善味道，並去除部分化學物質。
+Combine methods: filter for protozoa, then use tablets for viruses. | 結合多種方式：先過濾去除原生動物，再用淨水錠對付病毒。
+Is this water potable, or only for washing? | 這水可以喝，還是只能用來清洗？
+Most animal attacks are defensive, not predatory. | 大多數動物攻擊是防衛性的，而不是掠食。
+Animals usually attack when they feel cornered or surprised. | 動物通常在覺得被逼到角落或受到驚嚇時才攻擊。
+Never get between a mother and her young. | 絕對不要站在母獸和幼獸之間。
+Feeding wildlife creates food-conditioned animals. | 餵食野生動物會讓牠們養成討食的習慣。
+Habituated macaques may bite if you refuse to hand over food. | 習慣人類的獼猴，如果你不給食物，可能會咬人。
+A boar's tusks can cause deep wounds to the legs. | 山豬的獠牙可能在腿上造成很深的傷口。
+If a dog attacks, protect your face and neck. | 如果狗攻擊你，要保護臉和頸部。
+If you're knocked down, curl up and protect your neck with your hands. | 如果被撞倒，蜷縮起來並用雙手護住頸部。
+A bear will usually avoid you if it hears you coming. | 熊如果聽到你來了，通常會避開。
+Many charges are bluff charges. Stand your ground and back away slowly. | 很多衝撞都是虛張聲勢，站穩腳步，再慢慢後退。
+If a black bear makes contact, fight back with everything you have. | 如果黑熊真的攻擊你，要用盡全力反擊。
+Report any bear sighting to the park rangers. | 看到熊要向國家公園保育巡查員通報。
+Rabies has been found in Taiwan's ferret-badgers since 2013. | 自 2013 年起，台灣的鼬獾被發現帶有狂犬病。
+Rabies is almost always fatal once symptoms appear. | 狂犬病一旦出現症狀，幾乎都會致命。
+Post-exposure prophylaxis is very effective if started early. | 暴露後預防接種如果及早開始，非常有效。
+Wash the wound with soap and running water for fifteen minutes. | 用肥皂和流動的清水沖洗傷口十五分鐘。
+Note what the animal looked like and where it happened. | 記下動物的樣子和發生地點。
+Don't try to catch or kill the animal yourself. | 不要自己去抓或打死那隻動物。
+Multiple wasp stings can cause serious envenomation. | 被胡蜂多次螫傷可能造成嚴重中毒。
+Wild animals are not pets, however cute they look. | 野生動物不是寵物，不管看起來多可愛。
+`
+});
