@@ -600,3 +600,63 @@ Clothing tells you a lot about a period in history. | 服裝能告訴你很多�
 There's no right or wrong in fashion, only what works for you. | 時尚沒有對錯，只有適不適合你。
 `
 });
+
+// 飲食：帶外國朋友吃飯、介紹在地料理
+addPhrases("food", {
+  basic: `
+Are you hungry? Let's go eat. | 你餓了嗎？我們去吃飯吧。
+I'll take you to my favorite place. | 我帶你去我最喜歡的店。
+Have you eaten Taiwanese food before? | 你以前吃過台灣菜嗎？
+Is there anything you don't eat? | 有什麼東西你不吃嗎？
+Are you allergic to anything? | 你對什麼東西過敏嗎？
+Can you eat spicy food? | 你能吃辣嗎？
+Do you eat pork? | 你吃豬肉嗎？
+This is a local favorite. | 這是在地人很愛的。
+This is beef noodle soup. | 這是牛肉麵。
+This is braised pork rice. | 這是滷肉飯。
+These are soup dumplings. | 這些是小籠包。
+Be careful, the soup inside is hot. | 小心，裡面的湯很燙。
+It's sweet and a little salty. | 它甜甜的，又有點鹹。
+Try a little first. | 先吃一點點試試看。
+Do you like it? | 你喜歡嗎？
+It's okay if you don't like it. | 不喜歡也沒關係。
+Let me order for the table. | 我來幫大家點菜。
+We share dishes here. | 我們這裡是大家一起分著吃的。
+Here, use this spoon. | 來，用這支湯匙。
+Don't worry, it's my treat. | 別擔心，這頓我請。
+`,
+  inter: `
+I'd love to show you some real local food. | 我很想帶你吃一些道地的在地美食。
+This place doesn't look fancy, but the food is amazing. | 這家店看起來不起眼，但東西超好吃。
+The line is long, but it's worth the wait. | 隊伍很長，但值得等。
+Is there anything you can't eat for religious or health reasons? | 有沒有因為宗教或健康原因不能吃的東西？
+Let me know if you're vegetarian. | 如果你吃素，跟我說一聲。
+I'll ask them to make it less spicy for you. | 我請他們幫你做小辣一點。
+It's made with pork belly slowly braised in soy sauce. | 它是用五花肉加醬油慢慢滷出來的。
+It's kind of like a pancake, but with egg and green onions. | 它有點像煎餅，不過裡面有蛋和蔥。
+It smells strong, but it tastes much better than it smells. | 它聞起來很重，但吃起來比聞起來好太多了。
+Dip it in this sauce for more flavor. | 沾這個醬會更有味道。
+You eat the dumpling in one bite, or bite a small hole to let the soup out. | 小籠包可以一口吃，或先咬個小洞讓湯流出來。
+In Taiwan, it's normal to slurp your noodles. | 在台灣，吃麵發出聲音是很正常的。
+Don't stick your chopsticks straight up in your rice. | 不要把筷子直插在飯裡。
+You don't have to finish everything. Just try what you like. | 不用全部吃完，挑你喜歡的試試就好。
+This dish is usually eaten at breakfast. | 這道菜通常是早餐吃的。
+We usually drink bubble tea after a meal like this. | 吃完這種飯我們通常會去買杯珍奶。
+How does it compare to the food back home? | 跟你家鄉的食物比起來怎麼樣？
+What's a typical dish from your country? | 你們國家有什麼代表性的菜？
+You don't need to tip here. | 這裡不用給小費。
+Next time, you can show me your favorite food. | 下次換你帶我吃你最愛的東西。
+`,
+  adv: `
+If you want to understand a place, start with its food. | 想了解一個地方，就從它的食物開始。
+This dish has a story behind it, and it goes back generations. | 這道菜背後有個故事，可以追溯好幾代。
+The flavor is hard to describe; it's savory, a bit sweet, and very comforting. | 這味道很難形容：鹹香、微甜，吃了很療癒。
+It's an acquired taste, so no pressure if it's not for you. | 這是需要習慣的味道，不合你口味也別有壓力。
+Night markets are where you'll find the most authentic street food. | 夜市才吃得到最道地的路邊小吃。
+Every family has its own version of this recipe. | 每個家庭都有自己版本的做法。
+In our culture, sharing food is a way of showing hospitality. | 在我們的文化裡，分享食物是一種待客之道。
+Locals tend to judge a restaurant by how crowded it is. | 在地人常看店裡人多不多來判斷好不好吃。
+I chose dishes that are mild, so you can ease into the local flavors. | 我點的都是口味比較溫和的，讓你慢慢習慣在地味道。
+Feel free to be honest; I won't be offended if you don't like it. | 儘管說實話，你不喜歡我也不會介意。
+`
+});
