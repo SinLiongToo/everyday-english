@@ -847,6 +847,46 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-28.js, phrases in sent-24.js.
+    id: "respect", icon: "🙏", zh: "婉拒與文化尊重", en: "Saying No & Cultural Respect",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Would you like some beer?", "要喝點啤酒嗎？"],
+        ["B", "No, thank you. I don't drink alcohol.", "不用了，謝謝，我不喝酒。"],
+        ["A", "Oh, sorry. How about some juice?", "喔，抱歉。那果汁呢？"],
+        ["B", "Juice is great, thank you.", "果汁很好，謝謝。"],
+        ["A", "Try this soup, too. It has pork in it.", "也嚐嚐這個湯，裡面有豬肉。"],
+        ["B", "It looks delicious, but I don't eat pork. Is there anything with just vegetables?", "看起來很好吃，但我不吃豬肉。有只放蔬菜的嗎？"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "We're having a barbecue on Saturday. Can you come?", "我們星期六要烤肉，你能來嗎？"],
+        ["B", "Thanks for asking, but I'm afraid I can't make it. I have a family event.", "謝謝你問我，但恐怕我沒辦法去，我有家庭聚會。"],
+        ["A", "No problem. Maybe next time?", "沒關係，下次吧？"],
+        ["B", "Definitely. Can I take a rain check?", "一定。可以改天再約嗎？"],
+        ["A", "Of course. Oh, and Ramadan starts next month, right? Should we hold the team dinner after sunset?", "當然。對了，下個月是齋戒月吧？我們要不要把團隊聚餐改在日落之後？"],
+        ["B", "That's very considerate. Thank you for asking.", "你真體貼，謝謝你問我。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "I asked our partners if they could finish by Friday. They said, \"That may be difficult.\"", "我問合作夥伴能不能在週五前完成，他們說：「這可能有點困難。」"],
+        ["B", "In a high-context culture, that's usually a polite no.", "在高語境文化中，那通常是客氣的拒絕。"],
+        ["A", "Really? I thought they meant they'd try.", "真的嗎？我以為他們的意思是會盡量。"],
+        ["B", "It's easy to miss. If we push them in the group meeting, they may lose face.", "這很容易誤解。如果我們在群組會議上逼他們，他們可能會沒面子。"],
+        ["A", "So what should we do?", "那我們該怎麼做？"],
+        ["B", "Ask privately what timeline would work for them, and offer an alternative. That way, everyone saves face.", "私下問他們什麼時程可行，並提出替代方案。這樣大家都有面子。"]
+      ]
+    }
+  },
+  {
     // All words and phrases for this topic are in vocab-21.js and sent-17.js.
     id: "movie", icon: "🎬", zh: "電影口語", en: "Movie & TV Talk",
     basic: {
