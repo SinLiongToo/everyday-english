@@ -601,3 +601,114 @@ Employers must not confiscate workers' passports. | 雇主不得沒收工人的�
 Ethical recruitment means workers pay no fees to get a job. | 道德招聘意味著工人不必付費就能得到工作。
 `
 });
+
+// 工作職場：保護隱私、保持中立
+addPhrases("work", {
+  basic: `
+Sorry, that's private. | 抱歉，那是私事。
+I'd rather not talk about that. | 我不太想談那件事。
+I keep work and home separate. | 我把工作和私生活分開。
+Please don't tell anyone. | 請不要告訴別人。
+I won't tell anyone. | 我不會告訴任何人。
+I don't know anything about it. | 這件事我不清楚。
+I'm not on anyone's side. | 我不站任何一邊。
+I want to stay neutral. | 我想保持中立。
+I like you both. | 你們兩個我都喜歡。
+Please don't ask me to choose. | 請不要叫我選邊。
+That's between you two. | 那是你們兩個之間的事。
+Can you talk to each other? | 你們可以直接談談嗎？
+Let's not talk about other people. | 我們不要談論別人吧。
+I don't like gossip. | 我不喜歡八卦。
+Is that true, or is it just a rumor? | 那是真的，還是只是謠言？
+I'll wait and see. | 我再看看。
+Let's talk about something else. | 我們聊點別的吧。
+I don't talk about politics at work. | 我在公司不談政治。
+I'm not sure. I'd better not say. | 我不確定，我還是別說好了。
+That's a good question. Ask the manager. | 好問題，問經理吧。
+Lock your computer when you leave. | 離開時鎖上電腦。
+Don't leave papers on your desk. | 不要把文件留在桌上。
+Don't share your password. | 不要把密碼給別人。
+I don't add coworkers on social media. | 我不加同事的社群帳號。
+Please don't post that photo. | 請不要把那張照片貼出去。
+Please don't give out my phone number. | 請不要把我的電話號碼給別人。
+Let's keep it professional. | 我們保持專業吧。
+It's nothing personal. | 這不是針對你個人。
+I just want to do my job. | 我只想做好我的工作。
+Let's focus on the work. | 我們專心在工作上吧。
+`,
+  inter: `
+I'd rather not take sides. | 我不想選邊站。
+I'm going to stay out of this one. | 這件事我不想介入。
+I can see both points of view. | 雙方的觀點我都能理解。
+I think you should talk to her directly. | 我覺得你應該直接跟她談。
+I'm not the right person to ask. | 你問錯人了。
+I'd prefer to hear it from him. | 我比較想聽他本人說。
+I don't want to get involved. | 我不想牽扯進去。
+Let's not jump to conclusions. | 我們不要妄下結論。
+I'd take that rumor with a grain of salt. | 那個謠言聽聽就好。
+Who told you that? | 誰跟你說的？
+I'd rather not comment on that. | 這件事我不予置評。
+Let's keep personal opinions out of the meeting. | 開會時不要帶入個人意見。
+Can we stick to the facts? | 我們就事論事好嗎？
+I keep my private life private. | 我的私生活不公開。
+I'm a pretty private person. | 我是個很注重隱私的人。
+My weekend was good, thanks. Nothing special. | 週末過得不錯，謝謝，沒什麼特別的。
+That's a bit personal, don't you think? | 這有點私人吧，你不覺得嗎？
+I'm not comfortable sharing that. | 我不太方便透露。
+Please keep this to yourself for now. | 這件事請先別說出去。
+Is this confidential? | 這是機密嗎？
+This is on a need-to-know basis. | 這件事只告知必要的人。
+Don't discuss clients in the elevator. | 不要在電梯裡談論客戶。
+Be careful what you write in the group chat. | 在群組裡發言要小心。
+Assume anything you write could be screenshotted. | 你寫的任何東西都可能被截圖。
+I don't check work messages on my personal phone. | 我不用私人手機看工作訊息。
+Turn on the screen lock before you leave. | 離開前先開啟螢幕鎖定。
+Check your privacy settings on social media. | 檢查你社群媒體的隱私設定。
+I don't vent about work online. | 我不在網路上抱怨工作。
+Don't overshare in your first few weeks. | 剛到職的前幾週不要透露太多私事。
+I try to keep a low profile at work. | 我在公司盡量保持低調。
+I'm friendly with everyone, but I don't join cliques. | 我和大家都友好，但不加入小圈圈。
+If it gets serious, talk to HR. | 如果事情嚴重了，就去找人資。
+Favoritism makes the whole team unhappy. | 偏袒會讓整個團隊不開心。
+I treat everyone the same. | 我對每個人都一樣。
+Let's agree to disagree and move on. | 我們各自保留意見，繼續往下吧。
+`,
+  adv: `
+I appreciate you telling me, but I'd rather not get involved. | 謝謝你告訴我，但我不想牽扯進去。
+I'm Switzerland on this one. | 這件事我保持中立。
+I value my relationships with both of you. | 我很珍惜和你們兩位的關係。
+I don't want to be caught in the crossfire. | 我不想被捲入你們的紛爭。
+I'm not comfortable discussing a colleague who isn't here. | 我不太想在同事不在場時談論他。
+If you have concerns, raise them with him directly. | 如果你有疑慮，直接跟他提。
+I'll leave that to the people involved. | 這就交給當事人處理吧。
+Staying neutral doesn't mean having no opinion. | 保持中立不代表沒有意見。
+Neutral doesn't mean silent when something is wrong. | 遇到不對的事，中立不等於沉默。
+If it's harassment, I won't stay neutral. I'll report it. | 如果是騷擾，我不會保持中立，我會檢舉。
+Be even-handed when you deal with competing teams. | 處理互相競爭的團隊時要不偏不倚。
+Don't let office politics affect your work. | 不要讓辦公室政治影響你的工作。
+Factions come and go, but your reputation stays. | 派系來來去去，但你的名聲會留下來。
+Avoid forming alliances in a power struggle. | 在權力鬥爭中避免結盟。
+What you hear through the grapevine is often wrong. | 從小道消息聽來的事常常是錯的。
+Don't act on hearsay. | 不要根據傳聞行事。
+Remember, the walls have ears. | 記住，隔牆有耳。
+Loose lips sink ships. | 禍從口出。
+Sometimes it's wiser to bite your tongue. | 有時候忍住不說比較明智。
+Keep a professional distance from clients and vendors. | 和客戶、廠商保持專業距離。
+I trust your discretion on this. | 這件事我相信你會保密。
+Please be discreet. Nothing has been announced yet. | 請低調處理，還沒有正式宣布。
+This is covered by a nondisclosure agreement. | 這受保密協議約束。
+Don't let anyone look over your shoulder at your screen. | 別讓人從你背後偷看螢幕。
+A privacy screen helps on trains and in cafés. | 在火車上和咖啡廳，防窺片很有用。
+That email looks like phishing. Don't click the link. | 那封信看起來像網路釣魚，不要點連結。
+Never give your password to someone who calls claiming to be IT. | 有人打電話自稱是資訊部門，絕對不要給他密碼。
+Find out what the company's monitoring policy is. | 了解公司的監控政策。
+Assume your work email isn't private. | 要假設你的公司信箱不是私密的。
+Your employer needs a legitimate reason to collect your personal data. | 雇主蒐集你的個人資料需要正當理由。
+Think twice before you post anything about work online. | 在網路上發布任何跟工作有關的內容前，要三思。
+Keep a paper trail if a conflict starts to escalate. | 衝突開始升級時，要保留書面紀錄。
+Document what happened, when and who was there. | 記錄發生了什麼、什麼時候，以及誰在場。
+Employees should be able to report problems without fear of retaliation. | 員工應該能夠舉報問題，而不怕被報復。
+Not my circus, not my monkeys. | 不關我的事。
+Keep your head down and let your work speak for itself. | 埋頭做事，讓工作成果替你說話。
+`
+});

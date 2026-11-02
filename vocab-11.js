@@ -437,3 +437,118 @@ heritage language | 傳承語言 | Her children are losing their heritage langua
 hybrid identity | 混合身分認同 | Living abroad gave her a hybrid identity. | 🧩
 `
 });
+
+// 工作職場：保護隱私、保持中立
+addVocab("work", {
+  basic: `
+private | 私人的 | Sorry, that's private. | 🔒
+privacy | 隱私 | Please respect my privacy. | 🛡️
+personal | 個人的；私人的 | I don't talk about personal things at work. | 👤
+secret | 秘密 | Can you keep a secret? | 🤫
+gossip | 八卦；說閒話 | Don't gossip about your coworkers. | 🗣️
+rumor | 謠言 | I heard a rumor, but I don't believe it. | 👂
+side | 一方；立場 | I'm not on anyone's side. | ⚖️
+neutral | 中立的 | I want to stay neutral. | ⚪
+opinion | 意見 | Everyone has a different opinion. | 💭
+agree | 同意 | I agree with you on this point. | 👍
+disagree | 不同意 | It's okay to disagree. | 👎
+argue | 爭吵；爭論 | They argue every day. | 😠
+fight | 吵架 | I don't want to be part of their fight. | 🥊
+careful | 小心的 | Be careful what you say. | ⚠️
+trust | 信任 | Who can you trust at work? | 🤝
+lock | 鎖上 | Lock your computer when you leave. | 🔐
+screen | 螢幕 | Turn off your screen when you leave your desk. | 🖥️
+post | 發文；張貼 | Don't post photos of the office online. | 📲
+social media | 社群媒體 | I don't add coworkers on social media. | 📱
+address | 地址 | I don't give my home address to clients. | 🏠
+phone number | 電話號碼 | Please don't share my phone number. | 📞
+relationship | 感情關係 | My relationship is private. | 💑
+quiet | 低調的；保密的 | Keep it quiet, please. | 🤫
+listen | 聽 | Just listen and don't take sides. | 👂
+nod | 點頭 | I just nodded and said nothing. | 🙂
+politics | 政治 | I don't talk about politics at work. | 🏛️
+topic | 話題 | Let's change the topic. | 💬
+both | 兩者都 | I work well with both of them. | 👥
+fair | 公平的 | I want to be fair to both of you. | ⚖️
+blame | 責怪 | Don't blame others for your mistakes. | 👉
+drama | 紛爭；鬧劇 | I don't like office drama. | 🎭
+`,
+  inter: `
+confidential | 機密的 | This information is confidential. | 🔒
+overshare | 透露太多私事 | Try not to overshare with new coworkers. | 💬
+office gossip | 辦公室八卦 | I stay out of office gossip. | 🗣️
+take sides | 選邊站 | I don't want to take sides. | ⚖️
+stay out of it | 置身事外 | I'm going to stay out of it. | 🚪
+mind your own business | 少管閒事 | Sometimes it's best to mind your own business. | 🙊
+impartial | 公正的 | A good manager is impartial. | ⚖️
+objective | 客觀的 | Let's try to stay objective. | 🎯
+professional | 專業的 | Keep it professional. | 👔
+boundary | 界線 | It's important to set a boundary between work and home. | 🚧
+clique | 小圈圈 | There's a clique in our department. | 👯
+office politics | 辦公室政治 | I try to avoid office politics. | ♟️
+backstab | 背後捅刀 | He backstabbed me to get promoted. | 🔪
+vent | 發洩；抱怨 | Be careful who you vent to. | 😤
+complain | 抱怨 | Don't complain about your boss at lunch. | 😒
+spread | 散播 | Don't spread rumors. | 📢
+two-faced | 兩面人的 | Be careful. He's a bit two-faced. | 🎭
+tactfully | 委婉地 | Answer the question tactfully. | 🎩
+sensitive information | 敏感資訊 | Don't discuss sensitive information in the elevator. | 🗂️
+need-to-know basis | 必要才告知 | We share this on a need-to-know basis. | 🔐
+personal data | 個人資料 | HR must protect your personal data. | 🪪
+privacy settings | 隱私設定 | Check your privacy settings. | ⚙️
+screen lock | 螢幕鎖定 | Turn on the screen lock on your phone. | 🔒
+work phone | 公務手機 | Use your work phone for clients. | 📱
+personal phone | 私人手機 | I don't give out my personal phone number. | 📱
+group chat | 群組聊天 | Don't complain in the work group chat. | 💬
+screenshot | 截圖 | Anything you write can be screenshotted. | 📸
+off the record | 私下說；不列入紀錄 | Nothing is ever really off the record. | 🤐
+keep it to yourself | 別說出去 | Please keep it to yourself. | 🤫
+low profile | 低調 | I try to keep a low profile. | 🫥
+no comment | 無可奉告 | No comment. | 🙊
+mediator | 調解人 | HR can act as a mediator. | 🕊️
+conflict | 衝突 | I don't want to get involved in their conflict. | ⚡
+HR | 人資部門 | Talk to HR if it gets serious. | 🗂️
+favoritism | 偏袒 | Favoritism hurts team morale. | 🥇
+`,
+  adv: `
+discretion | 謹慎；保密 | I trust your discretion. | 🤐
+discreet | 謹慎低調的 | Please be discreet about this. | 🤫
+nondisclosure agreement | 保密協議 | I signed a nondisclosure agreement. | 📝
+NDA | 保密協議 | That's covered by my NDA. | 📝
+data protection | 資料保護 | Data protection laws apply to employee records. | 🛡️
+consent | 同意 | They need your consent to share your data. | ✅
+monitoring | 監控 | Check the company's policy on email monitoring. | 👁️
+digital footprint | 數位足跡 | Think about your digital footprint. | 👣
+phishing | 網路釣魚 | That email looks like phishing. | 🎣
+social engineering | 社交工程 | Social engineering tricks people into giving away passwords. | 🎭
+shoulder surfing | 偷看別人螢幕 | A privacy screen stops shoulder surfing. | 👀
+privacy screen | 防窺片 | I put a privacy screen on my laptop. | 🖥️
+compartmentalize | 區隔開來 | I compartmentalize work and personal life. | 🗄️
+impartiality | 公正性 | HR must show impartiality. | ⚖️
+even-handed | 不偏不倚的 | Be even-handed with both teams. | ⚖️
+stay above the fray | 置身紛爭之外 | She manages to stay above the fray. | 🕊️
+caught in the crossfire | 被捲入紛爭 | I don't want to get caught in the crossfire. | 💥
+fence-sitter | 騎牆派 | Staying neutral doesn't mean being a fence-sitter. | 🧱
+political capital | 人脈資本；影響力 | Don't waste political capital on small fights. | 💰
+alliance | 結盟 | Be careful about forming alliances. | 🤝
+faction | 派系 | The office split into two factions. | ⚔️
+power struggle | 權力鬥爭 | There's a power struggle at the top. | 👑
+hearsay | 傳聞 | That's just hearsay. | 👂
+grapevine | 小道消息 | I heard it through the grapevine. | 🍇
+confidante | 可吐露心事的人 | Choose your confidantes carefully. | 🫂
+TMI | 透露太多（Too much information） | Sorry, that was TMI. | 😳
+professional distance | 專業距離 | Keep a professional distance from clients. | 📏
+reputation | 名聲 | Your reputation follows you. | ⭐
+paper trail | 書面紀錄 | Keep a paper trail of every decision. | 📄
+document | 記錄下來 | Document everything in writing. | 📝
+escalate | 往上呈報 | Escalate it to HR if it continues. | ⬆️
+retaliation | 報復 | You can report it without fear of retaliation. | 🛡️
+loose lips sink ships | 禍從口出 | Remember, loose lips sink ships. | 🚢
+walls have ears | 隔牆有耳 | Be careful. The walls have ears. | 🧱
+Switzerland | 中立國（比喻保持中立） | I'm Switzerland on this one. | 🇨🇭
+bite your tongue | 忍住不說 | Sometimes you just have to bite your tongue. | 👅
+keep your head down | 埋頭做事、不惹事 | Keep your head down and do good work. | 🙇
+stay in your lane | 做好自己的本分 | Stay in your lane and let them sort it out. | 🛣️
+not my circus, not my monkeys | 不關我的事 | Not my circus, not my monkeys. | 🎪
+`
+});
