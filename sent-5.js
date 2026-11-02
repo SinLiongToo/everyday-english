@@ -600,3 +600,31 @@ Show up for people when it matters most. | 在最重要的時候出現在別人�
 In the end, it's the people that make life meaningful. | 說到底，是人讓生活有意義。
 `
 });
+
+// 朋友談話：人際關係、界線與溝通
+addPhrases("friends", {
+  basic: `
+That's not what I meant. | 我不是那個意思。
+Can we talk about this calmly? | 我們可以冷靜地談談這件事嗎？
+I need you to listen to me. | 我需要你聽我把話說完。
+I don't feel comfortable with that. | 我對那件事感到不自在。
+That's a personal matter. | 那是私人的事情。
+I'd rather not talk about it. | 我比較不想談這件事。
+I need some space right now. | 我現在需要一點自己的空間。
+I value our friendship. | 我很珍惜我們的友誼。
+`,
+  inter: `
+I appreciate your honesty. | 我很感謝你願意坦誠相告。
+I didn't mean to hurt your feelings. | 我不是故意要傷害你的感受。
+I think there's been a misunderstanding. | 我覺得我們之間可能有誤會。
+Please don't jump to conclusions. | 請不要太快下結論。
+I see where you're coming from. | 我理解你為什麼會這麼想。
+We don't have to agree on everything. | 我們不需要每件事都意見一致。
+Let's agree to disagree. | 我們就保留彼此不同的看法吧。
+I don't want this to come between us. | 我不希望這件事影響我們的關係。
+Let's not make a big deal out of it. | 我們不要把這件事看得太嚴重。
+I hope we can work this out. | 我希望我們能一起解決這個問題。
+I think we need to be honest with each other. | 我覺得我們需要坦誠相待。
+I'd rather clear the air than let things get awkward. | 比起讓關係變尷尬，我寧願把話說清楚。
+`
+});
