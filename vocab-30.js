@@ -308,3 +308,53 @@ Pareto principle | 帕雷托法則（80/20 法則） | The Pareto principle says
 survivorship bias | 倖存者偏差 | Survivorship bias hides all the failures. | ✈️
 `
 });
+
+// 育・教育：逛書店、買書
+addVocab("education", {
+  basic: `
+bookstore | 書店 | Let's meet at the bookstore after lunch. | 🏬
+bookshelf | 書架 | The comics are on the bottom bookshelf. | 📚
+novel | 小說 | I'm looking for a good novel to read. | 📕
+comic book | 漫畫書 | My brother buys a comic book every week. | 💥
+magazine | 雜誌 | This magazine comes out every month. | 📰
+author | 作者 | Who is the author of this book? | ✍️
+title | 書名 | I forgot the title of the book. | 🏷️
+cover | 封面 | I love the cover of this book. | 🖼️
+page | 頁 | This book has three hundred pages. | 📄
+price | 價格 | What's the price of this book? | 💲
+cashier | 收銀台；收銀員 | Please pay at the cashier. | 🧾
+receipt | 收據 | Can I have a receipt, please? | 🧾
+bag | 袋子 | Do you need a bag for your books? | 🛍️
+dictionary | 字典 | I need an English dictionary. | 📖
+bookmark | 書籤 | I got a free bookmark with my book. | 🔖
+`,
+  inter: `
+bestseller | 暢銷書 | This bestseller sold a million copies. | 🏆
+paperback | 平裝本 | The paperback is cheaper and lighter. | 📘
+hardcover | 精裝本 | I bought the hardcover as a gift. | 📗
+edition | 版本 | Is this the latest edition? | 🆕
+in stock | 有現貨 | Do you have this book in stock? | ✅
+out of stock | 缺貨 | Sorry, that title is out of stock. | ❌
+order in | 幫顧客訂貨 | We can order in a copy for you. | 📦
+genre | 類型（文類） | Mystery is my favorite genre. | 🎭
+section | 區域；分區 | Where's the travel section? | 🗺️
+browse | 隨意瀏覽 | I like to browse the shelves on weekends. | 👀
+blurb | 封底簡介 | The blurb on the back made me want to read it. | 💬
+gift wrap | 禮品包裝 | Could you gift wrap this book, please? | 🎁
+membership card | 會員卡 | Members get ten percent off with a membership card. | 💳
+secondhand bookstore | 二手書店 | I found a rare book at a secondhand bookstore. | ♻️
+book signing | 簽書會 | The author is holding a book signing on Saturday. | 🖊️
+`,
+  adv: `
+independent bookstore | 獨立書店 | Independent bookstores often host community events. | 🏠
+first edition | 初版 | A signed first edition can be worth a fortune. | 💎
+out of print | 絕版 | That textbook has been out of print for years. | 🚫
+staff pick | 店員推薦 | The staff pick shelf is full of hidden gems. | ⭐
+translation | 譯本 | Is there a Chinese translation of this novel? | 🌐
+curate | 精選策劃 | The owner curates every book on the shelves. | 🎯
+page-turner | 引人入勝的書 | The thriller was a real page-turner. | 🔥
+backlist | 舊書目；過往出版書目 | Publishers rely on their backlist for steady sales. | 🗂️
+pre-order | 預購 | You can pre-order the sequel online. | ⏳
+reading nook | 閱讀角落 | The bookstore has a cozy reading nook upstairs. | 🛋️
+`
+});

@@ -21,3 +21,20 @@ B | That's so kind of you. Then I'll buy the bubble tea for dessert. | 你人真
 A | Deal! And please throw your trash in the bins. There aren't many, so keep it until you find one. | 一言為定！還有垃圾請丟垃圾桶，桶子不多，找到前先拿著。
 B | Got it. This is the best food tour I've ever had. Thanks for showing me around! | 了解。這是我吃過最棒的美食之旅，謝謝你帶我逛！
 `);
+
+addDialog("education", "basic", { zh: "在書店找書", en: "Finding a Book at the Bookstore" }, `
+A | Hi, can I help you find something? | 你好，需要幫你找書嗎？
+B | Yes, please. I'm looking for a book called "The Quiet Garden." | 好，麻煩你。我在找一本叫《安靜的花園》的書。
+A | Do you know the author's name? | 你知道作者的名字嗎？
+B | I think it's Emma Lin. | 我想是艾瑪・林。
+A | Let me check. Yes, we have it. It's in the fiction section, on the second floor. | 我查一下。有，我們有這本，在二樓的小說區。
+B | Great. Is it in paperback? | 太好了，有平裝本嗎？
+A | We only have the hardcover right now. The paperback comes out next month. | 現在只有精裝本，平裝本下個月出。
+B | How much is the hardcover? | 精裝本多少錢？
+A | It's twenty dollars. Members get ten percent off. | 二十元。會員打九折。
+B | I'm not a member. Can I sign up today? | 我不是會員，今天可以辦嗎？
+A | Sure, it's free. Just fill out this form at the cashier. | 可以，免費的。在收銀台填這張表就好。
+B | Perfect. And could you gift wrap it? It's for my sister. | 太好了。可以幫我包裝成禮物嗎？是要送我妹妹的。
+A | Of course. Would you like a bookmark too? It's free. | 當然。要不要再拿一張書籤？免費的。
+B | Yes, please. Thank you so much! | 好，謝謝你！
+`);

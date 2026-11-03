@@ -308,3 +308,43 @@ Peer review is part of good engineering. | 同儕審查是好工程的一部分�
 Better a rough answer today than a perfect one next month. | 今天的粗略答案勝過下個月的完美答案。
 `
 });
+
+// 育・教育：逛書店、買書
+addPhrases("education", {
+  basic: `
+Is there a bookstore near here? | 這附近有書店嗎？
+I'm looking for a book. | 我在找一本書。
+Where are the children's books? | 童書在哪裡？
+Where can I find English books? | 英文書在哪裡？
+Do you have this book? | 你們有這本書嗎？
+How much is this book? | 這本書多少錢？
+Can I read it here? | 我可以在這裡看嗎？
+I'm just looking, thanks. | 我只是看看，謝謝。
+I'll take this one. | 我要這本。
+Can I pay by card? | 可以刷卡嗎？
+Do you have a bag? | 有袋子嗎？
+This book looks interesting. | 這本書看起來很有趣。
+`,
+  inter: `
+Could you help me find a book? I only know the author's name. | 可以幫我找一本書嗎？我只知道作者的名字。
+Do you have this in paperback? | 這本有平裝版嗎？
+Is this the newest edition? | 這是最新版嗎？
+When will it be back in stock? | 什麼時候會再到貨？
+Could you order it in for me? | 可以幫我訂這本嗎？
+Can you call me when it arrives? | 書到了可以打電話通知我嗎？
+Can I return it if it's a gift? | 如果是送禮的話可以退嗎？
+Could you gift wrap it, please? | 可以幫我包裝成禮物嗎？
+Do members get a discount? | 會員有折扣嗎？
+What are your best sellers this month? | 這個月的暢銷書有哪些？
+Can you recommend a good mystery novel? | 可以推薦一本好看的推理小說嗎？
+Is there a café inside the bookstore? | 書店裡面有咖啡廳嗎？
+`,
+  adv: `
+I'm after something light for a long flight. | 我想找本輕鬆的書在長途飛行時看。
+Are any of these signed copies? | 這裡有簽名本嗎？
+This one's been out of print for ages; do you know where I might find a copy? | 這本絕版很久了，你知道哪裡還可能找得到嗎？
+I always check the staff picks; they rarely disappoint. | 我都會看店員推薦，很少讓我失望。
+Independent bookstores have a charm that online shops can't match. | 獨立書店有一種網路書店比不上的魅力。
+I tend to judge a book by its first page, not its cover. | 我通常看第一頁來判斷一本書，而不是看封面。
+`
+});
