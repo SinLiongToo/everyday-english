@@ -38,3 +38,22 @@ B | Perfect. And could you gift wrap it? It's for my sister. | 太好了。可�
 A | Of course. Would you like a bookmark too? It's free. | 當然。要不要再拿一張書籤？免費的。
 B | Yes, please. Thank you so much! | 好，謝謝你！
 `);
+
+addDialog("health", "inter", { zh: "陪爸爸看醫生（中老年健康）", en: "Taking Dad to the Doctor" }, `
+A | Good morning. What brings you in today? | 早安，今天哪裡不舒服？
+B | I'm here with my father. He's been feeling dizzy when he stands up. | 我陪我爸爸來。他站起來的時候會頭暈。
+A | How long has this been going on? | 這情況多久了？
+B | About two weeks. He almost fell in the bathroom last night. | 大約兩個禮拜。他昨晚在浴室差點跌倒。
+A | I'm glad he's okay. Is he taking any medication right now? | 還好他沒事。他現在有在吃什麼藥嗎？
+B | Yes, pills for high blood pressure and diabetes. Here's the list. | 有，高血壓和糖尿病的藥。這是藥單。
+A | Thanks. Sometimes blood pressure medicine can drop it too low. Let me check it lying down and standing. | 謝謝。降血壓的藥有時會讓血壓降太低，我量一下他躺著和站著的血壓。
+B | Could that be the reason he's been so tired lately? | 這會是他最近這麼累的原因嗎？
+A | It's possible. I'll also order a blood test to check his blood sugar and kidneys. | 有可能。我也會開抽血檢查，看看他的血糖和腎功能。
+B | Should we change anything at home? | 我們在家需要做什麼調整嗎？
+A | Ask him to stand up slowly, drink enough water, and add grab bars in the bathroom. | 請他慢慢站起來、多喝水，並在浴室加裝扶手。
+B | Okay. And should he stop his medicine? | 好的。那他要停藥嗎？
+A | No, please don't stop it on your own. I'll adjust the dose after we see the results. | 不，請不要自己停藥。等報告出來我再調整劑量。
+B | Got it. When should we come back? | 了解。我們什麼時候回診？
+A | Come back in one week. If he faints or has chest pain, go to the ER right away. | 一週後回診。如果他昏倒或胸痛，馬上去急診。
+B | Thank you, doctor. That really helps. | 謝謝醫生，這真的很有幫助。
+`);
