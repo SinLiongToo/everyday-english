@@ -5,8 +5,6 @@ addVocab("health", {
   basic: `
 baby | 嬰兒 | The baby has a fever. | 👶
 toddler | 學步的幼兒 | The toddler fell and bumped his head. | 🧒
-pediatrician | 小兒科醫師 | We took our son to the pediatrician. | 👩‍⚕️
-vaccine | 疫苗 | My daughter got a flu vaccine today. | 💉
 diaper rash | 尿布疹 | The baby has diaper rash. | 🧷
 teething | 長牙 | She's teething, so she cries a lot. | 🦷
 growth | 成長；發育 | The doctor checked his growth. | 📏
@@ -30,7 +28,6 @@ immunization schedule | 疫苗接種時程 | Keep a copy of your child's immuniz
 addVocab("health", {
   basic: `
 teenager | 青少年 | A teenager needs plenty of sleep. | 🧑
-acne | 青春痘；痤瘡 | I have acne on my forehead. | 😣
 `,
   inter: `
 puberty | 青春期 | Puberty brings big changes to the body. | 🌱
@@ -55,7 +52,6 @@ weight | 體重 | I want to lose some weight. | ⚖️
 `,
   inter: `
 health check | 健康檢查 | Get a full health check after forty. | 📋
-cholesterol | 膽固醇 | My cholesterol is a little high. | 🧈
 blood sugar | 血糖 | Cut down on sweets to control your blood sugar. | 🩸
 belly fat | 腹部脂肪 | Belly fat is hard to lose in middle age. | 🫃
 back pain | 背痛 | Sitting all day gives me back pain. | 🪑
@@ -79,7 +75,6 @@ hearing aid | 助聽器 | Grandma wears a hearing aid. | 🦻
 wheelchair | 輪椅 | He needs a wheelchair after his fall. | 🦽
 `,
   inter: `
-caregiver | 照顧者 | My mom is my grandma's caregiver. | 🤝
 nursing home | 安養院；護理之家 | Grandpa moved into a nursing home. | 🏥
 cataract | 白內障 | She had cataract surgery last week. | 👁️
 fall risk | 跌倒風險 | Loose rugs increase the fall risk at home. | ⚠️
@@ -99,19 +94,15 @@ polypharmacy | 多重用藥 | Polypharmacy is a common problem among older patie
 // 常見疾病
 addVocab("health", {
   basic: `
-flu | 流感 | I have the flu. | 🤒
 sore throat | 喉嚨痛 | I have a sore throat. | 😷
 runny nose | 流鼻水 | My son has a runny nose. | 🤧
 stomachache | 肚子痛 | I have a stomachache after lunch. | 🤢
-diarrhea | 腹瀉 | Drink water if you have diarrhea. | 🚽
 `,
   inter: `
 high blood pressure | 高血壓 | My father takes pills for high blood pressure. | 🩺
-diabetes | 糖尿病 | Diabetes runs in my family. | 🍬
 asthma | 氣喘 | My sister carries an inhaler for her asthma. | 🫁
 food poisoning | 食物中毒 | I got food poisoning from bad seafood. | 🦪
 migraine | 偏頭痛 | A migraine kept me in bed all day. | 🤕
-chronic | 慢性的 | Arthritis is a chronic condition. | ⏳
 `,
   adv: `
 stroke | 中風 | Sudden weakness on one side can be a sign of a stroke. | 🚨
@@ -119,6 +110,5 @@ heart attack | 心臟病發作 | Chest pain may be a sign of a heart attack. | �
 cancer screening | 癌症篩檢 | Regular cancer screening saves lives. | 🔍
 chronic kidney disease | 慢性腎臟病 | Diabetes is a major cause of chronic kidney disease. | 🫘
 remission | （病情）緩解 | Her cancer has been in remission for five years. | 🌈
-side effect | 副作用 | Drowsiness is a common side effect of this medicine. | 😴
 `
 });

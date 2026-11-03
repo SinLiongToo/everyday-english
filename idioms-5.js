@@ -20,22 +20,18 @@ not on my watch | 有我在就不准 | Cheat on the test? Not on my watch. | ⌚
 keep your shirt on | 別急；冷靜點 | Keep your shirt on, I'm coming! | 👕
 play it cool | 裝作若無其事 | She's coming over. Play it cool. | 😎
 the jig is up | 把戲被拆穿了 | The jig is up. We know you took the money. | 🕵️
-don't hold your breath | 別抱太大希望 | He said he'd call, but don't hold your breath. | 😮‍💨
 speak of the devil | 說曹操，曹操到 | Speak of the devil, here she comes! | 😈
-nice try | 想得美；不錯的嘗試（但沒用） | "Can I stay up late?" "Nice try. Bed." | 😏
 game on | 來吧，開始了 | You think you can beat me? Game on! | 🎮
 my lips are sealed | 我會守口如瓶 | Don't worry, my lips are sealed. | 🤐
 go figure | 真想不到；誰知道呢 | He hates cats, but he adopted one. Go figure. | 🤔
 get real | 現實一點 | Get real. We can't finish this in one day. | 🙄
 say when | 夠了就說一聲（倒東西時） | I'll pour you some wine. Say when. | 🍷
 level with me | 跟我說實話 | Level with me. Are we in trouble? | ⚖️
-cover for me | 幫我掩護一下 | Cover for me. I'll be back in ten minutes. | 🛡️
 roll with it | 隨機應變；順其自然 | Plans changed, so just roll with it. | 🎲
 `,
   adv: `
 we're not in Kansas anymore | 這裡已經不是我們熟悉的地方了 | Look at this place. We're not in Kansas anymore. | 🌪️
 you can't handle the truth | 你承受不了真相 | You want to know? Fine, but you can't handle the truth. | 😤
-it's not rocket science | 這又不是什麼高深學問 | Just follow the steps. It's not rocket science. | 🚀
 whatever floats your boat | 你高興就好 | Pineapple on pizza? Whatever floats your boat. | 🚤
 talk me down | 讓我冷靜下來；勸我別衝動 | I'm about to quit. Please talk me down. | 🧘
 `
@@ -58,7 +54,6 @@ aim high | 目標放高 | Aim high, even if you fall a little short. | 🎯
 hit the ground running | 一開始就全速前進 | She hit the ground running at her new job. | 🏃
 dig deep | 拿出內在的力量 | When you're tired, dig deep and keep going. | ⛏️
 keep your eye on the prize | 專注於目標 | Ignore the noise and keep your eye on the prize. | 👁️
-leap of faith | 憑信念跨出一步 | Starting a business was a leap of faith. | 🦘
 finish strong | 堅持到最後；漂亮收尾 | We're almost there, so let's finish strong. | 🏁
 get after it | 積極去做；衝吧 | New week, new goals. Let's get after it! | 🔥
 make it happen | 讓它成真 | You have the plan. Now make it happen. | ✨

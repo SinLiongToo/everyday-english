@@ -558,9 +558,13 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   function showHint() {
     if (hintShown) return;
     hintShown = true;
+    fillHint();
+    document.getElementById("toast").hidden = false;
+  }
+  // Also called when the language changes, so an open hint follows the new language.
+  function fillHint() {
     const el = document.getElementById("toast");
     el.innerHTML = `<b>${t("hintTitle")}</b><ul>${(IN_APP ? [t("hintInApp")] : []).concat(IOS ? [t("hintSilent")] : [], [t("hintVolume"), t("hintBrowser")]).map((s) => `<li>${s}</li>`).join("")}</ul><button type="button" class="tbtn">${t("ok")}</button>`;
-    el.hidden = false;
     el.querySelector("button").onclick = () => { el.hidden = true; };
   }
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -615,6 +619,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   }
   document.getElementById("langBtn").onclick = () => {
     state.lang = state.lang === "zh" ? "en" : "zh"; store.set("lang", state.lang); applyChrome(); render();
+    if (hintShown) fillHint();
   };
   document.getElementById("themeBtn").onclick = () => {
     const dark = state.theme ? state.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
