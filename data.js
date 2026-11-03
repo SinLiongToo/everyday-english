@@ -1721,6 +1721,52 @@ window.TOPICS = [
     }
   },
   {
+    // Words are in vocab-32.js, phrases in sent-28.js.
+    id: "hiking", icon: "🥾", zh: "爬山・登山", en: "Hiking & Mountaineering",
+    basic: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "Do you want to go hiking on Saturday?", "星期六要不要去爬山？"],
+        ["B", "Sure! Is the trail hard?", "好啊！步道會很難嗎？"],
+        ["A", "No, it's easy. It takes about two hours to the top.", "不會，很簡單，到山頂大概兩小時。"],
+        ["B", "What should I bring?", "我該帶什麼？"],
+        ["A", "Water, a snack, a hat and a light jacket.", "水、點心、帽子和一件薄外套。"],
+        ["B", "Okay. What time do we meet?", "好。我們幾點見面？"],
+        ["A", "Let's meet at the trailhead at seven. It gets hot later.", "我們七點在登山口見，晚一點會很熱。"],
+        ["B", "Great. See you on Saturday!", "太好了，星期六見！"]
+      ]
+    },
+    inter: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "We're halfway up, but those clouds look dark.", "我們爬到一半了，但那些雲看起來很暗。"],
+        ["B", "The forecast said thunderstorms after two. What time is it?", "預報說兩點後有雷雨。現在幾點？"],
+        ["A", "Almost noon. The summit is still an hour and a half away.", "快中午了，到山頂還要一個半小時。"],
+        ["B", "And the last part is an exposed ridge. I don't want to be up there in a storm.", "而且最後一段是沒有遮蔽的稜線，我不想在暴風雨時待在上面。"],
+        ["A", "Agreed. Should we turn back now?", "同意。那我們現在折返嗎？"],
+        ["B", "Let's go to the viewpoint, take a break, and then head down.", "我們走到觀景點，休息一下再下山。"],
+        ["A", "Sounds good. The mountain will still be here next month.", "好主意。山下個月還會在這裡。"],
+        ["B", "Exactly. Let's put on our rain gear just in case.", "沒錯。保險起見，我們先把雨具穿上。"]
+      ]
+    },
+    adv: {
+      v: [],
+      p: [],
+      d: [
+        ["A", "How are you feeling? We've gained almost 1,000 meters today.", "你覺得怎麼樣？我們今天爬升了快一千公尺。"],
+        ["B", "I've got a pounding headache and I'm a bit nauseous.", "我頭痛得厲害，還有點想吐。"],
+        ["A", "That sounds like altitude sickness. Let's check your oxygen saturation.", "聽起來像高山症，我們量一下你的血氧。"],
+        ["B", "It says 82 percent. Is that bad?", "顯示百分之八十二，這樣很糟嗎？"],
+        ["A", "It's low. We're not going any higher today; we'll rest at the hut and reassess.", "偏低。我們今天不再往上了，先在山屋休息，再重新評估。"],
+        ["B", "But we only have one weather window for the summit push.", "可是我們攻頂只有這一個好天氣空檔。"],
+        ["A", "If it gets worse overnight, we descend first thing in the morning. No summit is worth that risk.", "如果晚上變嚴重，明天一早就下撤。沒有哪座山頂值得冒那種險。"],
+        ["B", "You're right. I'd rather come back next year than not come back at all.", "你說得對。我寧願明年再來，也不要回不來。"]
+      ]
+    }
+  },
+  {
     id: "politics", icon: "🏛️", zh: "政治", en: "Politics & Society",
     basic: {
       v: [
