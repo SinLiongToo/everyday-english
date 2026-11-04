@@ -508,3 +508,69 @@ Zip it! | 閉嘴！
 Save it for someone who cares. | 省省吧，去說給在乎的人聽。
 `
 });
+
+// 電影口語：天氣慣用語（雨、風暴、風、雲、雪）
+addPhrases("movie", {
+  basic: `
+Look outside! It's raining cats and dogs. | 你看外面！雨下得好大。
+Sorry to rain on your parade, but it's canceled. | 抱歉掃你的興，但活動取消了。
+Don't rain on my parade! | 別潑我冷水！
+Great. When it rains, it pours. | 好極了，真是禍不單行。
+Don't worry. You'll be right as rain tomorrow. | 別擔心，你明天就會好了。
+I'm saving this money for a rainy day. | 這筆錢我要存起來以備不時之需。
+Cooking pasta? It's a breeze. | 煮義大利麵？簡單得很。
+Get your head out of the clouds! | 別再神遊了！
+You're a ray of sunshine, you know that? | 你真是個開心果，你知道嗎？
+She got angry and stormed off. | 她生氣地衝了出去。
+I can't come. I'm snowed under. | 我沒辦法去，我忙翻了。
+Let's brainstorm before the meeting. | 開會前我們先腦力激盪一下。
+Stop chasing rainbows and get a job. | 別再做白日夢了，去找份工作吧。
+He just won big, and now he wants to make it rain. | 他剛贏了一大筆，現在想大撒錢。
+The game is on, rain or shine. | 比賽風雨無阻照常進行。
+`,
+  inter: `
+Look on the bright side. Every cloud has a silver lining. | 往好處想，塞翁失馬，焉知非福。
+At least there's a silver lining. | 至少還有好的一面。
+It's just a storm in a teacup. It'll blow over. | 只是小題大作，很快就會過去的。
+We've been through worse. We'll weather this storm too. | 我們經歷過更糟的，這次也會撐過去。
+Everything went wrong at once. It was the perfect storm. | 所有事情一起出錯，簡直是完美風暴。
+Her first movie took the world by storm. | 她的第一部電影風靡全球。
+The news hit me like a bolt from the blue. | 這消息對我來說簡直是晴天霹靂。
+Don't worry. Lightning never strikes twice. | 別擔心，同樣的事不會再發生。
+How did you get wind of it? | 你是怎麼聽到風聲的？
+After lunch, I got my second wind. | 吃完午餐，我又恢復了精神。
+For once, let's throw caution to the wind. | 就這麼一次，我們豁出去吧。
+We sat on the porch, just shooting the breeze. | 我們坐在門廊上隨便閒聊。
+Where are your fair-weather friends now? | 你那些酒肉朋友現在在哪裡？
+He's been under a cloud since the scandal. | 自從醜聞後，他一直受到懷疑。
+One small lie snowballed into a disaster. | 一個小謊越滾越大，變成了災難。
+You don't have a snowball's chance in hell of winning. | 你根本毫無勝算。
+We got a pretty frosty reception. | 我們受到相當冷淡的接待。
+I've been in a fog all day. | 我整天都迷迷糊糊的。
+Uh-oh. Dad's got a face like thunder. | 糟了，爸爸的臉色超難看。
+He was out the door like greased lightning. | 他一溜煙就衝出門了。
+Come hell or high water, we finish this tonight. | 不管發生什麼，我們今晚都要完成這件事。
+`,
+  adv: `
+Go ahead, rain on me. I'm not going anywhere. | 來吧，儘管放馬過來，我哪裡都不去。
+It never rains but it pours. | 真是禍不單行。
+It's a terrible motel, but any port in a storm. | 這家汽車旅館很糟，但有總比沒有好。
+He always knows which way the wind is blowing. | 他總是很會看風向。
+Your plan sails a little close to the wind. | 你的計畫有點遊走在法律邊緣。
+I can feel the winds of change. | 我感覺得到變革之風。
+Her reply really took the wind out of his sails. | 她的回答真的挫了他的銳氣。
+You're a breath of fresh air in this place. | 你為這個地方帶來了新氣象。
+Don't let your feelings cloud your judgment. | 別讓你的情緒影響判斷。
+Stay calm. We're in the eye of the storm. | 保持冷靜，我們正處在風暴中心。
+Batten down the hatches. Here comes trouble. | 做好準備，麻煩來了。
+It's a tempest in a teapot. Let it go. | 這只是小題大作，算了吧。
+One day he loves me, the next day he doesn't. He blows hot and cold. | 他一天愛我、一天不愛，忽冷忽熱的。
+There's a storm brewing between those two. | 那兩個人之間正醞釀一場風暴。
+The project's been put on ice. | 那個專案已經被擱置了。
+Make hay while the sun shines. You won't be young forever. | 把握時機，你不會永遠年輕。
+After years of struggle, she finally found her place in the sun. | 奮鬥多年後，她終於找到了自己的一席之地。
+This is the calm after the storm. Enjoy it. | 這是風暴後的平靜，好好享受吧。
+Was that comment throwing shade at me? | 那句話是在酸我嗎？
+Let the applause rain down. | 讓掌聲如雨般落下吧。
+`
+});

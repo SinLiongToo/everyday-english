@@ -509,3 +509,69 @@ zip it | 閉嘴 | Zip it! | 🤐
 save it | 省省吧 | Save it. I don't want to hear your excuses. | ✋
 `
 });
+
+// 電影口語：天氣慣用語（雨、風暴、風、雲、雪）
+addVocab("movie", {
+  basic: `
+it's raining cats and dogs | 下傾盆大雨 | Take an umbrella. It's raining cats and dogs. | 🌧️
+rain on my parade | 潑我冷水；掃我的興 | I just got the job, so don't rain on my parade. | 🎉
+when it rains, it pours | 禍不單行；好事壞事都一起來 | I lost my keys and my phone. When it rains, it pours. | ⛈️
+right as rain | 完全恢復；一切安好 | Get some sleep and you'll be right as rain. | ☔
+save it for a rainy day | 存起來以備不時之需 | Don't spend it all. Save it for a rainy day. | 💰
+it's a breeze | 輕而易舉 | Don't worry about the test. It's a breeze. | 🍃
+head in the clouds | 心不在焉；不切實際 | He always has his head in the clouds. | ☁️
+a ray of sunshine | 帶來快樂的人；開心果 | Our new neighbor is a ray of sunshine. | 🌞
+storm off | 氣沖沖地離開 | Don't just storm off! Talk to me. | 🚪
+snowed under | 忙得不可開交 | Sorry, I'm snowed under with work. | ❄️
+brainstorm | 腦力激盪 | Let's brainstorm some ideas. | 💡
+chase rainbows | 追逐不切實際的夢想 | You can't chase rainbows forever. | 🌈
+make it rain | 撒錢；大把花錢 | Payday! Let's make it rain! | 💸
+rain or shine | 風雨無阻 | We'll be there, rain or shine. | 🌦️
+steal my thunder | 搶我的風頭 | You told them my news? Don't steal my thunder! | ⚡
+`,
+  inter: `
+every cloud has a silver lining | 塞翁失馬，焉知非福 | I missed the bus, but I met you. Every cloud has a silver lining. | 🌥️
+silver lining | 不幸中的好處 | The silver lining is that no one got hurt. | 🥈
+a storm in a teacup | 小題大作（英式） | Relax. It's just a storm in a teacup. | 🫖
+weather the storm | 度過難關 | We'll weather the storm together. | 🌀
+the perfect storm | 各種不利因素同時發生 | Bad weather, no money and a broken car: it was the perfect storm. | 🌪️
+take the world by storm | 風靡全球 | This band is going to take the world by storm. | 🌍
+a bolt from the blue | 晴天霹靂；意外的消息 | His resignation was a bolt from the blue. | 🌩️
+lightning never strikes twice | 同樣的事不會發生兩次 | Relax. Lightning never strikes twice. | ⚡
+get wind of | 聽到風聲 | Don't let the boss get wind of this. | 🌬️
+second wind | 重新振作；恢復體力 | I was tired, but now I've got my second wind. | 💨
+throw caution to the wind | 不顧一切；豁出去 | Let's throw caution to the wind and go! | 🎲
+shoot the breeze | 閒聊 | Come sit down and shoot the breeze with us. | 🗣️
+fair-weather friend | 只能同甘不能共苦的朋友 | He was just a fair-weather friend. | 🌤️
+under a cloud | 受到懷疑；名聲受損 | He left the company under a cloud. | 🌫️
+snowball | 越滾越大 | Small problems can snowball fast. | ⛄
+a snowball's chance in hell | 毫無機會 | He doesn't have a snowball's chance in hell. | 🔥
+frosty reception | 冷淡的接待 | We got a frosty reception from her parents. | 🧊
+in a fog | 迷迷糊糊；腦袋不清楚 | Sorry, I'm in a fog this morning. | 😶‍🌫️
+face like thunder | 臉色非常難看 | He walked in with a face like thunder. | 😠
+greased lightning | 速度飛快 | He ran like greased lightning. | 🏎️
+come hell or high water | 無論如何；不管發生什麼 | I'll be there, come hell or high water. | 🌊
+`,
+  adv: `
+rain on me | 放馬過來，讓困難都落在我身上吧（2020 年 Lady Gaga 與 Ariana Grande 的歌名） | Bring it on. Rain on me. I can take it. | 🌧️
+it never rains but it pours | 禍不單行（英式說法） | First the flood, then the fire. It never rains but it pours. | ⛈️
+any port in a storm | 急不暇擇；有總比沒有好 | It's not a great hotel, but any port in a storm. | ⚓
+know which way the wind blows | 看風向；識時務 | A good politician learns to know which way the wind blows. | 🧭
+sail close to the wind | 遊走在違法或危險邊緣 | Be careful. Don't sail close to the wind. | ⛵
+the winds of change | 變革之風 | The winds of change are blowing through the industry. | 🌬️
+take the wind out of his sails | 挫他的銳氣 | Nothing can take the wind out of his sails. | 🪁
+a breath of fresh air | 令人耳目一新的人或事 | Our new coach is a breath of fresh air. | 🌿
+cloud your judgment | 影響你的判斷 | Don't let anger cloud your judgment. | 🌫️
+the eye of the storm | 風暴中心 | Right now we're in the eye of the storm. | 🌀
+batten down the hatches | 做好準備迎接難關 | Batten down the hatches. The boss is angry. | 🚢
+a tempest in a teapot | 小題大作（美式） | This argument is a tempest in a teapot. | 🫖
+blow hot and cold | 忽冷忽熱；反覆無常 | Don't blow hot and cold with me. | 🌡️
+a storm brewing | 風暴正在醞釀 | I can feel a storm brewing in this office. | 🌩️
+put it on ice | 暫緩；擱置 | Let's put it on ice until next year. | 🧊
+make hay while the sun shines | 把握時機 | Business is good, so make hay while the sun shines. | 🌾
+a place in the sun | 一席之地；好的處境 | Everyone wants a place in the sun. | 🏖️
+the calm after the storm | 風暴後的平靜 | Enjoy the calm after the storm. | 🌅
+throw shade | 暗酸；嗆人 | Don't throw shade at her. She worked hard. | 😎
+rain down | 如雨般落下 | Watch the confetti rain down on the winners. | 🎊
+`
+});
