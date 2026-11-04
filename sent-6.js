@@ -712,3 +712,36 @@ Not my circus, not my monkeys. | 不關我的事。
 Keep your head down and let your work speak for itself. | 埋頭做事，讓工作成果替你說話。
 `
 });
+
+// 工作職場：外商職場慣用語（會議、郵件、專案合作）
+addPhrases("work", {
+  basic: `
+By all means, feel free to use my desk while I'm away. | 當然可以，我不在的時候你儘管使用我的座位。
+By all means, go ahead. | 當然可以，請便。
+Just wanted to give you a heads-up that the schedule might change. | 想先跟你說一聲，時程可能會有所調整。
+Thanks for the heads-up. | 謝謝你先提醒我。
+Rachel will take the lead on the product launch. | Rachel 將負責主導這次產品上市計畫。
+Can you take the lead on this one? | 這件事可以由你來主導嗎？
+At the end of the day, customer satisfaction is what matters most. | 說到底，最重要的還是顧客滿意度。
+`,
+  inter: `
+The presentation is ready, but I'll save another copy to be on the safe side. | 簡報已經準備好了，不過保險一點，我會再備份一份。
+Let's add an extra day, just to be on the safe side. | 保險起見，我們多預留一天吧。
+Let's take this offline and work out the details separately. | 這個問題我們另外討論，再單獨把細節確認清楚。
+The first design didn't meet the requirements, so we're going back to the drawing board. | 第一版設計沒有符合需求，因此我們得重新規劃。
+The system crashed before we saved anything, so we're back to square one. | 系統在我們儲存資料前就當掉了，現在只能從頭開始。
+Can we touch base tomorrow afternoon about the new campaign? | 我們明天下午可以簡單確認一下新活動的進度嗎？
+Let's get the ball rolling by assigning tasks to each team member. | 我們先把工作分配給各位成員，正式開始推進吧。
+Before we proceed, let's make sure everyone is on the same page. | 在繼續之前，我們先確認大家的理解是否一致。
+We have to do everything by the book during the audit. | 稽核期間，我們所有事情都必須按照規定辦理。
+This launch has a lot of moving parts, so we need to coordinate carefully. | 這次產品上市牽涉很多環節，因此我們需要仔細協調。
+`,
+  adv: `
+If you're ever in London, by all means visit the museums. | 如果你去倫敦，務必去參觀那些博物館。
+He threw his teammate under the bus to avoid taking responsibility. | 他為了逃避責任，把問題推到隊友身上。
+The new pricing strategy could really move the needle on sales. | 新的定價策略可能真正帶動業績成長。
+Will this move the needle? | 這件事真的能帶來實質成效嗎？
+Being on the same page doesn't always mean everyone agrees. | 大家理解一致，不一定代表每個人都同意。
+Back to the drawing board means rethinking the plan; back to square one means losing our progress. | back to the drawing board 是重新規劃方法；back to square one 是之前的進展白費、回到原點。
+`
+});

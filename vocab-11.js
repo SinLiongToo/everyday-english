@@ -552,3 +552,22 @@ stay in your lane | 做好自己的本分 | Stay in your lane and let them sort 
 not my circus, not my monkeys | 不關我的事 | Not my circus, not my monkeys. | 🎪
 `
 });
+
+// 工作職場：外商職場慣用語（會議、郵件、專案合作）
+addVocab("work", {
+  basic: `
+by all means | 當然可以；儘管請便 | By all means, feel free to use my desk while I'm away. | 👍
+take the lead | 帶頭負責；主導 | Rachel will take the lead on the product launch. | 🚩
+at the end of the day | 說到底；歸根究柢 | At the end of the day, customer satisfaction is what matters most. | 🎯
+`,
+  inter: `
+on the safe side | 保險起見；保守一點 | The presentation is ready, but I'll save another copy to be on the safe side. | 🛡️
+take it offline | 另外討論；會後再談 | Let's take it offline and work out the details separately. | 📴
+back to square one | 回到原點；之前的進展白費 | The system crashed before we saved anything, so we're back to square one. | 🔁
+by the book | 照規定；依標準程序 | We have to do everything by the book during the audit. | 📘
+moving parts | 牽涉的環節；需要協調的部分 | This launch has a lot of moving parts, so we need to coordinate carefully. | ⚙️
+`,
+  adv: `
+throw someone under the bus | 犧牲別人；把責任推給別人 | Never throw someone under the bus to protect yourself. | 🚌
+`
+});
