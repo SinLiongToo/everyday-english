@@ -23,6 +23,7 @@
   --ok: #1f7a4d;
   --bad: #b4232f;
   --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 14px rgba(0,0,0,.05);
+  --fr: #1d4ed8;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -30,10 +31,11 @@
     --bg: #141513; --card: #1d1f1c; --card-2: #262924; --fg: #ecebe6; --muted: #a9a79e;
     --border: #353831; --accent: #5cc4a6; --accent-fg: #0d1f1a; --accent-soft: #1d3a32;
     --basic: #6fd39d; --inter: #f0b35a; --adv: #f58a9c; --ok: #6fd39d; --bad: #ff8a8a;
-    --shadow: none; color-scheme: dark;
+    --shadow: none; color-scheme: dark; --fr: #93b4ff;
   }
 }
 :root[data-theme="dark"] {
+  --fr: #93b4ff;
   --bg: #141513; --card: #1d1f1c; --card-2: #262924; --fg: #ecebe6; --muted: #a9a79e;
   --border: #353831; --accent: #5cc4a6; --accent-fg: #0d1f1a; --accent-soft: #1d3a32;
   --basic: #6fd39d; --inter: #f0b35a; --adv: #f58a9c; --ok: #6fd39d; --bad: #ff8a8a;
@@ -123,6 +125,7 @@ main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
 .narrow-only { display: none; }
 /* Auto-play and the word filter sit in the bar, so they can be reached while reading. */
 .tctl { display: flex; align-items: center; gap: 6px 8px; flex: none; margin-bottom: 4px; }
+.tctl #apMode { max-width: 160px; }
 .tbar { flex-wrap: nowrap; }
 .tt { flex: 0 1 auto; }
 .tt h1 { overflow: hidden; text-overflow: ellipsis; }
@@ -178,7 +181,7 @@ select.tbtn { font: inherit; font-size: .9rem; color: var(--fg); cursor: pointer
 .vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
 .vcard {
   background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px;
-  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-content: start;
 }
 .vcard.done { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--card)); }
 .vword { font-size: 1.2rem; font-weight: 700; }
@@ -217,6 +220,18 @@ select.tbtn { font: inherit; font-size: .9rem; color: var(--fg); cursor: pointer
 #toast ul { margin: 8px 0 12px; padding-left: 20px; }
 #toast li { margin: 4px 0; }
 .tr { color: var(--muted); font-size: .93rem; }
+/* French line under a word, an example or a phrase. */
+.fr { color: var(--fr); font-size: .95rem; }
+.fr > span:first-child { margin-right: 6px; font-size: .85em; }
+.fr .ibtn { height: 28px; min-width: 28px; font-size: .8rem; margin-left: 6px; vertical-align: middle; }
+.vcard .fr { grid-column: 1 / -1; }
+.vcard.haspic .vfr { grid-column: 2 / -1; }
+.vfr { font-weight: 600; }
+.vfx { padding-left: 13px; }
+.row .fr { margin-top: 2px; }
+:root.no-fr .fr, :root.no-fr .fr-only { display: none; }
+.frb { font-size: .9rem; margin-left: 4px; }
+.qfr { color: var(--fr); }
 :root.hide-tr .tr { visibility: hidden; }
 :root.hide-tr .row:hover .tr, :root.hide-tr .vcard:hover .tr { visibility: visible; }
 
@@ -273,7 +288,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   .tbar { padding: 2px 10px 0 6px; margin: -24px -16px 14px; gap: 4px; }
   .tbar .ic { display: none; }
   .tt { flex: 1 1 0; }
-  .tctl { order: 5; flex: 1 1 100%; padding-left: 4px; gap: 5px; flex-wrap: nowrap; }
+  .tctl { order: 5; flex: 1 1 100%; min-width: 0; padding-left: 4px; gap: 5px; flex-wrap: nowrap; }
   .tctl .note { display: none; }
   .tbar .tctl .tbtn { padding: 3px 7px; font-size: .84rem; }
   .tctl #apMode { flex: 0 1 auto; min-width: 0; max-width: 110px; }
@@ -372,18 +387,19 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 <script src="idioms-4.js"></script>
 <script src="idioms-5.js"></script>
 <script src="dlg-1.js"></script>
+<script src="fr-food.js"></script>
 <script>
 (function () {
   "use strict";
 
   const LEVELS = ["basic", "inter", "adv"];
-  const UPDATED = "2026-11-03"; // 更新內容時改這個日期
+  const UPDATED = "2026-11-05"; // 更新內容時改這個日期
   const UI = {
     zh: {
       brand: "生活英語 <span class=\"wide-only\">Everyday English</span>",
       heroTitle: "從日常到深度對話，一步一步說好英語",
       updated: "最後更新：",
-      heroDesc: "涵蓋食衣住行育樂、居家用品、居家水電故障、交通事故、消防安全、緊急防災、機場、露營、野外求生、家庭、朋友、電影口語、勵志激勵、工作、面試、海外工作、報稅、股市投資、科技、統計與工程估算、身體健康、運動、跑步馬拉松、籃球、棒球、羽球、游泳、自行車、爬山登山、政治、軍事國防與新聞。每個主題 300 個以上的單字、600 個以上的句子（每字一句例句＋300 句實用句），分為基礎、中級、高級，並有情境對話與小測驗，可點 🔊 聽發音。",
+      heroDesc: "涵蓋食衣住行育樂、居家用品、居家水電故障、交通事故、消防安全、緊急防災、機場、露營、野外求生、家庭、朋友、電影口語、勵志激勵、工作、面試、海外工作、報稅、股市投資、科技、統計與工程估算、身體健康、運動、跑步馬拉松、籃球、棒球、羽球、游泳、自行車、爬山登山、政治、軍事國防與新聞。每個主題 300 個以上的單字、600 個以上的句子（每字一句例句＋300 句實用句），分為基礎、中級、高級，並有情境對話與小測驗，可點 🔊 聽發音。「食」主題另有 🇫🇷 法文對照、法文發音與法文小測驗。",
       basic: "基礎", inter: "中級", adv: "高級",
       basicS: "基礎", interS: "中級", advS: "高級",
       basicCefr: "A1–A2", interCefr: "B1–B2", advCefr: "C1",
@@ -416,13 +432,17 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       gsearch: "🔍 搜尋全部單字（英文或中文）",
       gFound: (n, shown) => n > shown ? `找到 ${n} 個單字，顯示前 ${shown} 個` : `找到 ${n} 個單字`,
       gNone: "找不到符合的單字，試試其他拼法或中文。",
+      frBtn: "🇫🇷 法文", frOn: "顯示法文", modeWF: "單字＋例句＋法文", modePF: "實用句＋法文",
+      frQuiz: "🇫🇷 法文小測驗",
+      frQA: (i, n) => `第 ${i} / ${n} 題・選出對應的法文`, frQB: (i, n) => `第 ${i} / ${n} 題・聽法文，選出英文意思`,
+      hintFr: "沒有法文語音：iPhone 到「設定 → 輔助使用 → 朗讀內容 → 聲音」下載法文；Android 到「設定 → 文字轉語音」安裝法文語音資料。",
       foot: "練習進度只儲存在你的瀏覽器中。"
     },
     en: {
       brand: "Everyday <span>English</span>",
       heroTitle: "From daily chats to deep discussions, one step at a time",
       updated: "Last updated: ",
-      heroDesc: "Food, clothing, housing, household items, home repairs, transport, traffic accidents, fire safety, emergency preparedness, airports, education, leisure, camping, wilderness survival, family, friends, saying no and cultural respect, movie and TV talk, inspiration and motivation, work, job interviews, working abroad, taxes, the stock market, technology, statistics and engineering, body and health, sports, running and marathons, basketball, baseball, badminton, swimming, cycling, hiking and mountaineering, politics, military and defense, and news. Every topic has 300+ words and 600+ sentences (an example for each word plus 300 useful phrases) across Basic, Intermediate and Advanced levels, plus dialogues and a quiz. Tap 🔊 to hear any line.",
+      heroDesc: "Food, clothing, housing, household items, home repairs, transport, traffic accidents, fire safety, emergency preparedness, airports, education, leisure, camping, wilderness survival, family, friends, saying no and cultural respect, movie and TV talk, inspiration and motivation, work, job interviews, working abroad, taxes, the stock market, technology, statistics and engineering, body and health, sports, running and marathons, basketball, baseball, badminton, swimming, cycling, hiking and mountaineering, politics, military and defense, and news. Every topic has 300+ words and 600+ sentences (an example for each word plus 300 useful phrases) across Basic, Intermediate and Advanced levels, plus dialogues and a quiz. Tap 🔊 to hear any line. The Food topic also has 🇫🇷 French translations, French audio and a French quiz.",
       basic: "Basic", inter: "Intermediate", adv: "Advanced",
       basicS: "Basic", interS: "Inter.", advS: "Adv.",
       basicCefr: "A1–A2", interCefr: "B1–B2", advCefr: "C1",
@@ -455,6 +475,10 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       gsearch: "🔍 Search all words",
       gFound: (n, shown) => n > shown ? `${n} words found, showing the first ${shown}` : `${n} words found`,
       gNone: "No matching words. Try another spelling.",
+      frBtn: "🇫🇷 French", frOn: "Show French", modeWF: "Words + examples + French", modePF: "Phrases + French",
+      frQuiz: "🇫🇷 French quiz",
+      frQA: (i, n) => `Question ${i} of ${n} · Choose the French word`, frQB: (i, n) => `Question ${i} of ${n} · Listen and choose the English meaning`,
+      hintFr: "No French voice: on iPhone, go to Settings → Accessibility → Spoken Content → Voices and download French; on Android, install French voice data in Settings → Text-to-speech.",
       foot: "Your progress is saved only in this browser."
     }
   };
@@ -474,7 +498,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     learned: new Set(store.get("learned", [])),
     level: store.get("level", "basic"),
     apMode: store.get("apMode", "we"),
-    apRep: store.get("apRep", 1)
+    apRep: store.get("apRep", 1),
+    fr: store.get("fr", true)
   };
   const t = (k) => UI[state.lang][k];
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -485,6 +510,12 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     PICS[tid] = {};
     s.split("|").forEach((pair) => { const i = pair.lastIndexOf(":"); PICS[tid][pair.slice(0, i).toLowerCase()] = pair.slice(i + 1); });
   });
+  // French: FRW[topic][word] = [French word, French example]; FRP[topic][phrase] = French phrase.
+  const FRW = window.FRW || {}, FRP = window.FRP || {};
+  const hasFr = (tp) => !!FRW[tp.id];
+  const frW = (tid, w) => (FRW[tid] || {})[w] || null;
+  const frP = (tid, s) => (FRP[tid] || {})[s] || "";
+  const frLine = (text, cls = "") => text ? `<div class="fr ${cls}" lang="fr"><span aria-hidden="true">🇫🇷</span><span>${esc(text)}</span><button class="ibtn" data-say="${esc(text)}" data-lang="fr" aria-label="${t("speak")}: ${esc(text)}">🔊</button></div>` : "";
   const picFor = (tid, w) => (PICS[tid] || {})[w.toLowerCase()] || "";
   const totalWords = TOPICS.reduce((n, tp) => n + LEVELS.reduce((m, lv) => m + tp[lv].v.length, 0), 0);
   // Every word's example sentence plus every useful phrase.
@@ -494,10 +525,21 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   const synth = window.speechSynthesis;
   // iPhones list joke voices (Bells, Bubbles…) under en-US; never pick those.
   const NOVELTY = /^(albert|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|junior|ralph|fred|kathy|grandma|grandpa|eddy|flo|reed|rocko|sandy|shelley)\b/i;
-  let voices = [];
+  let voices = [], frVoices = [], allVoiceCount = 0;
   function loadVoices() {
     if (!synth) return;
-    voices = synth.getVoices().filter((v) => /^en[-_]/i.test(v.lang) && !NOVELTY.test(v.name));
+    const all = synth.getVoices();
+    allVoiceCount = all.length;
+    voices = all.filter((v) => /^en[-_]/i.test(v.lang) && !NOVELTY.test(v.name));
+    frVoices = all.filter((v) => /^fr[-_]/i.test(v.lang) && !NOVELTY.test(v.name));
+  }
+  // True once the phone has listed its voices and none of them speaks French.
+  const frMissing = () => !!synth && allVoiceCount > 0 && !frVoices.length;
+  function pickFrVoice() {
+    const local = frVoices.filter((v) => v.localService !== false);
+    const pool = local.length ? local : frVoices;
+    const ff = pool.filter((v) => /fr[-_]FR/i.test(v.lang));
+    return ff.find((v) => v.default) || ff[0] || pool[0] || null;
   }
   if (synth) { loadVoices(); synth.onvoiceschanged = loadVoices; }
   function pickVoice(alt) {
@@ -510,15 +552,19 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     return alt && pool.length > 1 ? pool.find((v) => v !== first) : first;
   }
   let speechOk = false, hintShown = false;
-  function speak(text, alt) {
+  let frHinted = false;
+  function speak(text, alt, lang) {
     return new Promise((resolve) => {
       if (!synth) { showHint(); return resolve(); }
       const u = new SpeechSynthesisUtterance(text);
-      u.lang = "en-US";
-      const v = pickVoice(alt);
+      const isFr = lang === "fr";
+      // No French voice on this phone: explain how to install one (once).
+      if (isFr && frMissing() && !frHinted) { frHinted = true; hintShown = false; showHint(); }
+      u.lang = isFr ? "fr-FR" : "en-US";
+      const v = isFr ? pickFrVoice() : pickVoice(alt);
       if (v) u.voice = v;
       u.rate = state.slow ? 0.7 : 0.95;
-      u.pitch = alt ? 0.85 : 1.05;
+      u.pitch = isFr ? 1 : alt ? 0.85 : 1.05;
       let started = false;
       u.onstart = () => { started = speechOk = true; };
       u.onend = u.onerror = () => resolve();
@@ -564,7 +610,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   // Also called when the language changes, so an open hint follows the new language.
   function fillHint() {
     const el = document.getElementById("toast");
-    el.innerHTML = `<b>${t("hintTitle")}</b><ul>${(IN_APP ? [t("hintInApp")] : []).concat(IOS ? [t("hintSilent")] : [], [t("hintVolume"), t("hintBrowser")]).map((s) => `<li>${s}</li>`).join("")}</ul><button type="button" class="tbtn">${t("ok")}</button>`;
+    el.innerHTML = `<b>${t("hintTitle")}</b><ul>${(IN_APP ? [t("hintInApp")] : []).concat(IOS ? [t("hintSilent")] : [], [t("hintVolume"), t("hintBrowser")], frHinted ? [t("hintFr")] : []).map((s) => `<li>${s}</li>`).join("")}</ul><button type="button" class="tbtn">${t("ok")}</button>`;
     el.querySelector("button").onclick = () => { el.hidden = true; };
   }
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -585,7 +631,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       for (let r = 0; r < repeat && my === playToken; r++) {
         for (const p of it.parts) {
           if (my !== playToken) break;
-          await speak(p.text, p.alt);
+          await speak(p.text, p.alt, p.lang);
           await wait(state.slow ? 600 : 350);
         }
       }
@@ -602,6 +648,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     root.lang = state.lang === "zh" ? "zh-Hant" : "en";
     if (state.theme) root.dataset.theme = state.theme; else delete root.dataset.theme;
     root.classList.toggle("hide-tr", state.hideTr && state.lang === "zh");
+    root.classList.toggle("no-fr", !state.fr);
     const dark = state.theme ? state.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
     document.getElementById("brand").innerHTML = t("brand");
     const langLbl = document.getElementById("langLbl");
@@ -642,8 +689,8 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
 
   // One word card. `meta` adds a line under it (used by the all-topics search to show where the word lives).
   function vcardHTML(tp, lv, [w, m, ex], meta = "") {
-    const k = key(tp.id, lv, w), done = state.learned.has(k), pic = picFor(tp.id, w);
-    return `<div class="vcard${done ? " done" : ""}${pic ? " haspic" : ""}" data-q="${esc((w + " " + m).toLowerCase())}">
+    const k = key(tp.id, lv, w), done = state.learned.has(k), pic = picFor(tp.id, w), f = frW(tp.id, w);
+    return `<div class="vcard${done ? " done" : ""}${pic ? " haspic" : ""}" data-q="${esc((w + " " + m + (f ? " " + f[0] : "")).toLowerCase())}">
         ${pic ? `<div class="vpic" aria-hidden="true">${pic}</div>` : ""}
         <div class="vword${w.length > 11 && !w.includes(" ") ? " long" : ""}">${esc(w)}</div>
         <div class="vact">
@@ -651,7 +698,9 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
           <button class="ibtn${done ? " on" : ""}" data-learn="${esc(k)}" title="${t("markDone")}" aria-label="${t("markDone")}" aria-pressed="${done}">✓</button>
         </div>
         ${zh() ? `<div class="vzh tr">${esc(m)}</div>` : "<div></div>"}
+        ${f ? frLine(f[0], "vfr") : ""}
         <div class="vex">${esc(ex)} <button class="ibtn" style="height:28px;min-width:28px;font-size:.8rem" data-say="${esc(ex)}" aria-label="${t("speak")}">🔊</button></div>
+        ${f ? frLine(f[1], "vfx") : ""}
         ${meta}
       </div>`;
   }
@@ -688,7 +737,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       const [d, n] = topicProgress(tp);
       return `<a class="tcard" href="#/${tp.id}">
         <div class="ic" aria-hidden="true">${tp.icon}</div>
-        <h3>${esc(zh() ? tp.zh : tp.en)}</h3>
+        <h3>${esc(zh() ? tp.zh : tp.en)}${hasFr(tp) ? `<span class="frb" title="Français">🇫🇷</span>` : ""}</h3>
         ${zh() ? `<div class="sub">${esc(tp.en)}</div>` : ""}
         <div class="bar"><i style="width:${(d / n * 100).toFixed(0)}%"></i></div>
         <div class="pct">${t("learnedOf")(d, n)}</div>
@@ -726,14 +775,17 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     const next = TOPICS[(idx + 1) % TOPICS.length];
     document.title = `${zh() ? tp.zh : tp.en} · Everyday English`;
 
+    const fr = hasFr(tp);
+    // A French auto-play mode picked on another topic falls back to its English version here.
+    if (!fr && (state.apMode === "wf" || state.apMode === "pf")) state.apMode = state.apMode === "wf" ? "we" : "p";
     const tabs = LEVELS.map((l) =>
       `<button class="tab ${l}" role="tab" aria-selected="${l === lv}" data-lv="${l}" title="${t(l)} ${t(l + "Cefr")}">${t(l + "S")}</button>`).join("");
 
     const vocab = L.v.map((e) => vcardHTML(tp, lv, e)).join("");
 
-    const phrases = L.p.map(([en, z], i) => `<li class="row" data-q="${esc((en + " " + z).toLowerCase())}">
+    const phrases = L.p.map(([en, z], i) => `<li class="row" data-q="${esc((en + " " + z + " " + frP(tp.id, en)).toLowerCase())}">
         <span class="pn">${i + 1}</span>
-        <div class="txt"><div class="en">${esc(en)}</div>${trLine(z)}</div>
+        <div class="txt"><div class="en">${esc(en)}</div>${trLine(z)}${frLine(frP(tp.id, en))}</div>
         <button class="ibtn" data-say="${esc(en)}" aria-label="${t("speak")}">🔊</button>
       </li>`).join("");
 
@@ -758,12 +810,13 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <div class="tctl">
           <button class="tbtn primary" id="apBtn" type="button">${t("autoPlay")}</button>
           <select class="tbtn" id="apMode" aria-label="${t("apMode")}">
-            ${[["w", "modeW"], ["we", "modeWE"], ["e", "modeE"], ["p", "modeP"], ["all", "modeAll"]].map(([v, k]) =>
+            ${[["w", "modeW"], ["we", "modeWE"], ["e", "modeE"], ["p", "modeP"], ["all", "modeAll"]].concat(fr ? [["wf", "modeWF"], ["pf", "modePF"]] : []).map(([v, k]) =>
               `<option value="${v}"${state.apMode === v ? " selected" : ""}>${t(k)}</option>`).join("")}
           </select>
           <select class="tbtn" id="apRep" aria-label="${t("apRep")}">
             ${[1, 2, 3].map((n) => `<option value="${n}"${state.apRep === n ? " selected" : ""}>×${n}</option>`).join("")}
           </select>
+          ${fr ? `<button class="tbtn" id="frBtn" type="button" aria-pressed="${state.fr}" title="${t("frOn")}" aria-label="${t("frOn")}">🇫🇷<span class="wide-only"> ${t("frBtn").replace("🇫🇷 ", "")}</span></button>` : ""}
           <label class="tun"><input type="checkbox" id="vun"> <span class="wide-only">${t("unlearned")}</span><span class="narrow-only">${t("unlearnedS")}</span></label>
           <span class="note" id="vcount"></span>
         </div>
@@ -799,6 +852,10 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         <h2><span class="num">4</span>${t("quiz")}</h2>
         <div class="quiz" id="quiz"></div>
       </section>
+      ${fr ? `<section class="blk fr-only">
+        <h2><span class="num">5</span>${t("frQuiz")}</h2>
+        <div class="quiz" id="frquiz"></div>
+      </section>` : ""}
       <nav class="pager">
         <a href="#/${prev.id}/${lv}"><small>${t("prev")}</small>${prev.icon} ${esc(zh() ? prev.zh : prev.en)}</a>
         <a href="#/${next.id}/${lv}" style="text-align:right"><small>${t("nextT")}</small>${esc(zh() ? next.zh : next.en)} ${next.icon}</a>
@@ -832,23 +889,30 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       document.getElementById("pRep").value = e.target.value;
     };
     // Modes: w / we / e play the word cards, p plays the useful phrases, all plays words + examples, then phrases.
+    // wf / pf read the French line after each English one.
+    const frOf = (el, sel) => { const b = el.querySelector(sel + " [data-say]"); return b ? [{ text: b.dataset.say, lang: "fr" }] : []; };
     apBtn.onclick = () => playSeq(apBtn, t("autoPlay"), () => {
       const m = state.apMode;
-      const words = m === "p" ? [] : [...app.querySelectorAll(".vcard:not([hidden])")].map((el) => {
-        const w = el.querySelector(".vact [data-say]").dataset.say;
-        const ex = el.querySelector(".vex [data-say]").dataset.say;
-        const parts = m === "w" ? [w] : m === "e" ? [ex] : [w, ex];
-        return { el, parts: parts.map((text) => ({ text })) };
+      const words = m === "p" || m === "pf" ? [] : [...app.querySelectorAll(".vcard:not([hidden])")].map((el) => {
+        const w = { text: el.querySelector(".vact [data-say]").dataset.say };
+        const ex = { text: el.querySelector(".vex [data-say]").dataset.say };
+        const parts = m === "w" ? [w] : m === "e" ? [ex] : m === "wf" ? [w, ...frOf(el, ".vfr"), ex, ...frOf(el, ".vfx")] : [w, ex];
+        return { el, parts };
       });
-      const phr = m === "p" || m === "all"
-        ? [...document.querySelectorAll("#phr .row:not([hidden])")].map((el) => ({ el, parts: [{ text: el.querySelector("[data-say]").dataset.say }] }))
+      const phr = m === "p" || m === "all" || m === "pf"
+        ? [...document.querySelectorAll("#phr .row:not([hidden])")].map((el) => ({ el, parts: [{ text: el.querySelector(".ibtn[data-say]:not([data-lang])").dataset.say }].concat(m === "pf" ? frOf(el, ".fr") : []) }))
         : [];
       return words.concat(phr);
     }, state.apRep);
+    const frBtn = document.getElementById("frBtn");
+    if (frBtn) frBtn.onclick = () => {
+      state.fr = !state.fr; store.set("fr", state.fr); applyChrome();
+      frBtn.setAttribute("aria-pressed", String(state.fr));
+    };
 
     const phrBtn = document.getElementById("playPhr");
     phrBtn.onclick = () => playSeq(phrBtn, t("playAll"), () =>
-      [...document.querySelectorAll("#phr .row:not([hidden])")].map((el) => ({ el, parts: [{ text: el.querySelector("[data-say]").dataset.say }] })),
+      [...document.querySelectorAll("#phr .row:not([hidden])")].map((el) => ({ el, parts: [{ text: el.querySelector(".ibtn[data-say]:not([data-lang])").dataset.say }] })),
       state.apRep);
     const pq = document.getElementById("pq"), pcount = document.getElementById("pcount");
     const filterPhr = () => {
@@ -873,6 +937,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
         [...document.querySelectorAll(`#dlgx${k} .row`)].map((el, i) => ({ el, parts: [{ text: x.d[i][1], alt: x.d[i][0] === "B" }] })));
     });
     startQuiz(tp, lv);
+    if (fr) startFrQuiz(tp, lv);
   }
 
   function filterVocab() {
@@ -946,10 +1011,74 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     show();
   }
 
+  // ---------- French quiz ----------
+  // Odd questions: see the English word, pick its French. Even questions: hear the French, pick the English.
+  function startFrQuiz(tp, lv) {
+    const pool = tp[lv].v.filter(([w]) => frW(tp.id, w));
+    const others = (e, key) => {
+      const seen = new Set([key(e)]), out = [];
+      for (const x of shuffle(pool)) {
+        const k = key(x);
+        if (!seen.has(k)) { seen.add(k); out.push(x); }
+        if (out.length === 3) break;
+      }
+      return out;
+    };
+    const qs = shuffle(pool).slice(0, QUIZ_LEN).map((e, n) => {
+      const f = frW(tp.id, e[0])[0], listen = n % 2 === 1;
+      const key = listen ? (x) => x[0].toLowerCase() : (x) => frW(tp.id, x[0])[0].toLowerCase();
+      const opts = shuffle([e, ...others(e, key)]).map((x) => listen ? x[0] : frW(tp.id, x[0])[0]);
+      return { w: e[0], m: e[1], f, listen, pic: picFor(tp.id, e[0]), ans: listen ? e[0] : f, opts };
+    });
+    let i = 0, score = 0;
+    const box = document.getElementById("frquiz");
+    function show() {
+      if (i >= qs.length) return result();
+      const q = qs[i];
+      const sayBtn = `<button class="ibtn" data-say="${esc(q.f)}" data-lang="fr" aria-label="${t("speak")}">🔊</button>`;
+      box.innerHTML = `
+        <div class="qmeta">${(q.listen ? t("frQB") : t("frQA"))(i + 1, qs.length)}</div>
+        ${q.pic && !q.listen ? `<div class="qpic" aria-hidden="true">${q.pic}</div>` : ""}
+        <p class="qtext">${q.listen ? `${sayBtn} <span class="blank" id="frShow">____</span>` : `<b>${esc(q.w)}</b>${zh() ? ` <span class="tr">（${esc(q.m)}）</span>` : ""}`}</p>
+        <div class="opts"${q.listen ? "" : ' lang="fr"'}>${q.opts.map((o) => `<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+        <div class="qfoot"><span class="fb" id="frfb" aria-live="polite"></span></div>`;
+      box.querySelectorAll(".opt").forEach((b) => b.onclick = () => answer(b, q));
+      // Listening questions read the French aloud as soon as they appear (not on first page load).
+      if (q.listen && i > 0) { stopSpeech(); speak(q.f, false, "fr"); }
+    }
+    function answer(btn, q) {
+      const ok = btn.dataset.o === q.ans;
+      if (ok) score++;
+      box.querySelectorAll(".opt").forEach((b) => { b.disabled = true; if (b.dataset.o === q.ans) b.classList.add("right"); });
+      if (!ok) btn.classList.add("wrong");
+      const shown = document.getElementById("frShow");
+      if (shown) { shown.textContent = q.f; shown.lang = "fr"; shown.classList.add("qfr"); }
+      const fb = document.getElementById("frfb");
+      fb.className = "fb " + (ok ? "ok" : "no");
+      fb.textContent = (ok ? t("right") : t("wrong")(q.ans)) + ` ${q.w} = ${q.f}` + (zh() ? `（${q.m}）` : "");
+      const nb = document.createElement("button");
+      nb.className = "pbtn"; nb.textContent = i + 1 < qs.length ? t("next") : t("finish");
+      nb.onclick = () => { i++; show(); };
+      box.querySelector(".qfoot").appendChild(nb);
+      nb.focus();
+      stopSpeech(); speak(q.f, false, "fr");
+    }
+    function result() {
+      const r = score / qs.length;
+      box.innerHTML = `
+        <div class="score">${Math.round(r * 100)}%</div>
+        <div>${t("scoreMsg")(score, qs.length)}</div>
+        <p class="note">${r >= 0.85 ? t("great") : r >= 0.5 ? t("good") : t("tryAgain")}</p>
+        <div class="qfoot"><button class="pbtn" style="margin-left:0" id="frRetry">${t("retry")}</button></div>`;
+      document.getElementById("frRetry").onclick = () => startFrQuiz(tp, lv);
+    }
+    show();
+  }
+
   // ---------- delegated clicks ----------
   app.addEventListener("click", (e) => {
     const say = e.target.closest("[data-say]");
-    if (say) { stopSpeech(); speak(say.dataset.say, !!say.dataset.alt); return; }
+    if (say) { stopSpeech(); speak(say.dataset.say, !!say.dataset.alt, say.dataset.lang); return; }
     const lb = e.target.closest("[data-learn]");
     if (lb) {
       const k = lb.dataset.learn;
