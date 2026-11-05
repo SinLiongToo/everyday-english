@@ -571,3 +571,32 @@ moving parts | 牽涉的環節；需要協調的部分 | This launch has a lot o
 throw someone under the bus | 犧牲別人；把責任推給別人 | Never throw someone under the bus to protect yourself. | 🚌
 `
 });
+
+// 工作職場：推卸責任、邀功、說話方式（辦公室人際）
+addVocab("work", {
+  basic: `
+slack off | 偷懶；打混 | Don't slack off just because the boss is away. | 😴
+slacker | 愛偷懶的人 | Nobody wants to work with a slacker. | 🛋️
+take credit for | 邀功；把功勞攬在自己身上 | He tried to take credit for my idea. | 🏅
+miss the point | 搞錯重點；沒抓到重點 | I think you miss the point. It's about safety, not cost. | 🎯
+get straight to the point | 開門見山；直接講重點 | Let me get straight to the point: we're over budget. | ➡️
+`,
+  inter: `
+pass the buck | 推卸責任 | Don't pass the buck. This is your project. | 🫴
+shift the blame | 推卸責任；把錯推給別人 | She always tries to shift the blame onto the new guy. | 👉
+clean up someone's mess | 幫人收拾爛攤子 | I'm tired of having to clean up someone's mess every week. | 🧹
+dump work on someone | 把工作推給別人 | It's not fair to dump work on someone just because they never say no. | 📦
+work for nothing | 做白工；白忙一場 | Let's sign a contract first. I don't want to work for nothing. | 🫠
+beat around the bush | 說話拐彎抹角 | Don't beat around the bush. Tell me what happened. | 🌳
+pay lip service | 口頭答應卻不行動；說一套做一套 | Many companies pay lip service to work-life balance. | 👄
+give credit where credit is due | 該給的功勞要給 | Give credit where credit is due: Amy did most of the work. | 👏
+pick up the slack | 補上別人沒做的部分 | When he's on leave, the rest of us pick up the slack. | 🧩
+free rider | 搭便車的人；坐享其成的人 | Every group project seems to have a free rider. | 🚗
+`,
+  adv: `
+act first and ask permission later | 先斬後奏 | He likes to act first and ask permission later. | ⚡
+ask forgiveness, not permission | 先做再說（之後再請求原諒） | His motto is "ask forgiveness, not permission." | 🙏
+do the heavy lifting | 做最辛苦、最吃重的部分 | The interns do the heavy lifting, and the managers take the credit. | 🏋️
+all talk and no action | 光說不練 | The new manager is all talk and no action. | 🗣️
+`
+});

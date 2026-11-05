@@ -745,3 +745,39 @@ Being on the same page doesn't always mean everyone agrees. | 大家理解一致
 Back to the drawing board means rethinking the plan; back to square one means losing our progress. | back to the drawing board 是重新規劃方法；back to square one 是之前的進展白費、回到原點。
 `
 });
+
+// 工作職場：推卸責任、邀功、說話方式（辦公室人際）
+addPhrases("work", {
+  basic: `
+Stop slacking off and get back to work. | 別再偷懶了，回去工作吧。
+He slacks off whenever the boss isn't looking. | 老闆一沒在看，他就偷懶。
+She took credit for the whole team's work. | 她把整個團隊的功勞都攬在自己身上。
+I don't care who takes the credit. I just want it done. | 我不在乎功勞算誰的，我只想把事情做完。
+I think you're missing the point. | 我覺得你搞錯重點了。
+Let's get straight to the point. | 我們開門見山吧。
+I'll get straight to the point: we need more time. | 我就直說了：我們需要更多時間。
+`,
+  inter: `
+Nobody wants to take responsibility. Everyone's just passing the buck. | 沒有人想負責，大家都在推卸責任。
+Don't try to shift the blame onto me. | 別想把錯推到我身上。
+Why am I always the one cleaning up your mess? | 為什麼總是我在幫你收拾爛攤子？
+I spent the whole weekend cleaning up someone else's mess. | 我整個週末都在幫別人收拾爛攤子。
+He keeps dumping his work on me. | 他一直把他的工作推給我。
+Please don't dump this on me at five o'clock on a Friday. | 拜託別在週五下午五點把這件事丟給我。
+They changed the requirements again. All that work was for nothing. | 他們又改需求了，之前做的全是白工。
+Please don't beat around the bush. Just tell me. | 拜託別拐彎抹角，直接告訴我。
+They pay lip service to safety, but nothing ever changes. | 他們嘴上說重視安全，但什麼都沒改變。
+Let's give credit where credit is due. | 該給的功勞還是要給。
+Thanks for picking up the slack while I was out. | 謝謝你在我不在時幫我補上工作。
+I'm not going to do everything while he takes the credit. | 我才不要事情全做了，功勞卻被他拿走。
+`,
+  adv: `
+He acted first and asked permission later, and the boss was furious. | 他先斬後奏，老闆氣炸了。
+Sometimes it's easier to ask forgiveness than permission. | 有時候先做再請求原諒，比事先請求許可容易。
+Passing the buck only makes the problem worse. | 推卸責任只會讓問題更嚴重。
+A good leader takes the blame and shares the credit. | 好的領導者承擔責任，分享功勞。
+If you keep cleaning up his mess, he'll never learn. | 如果你一直幫他收拾爛攤子，他永遠學不會。
+If you're dumping work on people, at least explain why. | 如果你要把工作交給別人，至少說明原因。
+Saying yes in the meeting and doing nothing afterward is just paying lip service. | 會議上答應、會後卻什麼都不做，只是口頭說說而已。
+`
+});
