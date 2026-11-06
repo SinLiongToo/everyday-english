@@ -7,7 +7,7 @@
 - **實用句**：100 句，可搜尋、播放全部、每句重複 ×1–×3
 - **情境對話**：可「播放全部」，A/B 兩種聲音
 - **小測驗**：用例句做克漏字選擇題
-- **🇫🇷 法文對照**（目前有 30 個主題，主題卡上標有 🇫🇷）：每個單字、例句、實用句下方有法文和 🔊 法文發音；自動播放可選「單字＋例句＋法文」「實用句＋法文」；另有「法文小測驗」（看英文選法文、聽法文選英文）。主題列的 🇫🇷 按鈕可隱藏法文。法文由 Claude 翻譯，未經母語者校對
+- **🇫🇷 法文對照**（目前有 34 個主題，主題卡上標有 🇫🇷）：每個單字、例句、實用句下方有法文和 🔊 法文發音；自動播放可選「單字＋例句＋法文」「實用句＋法文」；另有「法文小測驗」（看英文選法文、聽法文選英文）。主題列的 🇫🇷 按鈕可隱藏法文。法文由 Claude 翻譯，未經母語者校對
 
 頁首固定的搜尋框（按 / 可直接輸入，Esc 清除）：在首頁一次搜尋所有主題和等級的單字，在主題頁則篩選本頁單字。搜尋全部單字時，輸入英文或中文即可，結果可朗讀、標記已學會，點主題名稱可跳到該單字（網址如 `#/stocks/inter/odd lot`）。
 
@@ -24,7 +24,7 @@
 | `sent-1.js` ~ `sent-28.js` | 其餘實用句，一行一句：`English sentence \| 中文` |
 | `dlg-1.js` | 額外情境對話（例如「帶外國朋友逛夜市」），一行一句：`A \| English \| 中文` |
 | `idioms-1.js` ~ `idioms-5.js` | 每個主題約 30 個慣用語（中級、高級；`idioms-5.js` 為電影口語與勵志的補充），格式同單字 |
-| `fr-<主題>.js`（food、clothing、housing、transport、education、fun、household、repairs、accident、fire、prepare、airport、camping、survival、family、friends、respect、movie、inspire、work、interview、overseas、tax、stocks、tech、stats、health、sports、running、basketball） | 上述 30 個主題的法文對照：單字一行 `English word \| mot français \| exemple en français`，實用句一行 `English \| français`，英文必須與原文完全相同 |
+| `fr-<主題>.js`（food、clothing、housing、transport、education、fun、household、repairs、accident、fire、prepare、airport、camping、survival、family、friends、respect、movie、inspire、work、interview、overseas、tax、stocks、tech、stats、health、sports、running、basketball、baseball、badminton、swimming、cycling） | 上述 34 個主題的法文對照：單字一行 `English word \| mot français \| exemple en français`，實用句一行 `English \| français`，英文必須與原文完全相同 |
 | `.nojekyll` | 讓 GitHub Pages 直接提供檔案 |
 
 ## 本機預覽
