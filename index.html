@@ -308,6 +308,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .tcard { padding: 12px; }
 }
+#stopBtn.awake::after { content: " 🔆"; }
 </style>
 </head>
 <body>
@@ -461,7 +462,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       great: "太棒了！可以挑戰下一個等級。", good: "不錯！再複習一下單字。", tryAgain: "多看幾次單字和例句，再試一次。",
       prev: "上一個主題", nextT: "下一個主題",
       noSpeech: "此瀏覽器不支援語音朗讀。",
-      hintTitle: "聽不到聲音嗎？", ok: "知道了",
+      hintTitle: "聽不到聲音嗎？", ok: "知道了", awake: "播放中螢幕會保持開啟，避免手機鎖定後中斷",
       hintInApp: "你正在 App 內建瀏覽器（LINE、Facebook 等）中，它通常無法朗讀。請點右上角「⋯」選「用瀏覽器開啟」。",
       hintSilent: "iPhone：請關閉側邊的靜音開關（靜音模式下不會發聲）。",
       hintVolume: "把媒體音量調大。",
@@ -504,7 +505,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       great: "Excellent! You're ready for the next level.", good: "Good job! Review the words once more.", tryAgain: "Review the words and examples, then try again.",
       prev: "Previous topic", nextT: "Next topic",
       noSpeech: "Speech is not supported in this browser.",
-      hintTitle: "Can't hear anything?", ok: "Got it",
+      hintTitle: "Can't hear anything?", ok: "Got it", awake: "The screen stays on while playing, so locking doesn't cut it off",
       hintInApp: "You're in an in-app browser (LINE, Facebook…), which usually can't speak. Tap ⋯ and choose \"Open in browser\".",
       hintSilent: "iPhone: turn off the silent switch on the side; speech is muted in silent mode.",
       hintVolume: "Turn up the media volume.",
@@ -634,7 +635,34 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
   };
   const stickyRO = "ResizeObserver" in window ? new ResizeObserver(syncSticky) : null;
   if (stickyRO) stickyRO.observe(topEl); else addEventListener("resize", syncSticky);
-  function stopSpeech() { playToken++; stopBtn.hidden = true; if (synth && (synth.speaking || synth.pending)) synth.cancel(); }
+  function stopSpeech() { playToken++; stopBtn.hidden = true; seqOn = false; keepAwake(false); if (synth && (synth.speaking || synth.pending)) synth.cancel(); }
+
+  // Keep the screen on while a list is read aloud (Screen Wake Lock API).
+  // Phones stop browser speech once the screen locks, so auto-play asks the
+  // screen to stay on and releases it on stop. The OS drops the lock whenever
+  // the page is hidden, so it's re-requested when the page comes back.
+  let wakeLock = null, seqOn = false;
+  async function keepAwake(on) {
+    if (!("wakeLock" in navigator)) return;
+    try {
+      if (on && !wakeLock) {
+        const l = await navigator.wakeLock.request("screen");
+        if (!seqOn) { l.release(); return; } // stopped while we were waiting
+        wakeLock = l;
+        l.addEventListener("release", () => { if (wakeLock === l) { wakeLock = null; showAwake(); } });
+      } else if (!on && wakeLock) {
+        const l = wakeLock; wakeLock = null; await l.release();
+      }
+    } catch (e) { wakeLock = null; } // e.g. battery saver, or not allowed
+    showAwake();
+  }
+  function showAwake() {
+    stopBtn.classList.toggle("awake", !!wakeLock);
+    stopBtn.title = wakeLock ? t("awake") : "";
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && seqOn) keepAwake(true);
+  });
   stopBtn.onclick = stopSpeech;
 
   // In-app browsers (LINE, Facebook, Instagram, WeChat) usually can't speak at all.
@@ -668,6 +696,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
     const my = playToken;
     btn.dataset.on = "1"; btn.textContent = t("stop");
     stopBtn.hidden = false;
+    seqOn = true; keepAwake(true);
     for (const it of getItems()) {
       if (my !== playToken) break;
       it.el.classList.add("playing");
@@ -683,7 +712,7 @@ footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 
       if (my === playToken) await wait(state.slow ? 800 : 450);
     }
     delete btn.dataset.on; btn.textContent = label;
-    if (my === playToken) stopBtn.hidden = true;
+    if (my === playToken) { stopBtn.hidden = true; seqOn = false; keepAwake(false); }
   }
 
   // ---------- header ----------
