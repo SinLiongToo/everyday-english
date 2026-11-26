@@ -342,6 +342,7 @@ the man of the house | l'homme de la maison | C'est lui l'homme de la maison mai
 family man | le père de famille dévoué | Mon mari est un vrai père de famille.
 wear the pants | porter la culotte | Chez nous, maman et papa portent tous les deux la culotte.
 tie the knot | se marier ; se passer la bague au doigt | Ils vont se marier au printemps prochain.
+right as rain | frais comme un gardon | Maman m'a fait une soupe au poulet, et maintenant je suis frais comme un gardon.
 `,
   phrases: `
 Whose turn is it to do the dishes? | C'est à qui de faire la vaisselle ?

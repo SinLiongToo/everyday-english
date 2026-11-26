@@ -163,6 +163,7 @@ the man of the house | 一家之主 | He's the man of the house now. | 🏠
 family man | 顧家的男人 | My husband is a real family man. | 👨‍👩‍👧
 wear the pants | 當家作主 | Mom and Dad both wear the pants in our house. | 👖
 tie the knot | 結婚 | They'll tie the knot next spring. | 💍
+right as rain | 完全恢復；一切安好 | Mom made me chicken soup, and now I'm right as rain. | ☔
 `,
   adv: `
 born with a silver spoon in his mouth | 含著金湯匙出生 | He was born with a silver spoon in his mouth. | 🥄
