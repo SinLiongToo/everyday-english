@@ -215,6 +215,7 @@ a friend of a friend | 朋友的朋友 | I met him through a friend of a friend.
 mend fences | 修補關係 | It's time to mend fences. | 🚧
 read me like a book | 看透某人 | My best friend can read me like a book. | 📖
 let the cat out of the bag | 洩漏秘密 | Who let the cat out of the bag? | 🐈
+come clean | 坦白；老實招認 | I need to come clean: I'm the one who broke your headphones. | 🧼
 old friends are the best friends | 老朋友最好 | Old friends are the best friends. | 🧓
 bros before hoes | 兄弟比女人重要（粗俗俚語，貶低女性，只在很熟的男生朋友間開玩笑用，別對女生或在正式場合說） | He canceled his date to help me move. "Bros before hoes," he said. | 🍻
 `
