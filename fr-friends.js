@@ -339,6 +339,7 @@ two peas in a pod | comme deux gouttes d'eau ; inséparables | Ils se ressemblen
 lend an ear | prêter une oreille attentive | Tu peux m'écouter une minute ?
 just kidding | je plaisante | Je plaisante ! Ne te fâche pas.
 pull my leg | faire marcher quelqu'un | Tu essaies de me faire marcher ?
+peace out | salut, ciao | Bon, je dois y aller. Ciao !
 `,
   phrases: `
 What have you been up to? | Qu'est-ce que tu deviens ?

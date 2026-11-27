@@ -198,6 +198,7 @@ keep in touch | 保持聯絡 | Let's keep in touch. | 📱
 lend an ear | 傾聽 | Can you lend an ear for a minute? | 👂
 just kidding | 開玩笑的 | Just kidding! Don't be mad. | 😜
 pull my leg | 開某人玩笑 | Are you trying to pull my leg? | 🦵
+peace out | 掰啦；我先閃了（很隨性的道別） | Okay, I gotta go. Peace out! | ✌️
 `,
   adv: `
 thick as thieves | 交情很好；親密 | Those two are thick as thieves. | 🦹
