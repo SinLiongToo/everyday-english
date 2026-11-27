@@ -341,6 +341,9 @@ just kidding | je plaisante | Je plaisante ! Ne te fâche pas.
 pull my leg | faire marcher quelqu'un | Tu essaies de me faire marcher ?
 peace out | salut, ciao | Bon, je dois y aller. Ciao !
 spot on | pile dans le mille ; tout à fait juste | Tu as mis pile dans le mille. C'est exactement ce qui s'est passé.
+get stood up | se faire poser un lapin | C'est horrible de se faire poser un lapin à un premier rendez-vous.
+stand someone up | poser un lapin à quelqu'un | C'est impoli de poser un lapin à quelqu'un.
+bail on | lâcher quelqu'un ; se défiler | Ne nous lâche pas !
 `,
   phrases: `
 What have you been up to? | Qu'est-ce que tu deviens ?
@@ -454,6 +457,14 @@ Let's not make a big deal out of it. | N'en faisons pas toute une histoire.
 I hope we can work this out. | J'espère qu'on pourra arranger ça.
 I think we need to be honest with each other. | Je crois qu'il faut qu'on soit honnêtes l'un envers l'autre.
 I'd rather clear the air than let things get awkward. | Je préfère crever l'abcès plutôt que de laisser la situation devenir gênante.
+I waited for an hour. I got stood up! | J'ai attendu une heure. On m'a posé un lapin !
+He stood me up again. | Il m'a encore posé un lapin.
+I can't believe he stood me up! | Je n'arrive pas à croire qu'il m'ait posé un lapin !
+She stood her best friend up. | Elle a posé un lapin à sa meilleure amie.
+She bailed on me at the last minute. | Elle m'a lâché à la dernière minute.
+He flaked on me again! | Il m'a encore fait faux bond !
+I hate it when people flake on plans. | Je déteste quand les gens annulent au dernier moment.
+We were supposed to meet, but she ghosted me. | On devait se voir, mais elle m'a ghosté.
 `,
 });
 

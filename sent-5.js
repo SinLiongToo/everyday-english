@@ -499,6 +499,14 @@ Did you see my message? | 你有看到我的訊息嗎？
 Sorry, I didn't see it. | 抱歉，我沒看到。
 Let's plan something fun. | 我們來計畫點好玩的事吧。
 I'll introduce you to my friends. | 我會介紹我的朋友給你認識。
+I waited for an hour. I got stood up! | 我等了一個小時，結果被放鴿子了！
+He stood me up again. | 他又放我鴿子了！
+I can't believe he stood me up! | 真不敢相信他居然放我鴿子！
+She stood her best friend up. | 她放了自己最好朋友的鴿子。
+She bailed on me at the last minute. | 她在最後一刻突然取消約定。
+He flaked on me again! | 他又臨時放我鴿子了！
+I hate it when people flake on plans. | 我很討厭別人臨時取消約定。
+We were supposed to meet, but she ghosted me. | 我們本來約好見面，結果她突然失聯了。
 `,
   adv: `
 Making friends as an adult is surprisingly hard. | 成年後交朋友出奇地困難。
