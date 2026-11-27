@@ -499,6 +499,13 @@ I'm not brave enough to wear that. | 我沒有勇氣穿那個。
 Wear what makes you feel confident. | 穿讓你有自信的衣服。
 Could you gift-wrap it for me? | 可以幫我包裝成禮物嗎？
 Do you have this in a different color? | 這個有其他顏色嗎？
+That comes to $19.80. | 總共是 19 美元 80 美分。
+Could you round it down to $19? | 可以幫我把價格算成 19 美元嗎？
+Could you make it $19 even? | 可以算我 19 美元整嗎？
+Could you knock 80 cents off? | 可以幫我減掉 80 美分嗎？
+Can you do $19? | 可以算我 19 美元嗎？
+Sure, I can do that. | 沒問題，可以算你這個價格。
+Is the price negotiable? | 價格可以商量嗎？
 `,
   adv: `
 The fashion industry is one of the world's biggest polluters. | 時尚產業是全球最大的污染源之一。

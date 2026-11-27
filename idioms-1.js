@@ -54,6 +54,10 @@ if the shoe fits, wear it | 說的就是你；對號入座 | If the shoe fits, w
 dress down | 穿得輕便 | We dress down on Fridays. | 👖
 dress up | 盛裝打扮 | Do I need to dress up for the party? | 👗
 in your birthday suit | 光著身子 | Don't answer the door in your birthday suit! | 👶
+round it down | 抹零頭；把金額往下算 | Could you round it down to $19? | ⬇️
+round up | 往上湊整數 | It's $19.80, so let's just round up to $20. | ⬆️
+knock off | 從價格扣掉（一點錢） | Could you knock off 80 cents? | 💸
+even | （金額）整；剛好～元整 | Could you make it $19 even? | 💵
 `,
   adv: `
 hot under the collar | 生氣；惱火 | He got hot under the collar about the delay. | 😡

@@ -338,6 +338,10 @@ if the shoe fits, wear it | qui se sent morveux se mouche | Qui se sent morveux 
 dress down | s'habiller décontracté | Le vendredi, on s'habille décontracté.
 dress up | s'habiller ; se mettre sur son trente-et-un | Il faut s'habiller pour la fête ?
 in your birthday suit | en tenue d'Adam ; tout nu | N'ouvre pas la porte en tenue d'Adam !
+round it down | arrondir à l'unité inférieure | Vous pourriez arrondir à 19 dollars ?
+round up | arrondir au-dessus | Ça fait 19,80 dollars, alors arrondissons à 20.
+knock off | enlever ; faire une réduction de | Vous pourriez enlever 80 centimes ?
+even | tout rond | Vous pourriez me faire 19 dollars tout rond ?
 `,
   phrases: `
 It looks good on you. | Ça te va bien.
@@ -440,6 +444,13 @@ I'm not brave enough to wear that. | Je n'ose pas porter ça.
 Wear what makes you feel confident. | Porte ce qui te donne confiance en toi.
 Could you gift-wrap it for me? | Vous pourriez me faire un paquet cadeau ?
 Do you have this in a different color? | Vous l'avez dans une autre couleur ?
+That comes to $19.80. | Ça fait 19,80 dollars.
+Could you round it down to $19? | Vous pourriez arrondir à 19 dollars ?
+Could you make it $19 even? | Vous pourriez me faire 19 dollars tout rond ?
+Could you knock 80 cents off? | Vous pourriez enlever 80 centimes ?
+Can you do $19? | Vous me le faites à 19 dollars ?
+Sure, I can do that. | D'accord, ça me va.
+Is the price negotiable? | Le prix est négociable ?
 `
 });
 
