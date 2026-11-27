@@ -233,6 +233,7 @@ a call to arms | 號召行動 | This is a call to arms. | 📯
 pull rank | 以權壓人 | Don't pull rank on me. | 🎖️
 lock and load | 準備就緒 | Lock and load, everyone! | 🔒
 stand down | 解除警戒；退下 | The troops were told to stand down. | ✋
+watch your six | 小心背後（六點鐘方向） | Stay close and watch your six. | 🕕
 `,
   adv: `
 a war of words | 口水戰 | A war of words broke out. | 🗯️

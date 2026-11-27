@@ -484,6 +484,7 @@ a call to arms | un appel à la mobilisation | C'est un appel à la mobilisation
 pull rank | user de son autorité | N'use pas de ton autorité avec moi.
 lock and load | paré | Parés, tout le monde !
 stand down | lever l'alerte | On a ordonné aux troupes de lever l'alerte.
+watch your six | surveille tes arrières | Reste près de moi et surveille tes arrières.
 `,
   phrases: `
 I got my draft notice. | J'ai reçu mon ordre d'appel.

@@ -571,6 +571,7 @@ mend fences | recoller les morceaux | Il est temps de recoller les morceaux.
 read me like a book | lire en moi comme dans un livre | Mon meilleur ami lit en moi comme dans un livre.
 let the cat out of the bag | vendre la mèche | Qui a vendu la mèche ?
 old friends are the best friends | ce sont les vieux amis les meilleurs | Ce sont les vieux amis les meilleurs.
+bros before hoes | les potes avant les meufs | Il a annulé son rendez-vous pour m'aider à déménager : « Les potes avant les meufs », il a dit.
 `,
   phrases: `
 I didn't mean to step on your toes. | Je ne voulais pas marcher sur tes plates-bandes.
