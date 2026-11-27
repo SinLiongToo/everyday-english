@@ -213,6 +213,7 @@ a shoulder to cry on | 可以依靠的人 | Thanks for being a shoulder to cry o
 drift apart | 漸行漸遠 | Friends sometimes drift apart after college. | 🌊
 fall out | 鬧翻 | Don't fall out over money. | 💔
 stab someone in the back | 背後捅刀；背叛 | A true friend would never stab someone in the back. | 🔪
+lie to my face | 當面對我說謊；睜眼說瞎話 | How could you lie to my face like that? | 🤥
 bend over backwards | 竭盡全力 | She'd bend over backwards to help me. | 🤸
 give someone the cold shoulder | 冷落某人 | It's rude to give someone the cold shoulder. | 🥶
 a friend of a friend | 朋友的朋友 | I met him through a friend of a friend. | 🔗

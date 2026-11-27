@@ -577,6 +577,7 @@ through thick and thin | contre vents et marées | Elle m'a soutenu contre vents
 a shoulder to cry on | une épaule sur laquelle pleurer | Merci d'avoir été une épaule sur laquelle pleurer.
 fall out | se brouiller | Ne vous brouillez pas pour de l'argent.
 stab someone in the back | poignarder quelqu'un dans le dos | Un vrai ami ne poignarderait jamais quelqu'un dans le dos.
+lie to my face | me mentir en face | Comment as-tu pu me mentir en face comme ça ?
 bend over backwards | se mettre en quatre | Elle se mettrait en quatre pour m'aider.
 give someone the cold shoulder | battre froid à quelqu'un | C'est impoli de battre froid à quelqu'un.
 a friend of a friend | un ami d'ami | Je l'ai rencontré par un ami d'ami.
