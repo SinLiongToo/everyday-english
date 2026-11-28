@@ -676,3 +676,10 @@ Clothing tells you a lot about a period in history. | Les vêtements en disent l
 There's no right or wrong in fashion, only what works for you. | En mode, il n'y a ni bien ni mal, seulement ce qui te va.
 `
 });
+
+// 生活小狀況
+addFrench("clothing", {
+  phrases: `
+The clothes shrank. | Les vêtements ont rétréci.
+`,
+});

@@ -600,3 +600,11 @@ There's still something magical about watching a plane take off. | 看著飛機�
 Every departure lounge is full of stories. | 每個候機室都充滿了故事。
 `
 });
+
+// 生活小狀況
+addPhrases("transport", {
+  basic: `
+My car got towed. | 車被拖走了。
+I got a parking ticket. | 我收到停車罰單。
+`
+});

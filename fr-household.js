@@ -665,3 +665,11 @@ Good design is often invisible until it's missing. | Le bon design est souvent i
 Robot vacuums map your home, which raises questions about data. | Les aspirateurs robots cartographient votre logement, ce qui pose des questions sur les données.
 `
 });
+
+// 生活小狀況
+addFrench("household", {
+  phrases: `
+The remote isn't working. | La télécommande ne marche pas.
+I can't find my glasses. | Je ne trouve pas mes lunettes.
+`,
+});

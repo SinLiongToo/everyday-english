@@ -716,3 +716,10 @@ I chose dishes that are mild, so you can ease into the local flavors. | J'ai cho
 Feel free to be honest; I won't be offended if you don't like it. | Sois honnête ; je ne serai pas vexé si tu n'aimes pas.
 `
 });
+
+// 生活小狀況
+addFrench("food", {
+  phrases: `
+The milk has expired. | Le lait est périmé.
+`,
+});

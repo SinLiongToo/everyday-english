@@ -665,3 +665,10 @@ The old house has a charm that new builds can't match. | La vieille maison a un 
 Zoning laws restrict what can be built where. | Les règles de zonage limitent ce qu'on peut construire et où.
 `
 });
+
+// 生活小狀況
+addFrench("housing", {
+  phrases: `
+They're renovating downstairs. | Ils font des travaux en bas.
+`,
+});

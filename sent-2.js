@@ -602,3 +602,18 @@ Good design is often invisible until it's missing. | 好的設計往往在缺少
 Robot vacuums map your home, which raises questions about data. | 掃地機器人會繪製你家的地圖，引發資料方面的疑問。
 `
 });
+
+// 生活小狀況
+addPhrases("housing", {
+  basic: `
+They're renovating downstairs. | 樓下在裝修。
+`
+});
+
+// 生活小狀況
+addPhrases("household", {
+  basic: `
+The remote isn't working. | 遙控器沒反應。
+I can't find my glasses. | 眼鏡找不到了。
+`
+});

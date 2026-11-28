@@ -667,3 +667,17 @@ I chose dishes that are mild, so you can ease into the local flavors. | 我點�
 Feel free to be honest; I won't be offended if you don't like it. | 儘管說實話，你不喜歡我也不會介意。
 `
 });
+
+// 生活小狀況
+addPhrases("food", {
+  basic: `
+The milk has expired. | 牛奶過期了。
+`
+});
+
+// 生活小狀況
+addPhrases("clothing", {
+  basic: `
+The clothes shrank. | 衣服縮水了。
+`
+});

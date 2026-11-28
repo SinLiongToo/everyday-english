@@ -664,3 +664,11 @@ The journey is half the fun. | Le voyage, c'est la moitié du plaisir.
 Fare evasion costs transit systems millions each year. | La fraude coûte des millions aux réseaux de transport chaque année.
 `
 });
+
+// 生活小狀況
+addFrench("transport", {
+  phrases: `
+My car got towed. | Ma voiture a été emmenée à la fourrière.
+I got a parking ticket. | J'ai eu une contravention de stationnement.
+`,
+});

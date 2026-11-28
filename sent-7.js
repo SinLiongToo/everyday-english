@@ -601,3 +601,11 @@ Instant replay has taken some of the drama out of close calls. | 即時重播讓
 Physical literacy should be developed from early childhood. | 身體素養應該從幼兒時期開始培養。
 `
 });
+
+// 生活小狀況
+addPhrases("tech", {
+  basic: `
+I didn't get the verification code. | 驗證碼沒收到。
+I need to restart the router. | 路由器要重啟。
+`
+});

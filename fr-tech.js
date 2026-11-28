@@ -659,3 +659,11 @@ The real question is who benefits from new technology. | La vraie question est d
 We need to design technology with people in mind. | Il faut concevoir la technologie en pensant aux gens.
 `,
 });
+
+// 生活小狀況
+addFrench("tech", {
+  phrases: `
+I didn't get the verification code. | Je n'ai pas reçu le code de vérification.
+I need to restart the router. | Je dois redémarrer le routeur.
+`,
+});

@@ -307,3 +307,12 @@ A home is only as safe as its wiring. | 房子的安全取決於它的線路。
 When in doubt, shut it off and call a pro. | 有疑慮時，先關掉再找專業人員。
 `
 });
+
+// 生活小狀況
+addPhrases("repairs", {
+  basic: `
+The fridge isn't cooling. | 冰箱不冰了。
+The key won't turn. | 鑰匙轉不動。
+The ceiling is leaking. | 天花板在漏水。
+`
+});

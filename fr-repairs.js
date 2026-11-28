@@ -665,3 +665,12 @@ A home is only as safe as its wiring. | Un logement n'est pas plus sûr que son 
 When in doubt, shut it off and call a pro. | Dans le doute, coupe tout et appelle un pro.
 `
 });
+
+// 生活小狀況
+addFrench("repairs", {
+  phrases: `
+The fridge isn't cooling. | Le frigo ne refroidit plus.
+The key won't turn. | La clé ne tourne pas.
+The ceiling is leaking. | Le plafond fuit.
+`,
+});
