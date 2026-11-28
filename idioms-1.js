@@ -206,6 +206,10 @@ run out of gas | 沒油；沒力氣 | I always run out of gas after work. | ⛽
 take a back seat | 退居次要 | My hobbies take a back seat to work. | 💺
 jump on the bandwagon | 跟風 | Don't just jump on the bandwagon. | 🚌
 a long haul | 長期艱辛的事 | Learning English is a long haul. | 🚚
+stuck in traffic | 被困在車陣中；塞在路上 | I'm stuck in traffic. I'll be there in 20 minutes. | 🚦
+backed up | （車流）回堵 | Traffic is backed up all the way to the bridge. | 🌉
+crawl | （車流）龜速前進 | Traffic is crawling because of the construction. | 🐌
+bumper-to-bumper | 車子一輛緊貼一輛的 | It's bumper-to-bumper traffic on the highway. | 🚗
 `,
   adv: `
 fall off the wagon | 故態復萌 | Try not to fall off the wagon after you quit smoking. | 🛻

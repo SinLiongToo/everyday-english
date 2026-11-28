@@ -608,3 +608,14 @@ My car got towed. | 車被拖走了。
 I got a parking ticket. | 我收到停車罰單。
 `
 });
+
+// 塞車的說法
+addPhrases("transport", {
+  inter: `
+I'm stuck in traffic. I'll be there in 20 minutes. | 我塞在路上了，大約 20 分鐘後到。
+The traffic jam is getting worse. | 塞車情況越來越嚴重了。
+Traffic is backed up all the way to the bridge. | 車流一路回堵到橋那邊了。
+Traffic is crawling because of the construction. | 因為道路施工，車子只能緩慢前進。
+It's bumper-to-bumper traffic on the highway. | 高速公路上的車子塞得密密麻麻。
+`
+});

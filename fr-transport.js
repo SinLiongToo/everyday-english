@@ -337,6 +337,10 @@ run out of gas | tomber en panne d'essence ; être à plat | Je suis toujours à
 take a back seat | passer au second plan | Mes loisirs passent au second plan après le travail.
 jump on the bandwagon | suivre le mouvement ; prendre le train en marche | Ne suis pas simplement le mouvement.
 a long haul | un travail de longue haleine | Apprendre l'anglais, c'est un travail de longue haleine.
+stuck in traffic | coincé dans les embouteillages | Je suis coincé dans les embouteillages. J'arrive dans 20 minutes.
+backed up | bouché ; la file remonte | Ça bouche jusqu'au pont.
+crawl | avancer au pas | Ça avance au pas à cause des travaux.
+bumper-to-bumper | pare-chocs contre pare-chocs | Sur l'autoroute, c'est pare-chocs contre pare-chocs.
 `,
   phrases: `
 Which platform does the train leave from? | Le train part de quel quai ?
@@ -670,5 +674,16 @@ addFrench("transport", {
   phrases: `
 My car got towed. | Ma voiture a été emmenée à la fourrière.
 I got a parking ticket. | J'ai eu une contravention de stationnement.
+`,
+});
+
+// 塞車的說法
+addFrench("transport", {
+  phrases: `
+I'm stuck in traffic. I'll be there in 20 minutes. | Je suis coincé dans les embouteillages. J'arrive dans 20 minutes.
+The traffic jam is getting worse. | L'embouteillage empire.
+Traffic is backed up all the way to the bridge. | Ça bouche jusqu'au pont.
+Traffic is crawling because of the construction. | Ça avance au pas à cause des travaux.
+It's bumper-to-bumper traffic on the highway. | Sur l'autoroute, c'est pare-chocs contre pare-chocs.
 `,
 });
