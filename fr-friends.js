@@ -338,6 +338,7 @@ have your back | être là pour quelqu'un ; couvrir quelqu'un | Ne t'inquiète p
 two peas in a pod | comme deux gouttes d'eau ; inséparables | Ils se ressemblent comme deux gouttes d'eau.
 lend an ear | prêter une oreille attentive | Tu peux m'écouter une minute ?
 just kidding | je plaisante | Je plaisante ! Ne te fâche pas.
+when pigs fly | quand les poules auront des dents | Mike qui paie le dîner ? Oui, quand les poules auront des dents !
 pull my leg | faire marcher quelqu'un | Tu essaies de me faire marcher ?
 peace out | salut, ciao | Bon, je dois y aller. Ciao !
 spot on | pile dans le mille ; tout à fait juste | Tu as mis pile dans le mille. C'est exactement ce qui s'est passé.

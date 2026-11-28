@@ -197,6 +197,7 @@ hang out | 一起出去玩 | Do you want to hang out tonight? | 🛹
 keep in touch | 保持聯絡 | Let's keep in touch. | 📱
 lend an ear | 傾聽 | Can you lend an ear for a minute? | 👂
 just kidding | 開玩笑的 | Just kidding! Don't be mad. | 😜
+when pigs fly | 太陽打西邊出來；根本不可能 | Mike paying for dinner? Yeah, when pigs fly! | 🐷
 pull my leg | 開某人玩笑 | Are you trying to pull my leg? | 🦵
 peace out | 掰啦；我先閃了（很隨性的道別） | Okay, I gotta go. Peace out! | ✌️
 spot on | 完全正確；說中了 | You're spot on. That's exactly what happened. | 🎯
