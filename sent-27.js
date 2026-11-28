@@ -158,3 +158,30 @@ Understanding basic anatomy helps you describe symptoms clearly. | 了解基本�
 Point to the exact spot, and say whether the pain is sharp, dull or burning. | 指出確切的位置，並說明是刺痛、悶痛還是灼熱痛。
 `
 });
+
+// 身體・健康：藥局買藥、問用法
+addPhrases("health", {
+  basic: `
+I need something for a headache. | 我需要治頭痛的藥。
+Do you have anything for a sore throat? | 有治喉嚨痛的藥嗎？
+I have a bad cough. | 我咳得很嚴重。
+Do I need a prescription for this? | 這個需要處方箋嗎？
+How often should I take it? | 多久吃一次？
+Should I take it before or after meals? | 飯前還是飯後吃？
+Will it make me drowsy? | 吃了會想睡嗎？
+Is this safe for kids? | 小孩可以吃嗎？
+Is there a cheaper option? | 有比較便宜的選擇嗎？
+Thank you, that's very helpful. | 謝謝，很有幫助。
+`,
+  inter: `
+Can I buy this over the counter? | 這個不用處方就能買嗎？
+I'd like to fill this prescription. | 我要領這張處方的藥。
+Take two tablets every six hours. | 每六小時吃兩顆。
+Take it with water after meals. | 飯後配水吃。
+I'm allergic to penicillin. | 我對盤尼西林過敏。
+Can I take this with my other medicine? | 這個可以跟我其他的藥一起吃嗎？
+Do you have this in liquid form? | 這個有藥水的嗎？
+How long should I take it for? | 要吃多久？
+See a doctor if it doesn't get better. | 如果沒好轉就要去看醫生。
+`
+});

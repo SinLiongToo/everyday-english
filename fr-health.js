@@ -1035,3 +1035,28 @@ Understanding basic anatomy helps you describe symptoms clearly. | Connaître l'
 Point to the exact spot, and say whether the pain is sharp, dull or burning. | Montrez l'endroit exact, et dites si la douleur est aiguë, sourde ou brûlante.
 `,
 });
+
+// 藥局買藥、問用法
+addFrench("health", {
+  phrases: `
+I need something for a headache. | Il me faudrait quelque chose contre le mal de tête.
+Do you have anything for a sore throat? | Vous avez quelque chose contre le mal de gorge ?
+I have a bad cough. | J'ai une mauvaise toux.
+Do I need a prescription for this? | Il faut une ordonnance pour ça ?
+How often should I take it? | Je dois le prendre tous les combien ?
+Should I take it before or after meals? | Je le prends avant ou après les repas ?
+Will it make me drowsy? | Est-ce que ça va me donner envie de dormir ?
+Is this safe for kids? | C'est sans danger pour les enfants ?
+Is there a cheaper option? | Il y a une option moins chère ?
+Thank you, that's very helpful. | Merci, ça m'aide beaucoup.
+Can I buy this over the counter? | Je peux l'acheter sans ordonnance ?
+I'd like to fill this prescription. | Je voudrais faire préparer cette ordonnance.
+Take two tablets every six hours. | Prenez deux comprimés toutes les six heures.
+Take it with water after meals. | Prenez-le avec de l'eau après les repas.
+I'm allergic to penicillin. | Je suis allergique à la pénicilline.
+Can I take this with my other medicine? | Je peux le prendre avec mes autres médicaments ?
+Do you have this in liquid form? | Vous l'avez en sirop ?
+How long should I take it for? | Pendant combien de temps dois-je le prendre ?
+See a doctor if it doesn't get better. | Consultez un médecin si ça ne s'améliore pas.
+`,
+});
