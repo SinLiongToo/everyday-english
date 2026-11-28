@@ -687,3 +687,20 @@ Traffic is crawling because of the construction. | Ça avance au pas à cause de
 It's bumper-to-bumper traffic on the highway. | Sur l'autoroute, c'est pare-chocs contre pare-chocs.
 `,
 });
+
+// 下車的說法
+addFrench("transport", {
+  words: `
+drop me off | me déposer | Vous pouvez me déposer ici ?
+get out | descendre (de la voiture) | Je descends ici. Merci !
+`,
+  phrases: `
+Could you drop me off here? | Vous pouvez me déposer ici ?
+Could you drop me off in front of the hotel? | Vous pouvez me déposer devant l'hôtel ?
+Could you drop me off near the station? | Vous pouvez me déposer près de la gare ?
+I'll get out here. Thanks! | Je descends ici. Merci !
+I'm getting off here. | Je descends ici.
+I'm getting off at the next stop. | Je descends au prochain arrêt.
+This is my stop. I'm getting off. | C'est mon arrêt. Je descends.
+`,
+});

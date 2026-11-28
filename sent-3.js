@@ -619,3 +619,16 @@ Traffic is crawling because of the construction. | 因為道路施工，車子�
 It's bumper-to-bumper traffic on the highway. | 高速公路上的車子塞得密密麻麻。
 `
 });
+
+// 下車的說法
+addPhrases("transport", {
+  basic: `
+Could you drop me off here? | 可以在這裡讓我下車嗎？
+Could you drop me off in front of the hotel? | 可以在飯店門口讓我下車嗎？
+Could you drop me off near the station? | 可以在車站附近讓我下車嗎？
+I'll get out here. Thanks! | 我就在這裡下車，謝謝！
+I'm getting off here. | 我在這一站下車。
+I'm getting off at the next stop. | 我下一站下車。
+This is my stop. I'm getting off. | 這站就是我要下的站，我要下車了。
+`
+});

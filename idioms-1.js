@@ -335,3 +335,11 @@ running on fumes | 精疲力盡 | After the long trip, I'm running on fumes. | �
 a whirlwind trip | 匆忙的旅行 | We took a whirlwind trip to Europe. | 🌪️
 `
 });
+
+// 下車的說法：計程車用 drop off / get out，大眾運輸用 get off
+addVocab("transport", {
+  basic: `
+drop me off | 讓我（在某處）下車 | Could you drop me off here? | 🚕
+get out | （從汽車、計程車）下車 | I'll get out here. Thanks! | 🚪
+`
+});
